@@ -928,6 +928,284 @@
             @endcanany
             @endif
 
+            @if(__isActivePlan(Auth::user()->empresa, 'Pet Shop'))
+            <li class="side-nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarPetShop" aria-expanded="false" aria-controls="sidebarPetShop" class="side-nav-link">
+                    <i class="ri-bear-smile-fill"></i>
+                    <span>Pet Shop</span>
+                    <span class="menu-arrow"></span>
+                </a>
+                <div class="collapse" id="sidebarPetShop">
+                    <ul class="side-nav-second-level">
+                        @if (__isActivePlan(Auth::user()->empresa, 'Pets'))
+                        <li>
+                            <a data-bs-toggle="collapse" href="#petshopCadastros" aria-expanded="false" aria-controls="petshopCadastros">
+                                <span>Cadastros</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="petshopCadastros">
+                                <ul class="side-nav-third-level">
+                                    @if (Route::has('animais.pacientes.index'))
+                                    <li><a href="{{ route('animais.pacientes.index') }}">Pets</a></li>
+                                    @endif
+                                    @if (Route::has('animais.especies.index'))
+                                    <li><a href="{{ route('animais.especies.index') }}">Espécies</a></li>
+                                    @endif
+                                    @if (Route::has('animais.racas.index'))
+                                    <li><a href="{{ route('animais.racas.index') }}">Raças</a></li>
+                                    @endif
+                                    @if (Route::has('animais.pelagens.index'))
+                                    <li><a href="{{ route('animais.pelagens.index') }}">Pelagens</a></li>
+                                    @endif
+                                    @if (Route::has('petshop.planos.usuario.index'))
+                                    <li><a href="{{ route('petshop.planos.usuario.index') }}">Usuários Plano</a></li>
+                                    @endif
+                                    @if (Route::has('petshop.planos.usuarios-avulso.index'))
+                                    <li><a href="{{ route('petshop.planos.usuarios-avulso.index') }}">Usuário Avulso</a></li>
+                                    @endif
+                                </ul>
+                            </div>
+                        </li>
+                        @endif
+
+                        @if (__isActivePlan(Auth::user()->empresa, 'Planos') && Route::has('petshop.gerenciar.planos'))
+                        <li>
+                            <a href="{{ route('petshop.gerenciar.planos') }}">Gerenciar Planos</a>
+                        </li>
+                        @endif
+
+                        @if (__isActivePlan(Auth::user()->empresa, 'Veterinario'))
+                        <li>
+                            <a data-bs-toggle="collapse" href="#petshopVet" aria-expanded="false" aria-controls="petshopVet">
+                                <span>Atd. Veterinário</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="petshopVet">
+                                <ul class="side-nav-third-level">
+                                    <li>
+                                        <a data-bs-toggle="collapse" href="#petshopVetCadastro" aria-expanded="false" aria-controls="petshopVetCadastro">
+                                            <span>Cadastro</span>
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <div class="collapse" id="petshopVetCadastro">
+                                            <ul class="side-nav-fourth-level">
+                                                @if (Route::has('vet.medicos.index'))
+                                                <li><a href="{{ route('vet.medicos.index') }}">Médico</a></li>
+                                                @endif
+                                                @if (Route::has('vet.salas-atendimento.index'))
+                                                <li><a href="{{ route('vet.salas-atendimento.index') }}">Salas de Atendimento</a></li>
+                                                @endif
+                                                @if (Route::has('vet.salas-internacao.index'))
+                                                <li><a href="{{ route('vet.salas-internacao.index') }}">Salas de Internação</a></li>
+                                                @endif
+                                                @if (Route::has('vet.checklist.index'))
+                                                <li><a href="{{ route('vet.checklist.index') }}">Checklist</a></li>
+                                                @endif
+                                                @if (Route::has('vet.allergies.index'))
+                                                <li><a href="{{ route('vet.allergies.index') }}">Alergias</a></li>
+                                                @endif
+                                                @if (Route::has('vet.chronic-conditions.index'))
+                                                <li><a href="{{ route('vet.chronic-conditions.index') }}">Condições crônicas</a></li>
+                                                @endif
+                                                @if (Route::has('vet.medicines.index'))
+                                                <li><a href="{{ route('vet.medicines.index') }}">Medicamentos</a></li>
+                                                @endif
+                                                @if (Route::has('vet.vaccines.index'))
+                                                <li><a href="{{ route('vet.vaccines.index') }}">Vacinas</a></li>
+                                                @elseif (Route::has('vacina.vacinas.index'))
+                                                <li><a href="{{ route('vacina.vacinas.index') }}">Vacinas</a></li>
+                                                @endif
+                                                @if (Route::has('vet.modelos-atendimento.index'))
+                                                <li><a href="{{ route('vet.modelos-atendimento.index') }}">Modelo de Atendimento</a></li>
+                                                @endif
+                                                @if (Route::has('vet.assessment-models.index'))
+                                                <li><a href="{{ route('vet.assessment-models.index') }}">Modelo de Avaliação</a></li>
+                                                @endif
+                                                @if (Route::has('vet.prescription-models.index'))
+                                                <li><a href="{{ route('vet.prescription-models.index') }}">Modelo de Prescrição</a></li>
+                                                @endif
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    @if (Route::has('vet.atendimentos.index'))
+                                    <li><a href="{{ route('vet.atendimentos.index') }}">Atendimento</a></li>
+                                    @endif
+
+                                    <li>
+                                        <a data-bs-toggle="collapse" href="#petshopVetProntuarios" aria-expanded="false" aria-controls="petshopVetProntuarios">
+                                            <span>Prontuários</span>
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <div class="collapse" id="petshopVetProntuarios">
+                                            <ul class="side-nav-fourth-level">
+                                                @if (Route::has('vet.records.queue'))
+                                                <li><a href="{{ route('vet.records.queue') }}">Fila de consultas</a></li>
+                                                @endif
+                                                @if (Route::has('vet.records.index'))
+                                                <li><a href="{{ route('vet.records.index') }}">Histórico de Consultas</a></li>
+                                                @endif
+                                                @if (Route::has('vet.exams.index'))
+                                                <li><a href="{{ route('vet.exams.index') }}">Histórico de Exames</a></li>
+                                                @endif
+                                                @if (Route::has('vet.prescriptions.index'))
+                                                <li><a href="{{ route('vet.prescriptions.index') }}">Historico de Prescrições</a></li>
+                                                @endif
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <a data-bs-toggle="collapse" href="#petshopVetVacinacoes" aria-expanded="false" aria-controls="petshopVetVacinacoes">
+                                            <span>Vacinações</span>
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <div class="collapse" id="petshopVetVacinacoes">
+                                            <ul class="side-nav-fourth-level">
+                                                @if (Route::has('vet.vaccinations.panel'))
+                                                <li><a href="{{ route('vet.vaccinations.panel') }}">Painel de vacinação</a></li>
+                                                @endif
+                                                @if (Route::has('vet.vaccinations.index'))
+                                                <li><a href="{{ route('vet.vaccinations.index') }}">Histórico de Vacinas</a></li>
+                                                @endif
+                                                @if (Route::has('vet.vaccinations.scheduled'))
+                                                <li><a href="{{ route('vet.vaccinations.scheduled') }}">Aplicar Vacinação</a></li>
+                                                @endif
+                                            </ul>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <a data-bs-toggle="collapse" href="#petshopVetInternacoes" aria-expanded="false" aria-controls="petshopVetInternacoes">
+                                            <span>Gestão de Internações</span>
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <div class="collapse" id="petshopVetInternacoes">
+                                            <ul class="side-nav-fourth-level">
+                                                @if (Route::has('vet.hospitalizations.index'))
+                                                <li><a href="{{ route('vet.hospitalizations.index') }}">Histórico de Internação</a></li>
+                                                @endif
+                                                @if (Route::has('vet.hospitalizations.occupancy'))
+                                                <li><a href="{{ route('vet.hospitalizations.occupancy') }}">Ocupação de Leitos</a></li>
+                                                @endif
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        @endif
+
+                        @if (__isActivePlan(Auth::user()->empresa, 'Hotel'))
+                        <li>
+                            <a data-bs-toggle="collapse" href="#petshopHotel" aria-expanded="false" aria-controls="petshopHotel">
+                                <span>Hotel</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="petshopHotel">
+                                <ul class="side-nav-third-level">
+                                    @if (Route::has('hoteis.index'))
+                                    <li><a href="{{ route('hoteis.index') }}">Reservas</a></li>
+                                    @endif
+                                    <li>
+                                        <a data-bs-toggle="collapse" href="#petshopHotelQuartos" aria-expanded="false" aria-controls="petshopHotelQuartos">
+                                            <span>Quartos</span>
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <div class="collapse" id="petshopHotelQuartos">
+                                            <ul class="side-nav-fourth-level">
+                                                @if (Route::has('quartos.index'))
+                                                <li><a href="{{ route('quartos.index') }}">Gerenciar Quartos</a></li>
+                                                @endif
+                                                @if (Route::has('quartos.eventos.index'))
+                                                <li><a href="{{ route('quartos.eventos.index') }}">Eventos de Quarto</a></li>
+                                                @endif
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    @if (Route::has('hotel.monitoramento.hotel'))
+                                    <li><a href="{{ route('hotel.monitoramento.hotel') }}">Monitoramento Hotel</a></li>
+                                    @endif
+                                    @if (Route::has('hotel.monitoramento.quartos'))
+                                    <li><a href="{{ route('hotel.monitoramento.quartos') }}">Monitoramento Quartos</a></li>
+                                    @endif
+                                </ul>
+                            </div>
+                        </li>
+                        @endif
+
+                        @if (__isActivePlan(Auth::user()->empresa, 'Creche'))
+                        <li>
+                            <a data-bs-toggle="collapse" href="#petshopCreche" aria-expanded="false" aria-controls="petshopCreche">
+                                <span>Creche</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="petshopCreche">
+                                <ul class="side-nav-third-level">
+                                    @if (Route::has('creches.index'))
+                                    <li><a href="{{ route('creches.index') }}">Reservas</a></li>
+                                    @endif
+                                    <li>
+                                        <a data-bs-toggle="collapse" href="#petshopCrecheTurmas" aria-expanded="false" aria-controls="petshopCrecheTurmas">
+                                            <span>Turmas</span>
+                                            <span class="menu-arrow"></span>
+                                        </a>
+                                        <div class="collapse" id="petshopCrecheTurmas">
+                                            <ul class="side-nav-fourth-level">
+                                                @if (Route::has('turmas.index'))
+                                                <li><a href="{{ route('turmas.index') }}">Gerenciar Turmas</a></li>
+                                                @endif
+                                                @if (Route::has('turmas.eventos.index'))
+                                                <li><a href="{{ route('turmas.eventos.index') }}">Eventos de Turma</a></li>
+                                                @endif
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    @if (Route::has('creche.monitoramento.creche'))
+                                    <li><a href="{{ route('creche.monitoramento.creche') }}">Monitoramento Creche</a></li>
+                                    @endif
+                                    @if (Route::has('creche.monitoramento.salas'))
+                                    <li><a href="{{ route('creche.monitoramento.salas') }}">Monitoramento Salas</a></li>
+                                    @endif
+                                </ul>
+                            </div>
+                        </li>
+                        @endif
+
+                        @if (__isActivePlan(Auth::user()->empresa, 'Estetica'))
+                        <li>
+                            <a data-bs-toggle="collapse" href="#petshopEstetica" aria-expanded="false" aria-controls="petshopEstetica">
+                                <span>Esteticista</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <div class="collapse" id="petshopEstetica">
+                                <ul class="side-nav-third-level">
+                                    @if (Route::has('esteticas.index'))
+                                    <li><a href="{{ route('esteticas.index') }}">Gerenciar Estetica</a></li>
+                                    @endif
+                                    @if (Route::has('petshop.esteticista.agendamentos.pendente'))
+                                    <li><a href="{{ route('petshop.esteticista.agendamentos.pendente') }}">Agendamentos Pendentes</a></li>
+                                    @endif
+                                    @if (Route::has('petshop.esteticista.agendamentos.pendente-avulso'))
+                                    <li><a href="{{ route('petshop.esteticista.agendamentos.pendente-avulso') }}">Agendamentos Avulso Pendentes</a></li>
+                                    @endif
+                                </ul>
+                            </div>
+                        </li>
+                        @endif
+
+                        @if (__isActivePlan(Auth::user()->empresa, 'Agendamentos-Pet') && Route::has('agendamentos.index'))
+                        <li><a href="{{ route('agendamentos.index') }}">Agenda</a></li>
+                        @endif
+
+                        @if (Route::has('petshop.config.index'))
+                        <li><a href="{{ route('petshop.config.index') }}">Configurações</a></li>
+                        @endif
+                    </ul>
+                </div>
+            </li>
+            @endif
+
             @if(__isActivePlan(Auth::user()->empresa, 'Vendas'))
             @canany(['nfe_view', 'orcamento_view'])
             <li class="side-nav-item">

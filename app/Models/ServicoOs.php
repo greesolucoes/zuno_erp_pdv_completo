@@ -10,7 +10,7 @@ class ServicoOs extends Model
     use HasFactory;
 
     protected $fillable = [
-    	'servico_id', 'ordem_servico_id', 'quantidade', 'status', 'valor', 'subtotal'
+    	'servico_id', 'ordem_servico_id', 'quantidade', 'status', 'valor', 'subtotal', 'desconto'
     ];
 
     public function servico(){

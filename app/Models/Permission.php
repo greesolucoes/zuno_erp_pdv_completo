@@ -390,6 +390,194 @@ class Permission extends \Spatie\Permission\Models\Permission
             array('name' => 'projeto_custo_create', 'description' => 'Cria projeto de custos'),
             array('name' => 'projeto_custo_edit', 'description' => 'Edita projeto de custos'),
             array('name' => 'projeto_custo_delete', 'description' => 'Deleta projeto de custos'),
+
+            // Pet Shop
+            array('name' => 'pacientes_view', 'description' => 'Visualiza pets'),
+            array('name' => 'pacientes_create', 'description' => 'Cria pets'),
+            array('name' => 'pacientes_edit', 'description' => 'Edita pets'),
+            array('name' => 'pacientes_delete', 'description' => 'Deleta pets'),
+
+            array('name' => 'especies_view', 'description' => 'Visualiza espécies'),
+            array('name' => 'especies_create', 'description' => 'Cria espécies'),
+            array('name' => 'especies_edit', 'description' => 'Edita espécies'),
+            array('name' => 'especies_delete', 'description' => 'Deleta espécies'),
+
+            array('name' => 'racas_view', 'description' => 'Visualiza raças'),
+            array('name' => 'racas_create', 'description' => 'Cria raças'),
+            array('name' => 'racas_edit', 'description' => 'Edita raças'),
+            array('name' => 'racas_delete', 'description' => 'Deleta raças'),
+
+            array('name' => 'pelagens_view', 'description' => 'Visualiza pelagens'),
+            array('name' => 'pelagens_create', 'description' => 'Cria pelagens'),
+            array('name' => 'pelagens_edit', 'description' => 'Edita pelagens'),
+            array('name' => 'pelagens_delete', 'description' => 'Deleta pelagens'),
+
+            array('name' => 'diagnosticos_view', 'description' => 'Visualiza diagnósticos'),
+            array('name' => 'diagnosticos_create', 'description' => 'Cria diagnósticos'),
+            array('name' => 'diagnosticos_edit', 'description' => 'Edita diagnósticos'),
+            array('name' => 'diagnosticos_delete', 'description' => 'Deleta diagnósticos'),
+
+            array('name' => 'exames_view', 'description' => 'Visualiza exames (pet)'),
+            array('name' => 'exames_create', 'description' => 'Cria exames (pet)'),
+            array('name' => 'exames_edit', 'description' => 'Edita exames (pet)'),
+            array('name' => 'exames_delete', 'description' => 'Deleta exames (pet)'),
+
+            array('name' => 'consultas_view', 'description' => 'Visualiza consultas (pet)'),
+            array('name' => 'consultas_create', 'description' => 'Cria consultas (pet)'),
+            array('name' => 'consultas_edit', 'description' => 'Edita consultas (pet)'),
+            array('name' => 'consultas_delete', 'description' => 'Deleta consultas (pet)'),
+
+            array('name' => 'petshop_config_view', 'description' => 'Visualiza configurações do Pet Shop'),
+            array('name' => 'petshop_config_edit', 'description' => 'Edita configurações do Pet Shop'),
+
+            array('name' => 'petshop_planos_view', 'description' => 'Visualiza planos Pet Shop'),
+            array('name' => 'petshop_planos_create', 'description' => 'Cria planos Pet Shop'),
+            array('name' => 'petshop_planos_edit', 'description' => 'Edita planos Pet Shop'),
+            array('name' => 'petshop_planos_delete', 'description' => 'Deleta planos Pet Shop'),
+
+            array('name' => 'petshop_planos_usuarios_view', 'description' => 'Visualiza usuários de plano Pet Shop'),
+            array('name' => 'petshop_planos_usuarios_create', 'description' => 'Cria usuários de plano Pet Shop'),
+            array('name' => 'petshop_planos_usuarios_edit', 'description' => 'Edita usuários de plano Pet Shop'),
+            array('name' => 'petshop_planos_usuarios_delete', 'description' => 'Deleta usuários de plano Pet Shop'),
+
+            array('name' => 'petshop_planos_usuarios_avulso_view', 'description' => 'Visualiza usuários avulso Pet Shop'),
+            array('name' => 'petshop_planos_usuarios_avulso_edit', 'description' => 'Edita usuários avulso Pet Shop'),
+            array('name' => 'petshop_planos_usuarios_avulso_delete', 'description' => 'Deleta usuários avulso Pet Shop'),
+
+            array('name' => 'vet_medicos_view', 'description' => 'Visualiza médicos veterinários'),
+            array('name' => 'vet_medicos_create', 'description' => 'Cria médicos veterinários'),
+            array('name' => 'vet_medicos_edit', 'description' => 'Edita médicos veterinários'),
+            array('name' => 'vet_medicos_delete', 'description' => 'Deleta médicos veterinários'),
+
+            array('name' => 'vet_salas_atendimento_view', 'description' => 'Visualiza salas de atendimento (vet)'),
+            array('name' => 'vet_salas_atendimento_create', 'description' => 'Cria salas de atendimento (vet)'),
+            array('name' => 'vet_salas_atendimento_edit', 'description' => 'Edita salas de atendimento (vet)'),
+            array('name' => 'vet_salas_atendimento_delete', 'description' => 'Deleta salas de atendimento (vet)'),
+
+            array('name' => 'vet_salas_internacao_view', 'description' => 'Visualiza salas de internação (vet)'),
+            array('name' => 'vet_salas_internacao_create', 'description' => 'Cria salas de internação (vet)'),
+            array('name' => 'vet_salas_internacao_edit', 'description' => 'Edita salas de internação (vet)'),
+            array('name' => 'vet_salas_internacao_delete', 'description' => 'Deleta salas de internação (vet)'),
+
+            array('name' => 'vet_checklist_view', 'description' => 'Visualiza checklist (vet)'),
+            array('name' => 'vet_checklist_create', 'description' => 'Cria checklist (vet)'),
+            array('name' => 'vet_checklist_edit', 'description' => 'Edita checklist (vet)'),
+            array('name' => 'vet_checklist_delete', 'description' => 'Deleta checklist (vet)'),
+
+            array('name' => 'vet_alergias_view', 'description' => 'Visualiza alergias (vet)'),
+            array('name' => 'vet_alergias_create', 'description' => 'Cria alergias (vet)'),
+            array('name' => 'vet_alergias_edit', 'description' => 'Edita alergias (vet)'),
+            array('name' => 'vet_alergias_delete', 'description' => 'Deleta alergias (vet)'),
+
+            array('name' => 'vet_condicoes_cronicas_view', 'description' => 'Visualiza condições crônicas (vet)'),
+            array('name' => 'vet_condicoes_cronicas_create', 'description' => 'Cria condições crônicas (vet)'),
+            array('name' => 'vet_condicoes_cronicas_edit', 'description' => 'Edita condições crônicas (vet)'),
+            array('name' => 'vet_condicoes_cronicas_delete', 'description' => 'Deleta condições crônicas (vet)'),
+
+            array('name' => 'vet_medicamentos_view', 'description' => 'Visualiza medicamentos (vet)'),
+            array('name' => 'vet_medicamentos_create', 'description' => 'Cria medicamentos (vet)'),
+            array('name' => 'vet_medicamentos_edit', 'description' => 'Edita medicamentos (vet)'),
+            array('name' => 'vet_medicamentos_delete', 'description' => 'Deleta medicamentos (vet)'),
+
+            array('name' => 'vet_modelos_atendimento_view', 'description' => 'Visualiza modelos de atendimento (vet)'),
+            array('name' => 'vet_modelos_atendimento_create', 'description' => 'Cria modelos de atendimento (vet)'),
+            array('name' => 'vet_modelos_atendimento_edit', 'description' => 'Edita modelos de atendimento (vet)'),
+            array('name' => 'vet_modelos_atendimento_delete', 'description' => 'Deleta modelos de atendimento (vet)'),
+
+            array('name' => 'vet_modelos_avaliacao_view', 'description' => 'Visualiza modelos de avaliação (vet)'),
+            array('name' => 'vet_modelos_avaliacao_create', 'description' => 'Cria modelos de avaliação (vet)'),
+            array('name' => 'vet_modelos_avaliacao_edit', 'description' => 'Edita modelos de avaliação (vet)'),
+            array('name' => 'vet_modelos_avaliacao_delete', 'description' => 'Deleta modelos de avaliação (vet)'),
+
+            array('name' => 'vet_modelos_prescricao_view', 'description' => 'Visualiza modelos de prescrição (vet)'),
+            array('name' => 'vet_modelos_prescricao_create', 'description' => 'Cria modelos de prescrição (vet)'),
+            array('name' => 'vet_modelos_prescricao_edit', 'description' => 'Edita modelos de prescrição (vet)'),
+            array('name' => 'vet_modelos_prescricao_delete', 'description' => 'Deleta modelos de prescrição (vet)'),
+
+            array('name' => 'vet_atendimentos_view', 'description' => 'Visualiza atendimentos veterinários'),
+            array('name' => 'vet_atendimentos_create', 'description' => 'Cria atendimentos veterinários'),
+            array('name' => 'vet_atendimentos_edit', 'description' => 'Edita atendimentos veterinários'),
+            array('name' => 'vet_atendimentos_delete', 'description' => 'Deleta atendimentos veterinários'),
+
+            array('name' => 'vet_internacoes_view', 'description' => 'Visualiza internações (vet)'),
+            array('name' => 'vet_internacoes_create', 'description' => 'Cria internações (vet)'),
+            array('name' => 'vet_internacoes_edit', 'description' => 'Edita internações (vet)'),
+            array('name' => 'vet_internacoes_delete', 'description' => 'Deleta internações (vet)'),
+
+            array('name' => 'vet_prontuarios_view', 'description' => 'Visualiza prontuários (vet)'),
+            array('name' => 'vet_prontuarios_create', 'description' => 'Cria prontuários (vet)'),
+            array('name' => 'vet_prontuarios_edit', 'description' => 'Edita prontuários (vet)'),
+            array('name' => 'vet_prontuarios_delete', 'description' => 'Deleta prontuários (vet)'),
+
+            array('name' => 'vet_exames_view', 'description' => 'Visualiza exames (vet)'),
+            array('name' => 'vet_exames_create', 'description' => 'Cria exames (vet)'),
+            array('name' => 'vet_exames_edit', 'description' => 'Edita exames (vet)'),
+            array('name' => 'vet_exames_delete', 'description' => 'Deleta exames (vet)'),
+
+            array('name' => 'vet_prescricoes_view', 'description' => 'Visualiza prescrições (vet)'),
+            array('name' => 'vet_prescricoes_create', 'description' => 'Cria prescrições (vet)'),
+            array('name' => 'vet_prescricoes_edit', 'description' => 'Edita prescrições (vet)'),
+            array('name' => 'vet_prescricoes_delete', 'description' => 'Deleta prescrições (vet)'),
+
+            array('name' => 'vet_vacinacoes_view', 'description' => 'Visualiza vacinações (vet)'),
+            array('name' => 'vet_vacinacoes_create', 'description' => 'Cria vacinações (vet)'),
+            array('name' => 'vet_vacinacoes_edit', 'description' => 'Edita vacinações (vet)'),
+            array('name' => 'vet_vacinacoes_delete', 'description' => 'Deleta vacinações (vet)'),
+
+            array('name' => 'vet_cartoes_vacinacao_view', 'description' => 'Visualiza cartões de vacinação (vet)'),
+            array('name' => 'vet_cartoes_vacinacao_create', 'description' => 'Cria cartões de vacinação (vet)'),
+            array('name' => 'vet_cartoes_vacinacao_edit', 'description' => 'Edita cartões de vacinação (vet)'),
+            array('name' => 'vet_cartoes_vacinacao_delete', 'description' => 'Deleta cartões de vacinação (vet)'),
+
+            array('name' => 'vet_agenda_view', 'description' => 'Visualiza agenda veterinária'),
+            array('name' => 'vet_agenda_create', 'description' => 'Cria agendamentos na agenda veterinária'),
+            array('name' => 'vet_agenda_edit', 'description' => 'Edita agendamentos na agenda veterinária'),
+            array('name' => 'vet_agenda_delete', 'description' => 'Deleta agendamentos na agenda veterinária'),
+
+            array('name' => 'vacinas_view', 'description' => 'Visualiza vacinas'),
+            array('name' => 'vacinas_create', 'description' => 'Cria vacinas'),
+            array('name' => 'vacinas_edit', 'description' => 'Edita vacinas'),
+            array('name' => 'vacinas_delete', 'description' => 'Deleta vacinas'),
+
+            array('name' => 'vacinacoes_view', 'description' => 'Visualiza vacinações'),
+            array('name' => 'vacinacoes_create', 'description' => 'Cria vacinações'),
+            array('name' => 'vacinacoes_edit', 'description' => 'Edita vacinações'),
+            array('name' => 'vacinacoes_delete', 'description' => 'Deleta vacinações'),
+
+            array('name' => 'tele_entregas_view', 'description' => 'Visualiza tele-entregas'),
+            array('name' => 'tele_entregas_create', 'description' => 'Cria tele-entregas'),
+            array('name' => 'tele_entregas_edit', 'description' => 'Edita tele-entregas'),
+            array('name' => 'tele_entregas_delete', 'description' => 'Deleta tele-entregas'),
+
+            array('name' => 'tipos_tele_entregas_view', 'description' => 'Visualiza tipos de tele-entrega'),
+            array('name' => 'tipos_tele_entregas_create', 'description' => 'Cria tipos de tele-entrega'),
+            array('name' => 'tipos_tele_entregas_edit', 'description' => 'Edita tipos de tele-entrega'),
+            array('name' => 'tipos_tele_entregas_delete', 'description' => 'Deleta tipos de tele-entrega'),
+
+            array('name' => 'hoteis_view', 'description' => 'Visualiza reservas de hotel'),
+            array('name' => 'hoteis_create', 'description' => 'Cria reservas de hotel'),
+            array('name' => 'hoteis_edit', 'description' => 'Edita reservas de hotel'),
+            array('name' => 'hoteis_delete', 'description' => 'Deleta reservas de hotel'),
+
+            array('name' => 'quartos_view', 'description' => 'Visualiza quartos do hotel'),
+            array('name' => 'quartos_create', 'description' => 'Cria quartos do hotel'),
+            array('name' => 'quartos_edit', 'description' => 'Edita quartos do hotel'),
+            array('name' => 'quartos_delete', 'description' => 'Deleta quartos do hotel'),
+
+            array('name' => 'creches_view', 'description' => 'Visualiza reservas de creche'),
+            array('name' => 'creches_create', 'description' => 'Cria reservas de creche'),
+            array('name' => 'creches_edit', 'description' => 'Edita reservas de creche'),
+            array('name' => 'creches_delete', 'description' => 'Deleta reservas de creche'),
+
+            array('name' => 'turmas_view', 'description' => 'Visualiza turmas da creche'),
+            array('name' => 'turmas_create', 'description' => 'Cria turmas da creche'),
+            array('name' => 'turmas_edit', 'description' => 'Edita turmas da creche'),
+            array('name' => 'turmas_delete', 'description' => 'Deleta turmas da creche'),
+
+            array('name' => 'esteticas_view', 'description' => 'Visualiza agendamentos de estética'),
+            array('name' => 'esteticas_create', 'description' => 'Cria agendamentos de estética'),
+            array('name' => 'esteticas_edit', 'description' => 'Edita agendamentos de estética'),
+            array('name' => 'esteticas_delete', 'description' => 'Deleta agendamentos de estética'),
         ];
     }
 }

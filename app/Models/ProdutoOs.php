@@ -10,7 +10,7 @@ class ProdutoOs extends Model
     use HasFactory;
 
     protected $fillable = [
-    	'produto_id', 'ordem_servico_id', 'quantidade', 'valor', 'subtotal'
+    	'produto_id', 'ordem_servico_id', 'quantidade', 'valor', 'subtotal', 'desconto'
     ];
 
     public function produto(){

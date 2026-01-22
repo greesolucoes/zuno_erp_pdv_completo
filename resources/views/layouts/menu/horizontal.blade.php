@@ -571,6 +571,60 @@
                     @endcanany
                     @endif
 
+                    @if(__isActivePlan(Auth::user()->empresa, 'Pet Shop'))
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="#" id="petshop-menu" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-bear-smile-fill"></i> <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="petshop-menu">
+                            <label>Pet Shop</label>
+
+                            @if (__isActivePlan(Auth::user()->empresa, 'Pets'))
+                                @if (Route::has('animais.pacientes.index'))
+                                <a href="{{ route('animais.pacientes.index') }}" class="dropdown-item">Pets</a>
+                                @endif
+                                @if (Route::has('animais.especies.index'))
+                                <a href="{{ route('animais.especies.index') }}" class="dropdown-item">Espécies</a>
+                                @endif
+                                @if (Route::has('animais.racas.index'))
+                                <a href="{{ route('animais.racas.index') }}" class="dropdown-item">Raças</a>
+                                @endif
+                                @if (Route::has('animais.pelagens.index'))
+                                <a href="{{ route('animais.pelagens.index') }}" class="dropdown-item">Pelagens</a>
+                                @endif
+                            @endif
+
+                            @if (__isActivePlan(Auth::user()->empresa, 'Planos') && Route::has('petshop.gerenciar.planos'))
+                            <a href="{{ route('petshop.gerenciar.planos') }}" class="dropdown-item">Gerenciar Planos</a>
+                            @endif
+
+                            @if (__isActivePlan(Auth::user()->empresa, 'Veterinario') && Route::has('vet.atendimentos.index'))
+                            <a href="{{ route('vet.atendimentos.index') }}" class="dropdown-item">Atendimento Veterinário</a>
+                            @endif
+
+                            @if (__isActivePlan(Auth::user()->empresa, 'Hotel') && Route::has('hoteis.index'))
+                            <a href="{{ route('hoteis.index') }}" class="dropdown-item">Hotel - Reservas</a>
+                            @endif
+
+                            @if (__isActivePlan(Auth::user()->empresa, 'Creche') && Route::has('creches.index'))
+                            <a href="{{ route('creches.index') }}" class="dropdown-item">Creche - Reservas</a>
+                            @endif
+
+                            @if (__isActivePlan(Auth::user()->empresa, 'Estetica') && Route::has('esteticas.index'))
+                            <a href="{{ route('esteticas.index') }}" class="dropdown-item">Esteticista</a>
+                            @endif
+
+                            @if (__isActivePlan(Auth::user()->empresa, 'Agendamentos-Pet') && Route::has('agendamentos.index'))
+                            <a href="{{ route('agendamentos.index') }}" class="dropdown-item">Agenda</a>
+                            @endif
+
+                            @if (Route::has('petshop.config.index'))
+                            <a href="{{ route('petshop.config.index') }}" class="dropdown-item">Configurações</a>
+                            @endif
+                        </div>
+                    </li>
+                    @endif
+
                     @if(__isActivePlan(Auth::user()->empresa, 'Vendas'))
                     @canany(['nfe_view', 'orcamento_view'])
 

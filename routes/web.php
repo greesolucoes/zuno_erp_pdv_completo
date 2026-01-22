@@ -17,6 +17,9 @@ use Maatwebsite\Excel\Row;
 Auth::routes();
 Route::post('/reset-pass', 'ResetPasswordController@reset')->name('reset.pass');
 
+// Petshop module routes are maintained in a dedicated file.
+require __DIR__ . '/petshop.php';
+
 Route::get('/clear-all', function () {
     \Artisan::call('cache:clear');
     \Artisan::call('config:clear');

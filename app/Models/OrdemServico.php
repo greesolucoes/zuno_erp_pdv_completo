@@ -11,7 +11,15 @@ class OrdemServico extends Model
 
     protected $fillable = [
         'descricao', 'cliente_id', 'usuario_id', 'empresa_id', 'valor', 'data_inicio', 'data_entrega', 'funcionario_id', 
-        'forma_pagamento', 'codigo_sequencial', 'caixa_id', 'local_id', 'adiantamento', 'veiculo_id'
+        'forma_pagamento', 'codigo_sequencial', 'caixa_id', 'local_id', 'adiantamento', 'veiculo_id',
+
+        // Campos usados pelos módulos Petshop (Hotel/Creche/Estética/Vet)
+        'animal_id', 'plano_id', 'hotel_id', 'creche_id', 'estetica_id', 'estado',
+        'total_sem_desconto', 'modulos', 'modulo_ids',
+    ];
+
+    protected $casts = [
+        'modulo_ids' => 'array',
     ];
 
     public function servicos(){
