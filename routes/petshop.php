@@ -233,7 +233,6 @@ Route::middleware(['authh', 'validaEmpresa'])->group(function () {
                 ->whereNumber('atendimento')
                 ->name('vet.atendimentos.destroy');
             Route::get('atendimentos/opcoes/pacientes', [VetAtendimentosController::class, 'patientsOptions'])
-                ->name('vet.atendimentos.destroy');            Route::get('atendimentos/opcoes/pacientes', [VetAtendimentosController::class, 'patientsOptions'])
                 ->name('vet.atendimentos.patients-options');
             Route::get('atendimentos/pacientes/{animal}', [VetAtendimentosController::class, 'patientDetails'])
                 ->whereNumber('animal')
@@ -268,8 +267,7 @@ Route::middleware(['authh', 'validaEmpresa'])->group(function () {
                         ->whereNumber('status')
                         ->name('destroy');
                 });
-            Route::get('internacoes', [VetInternacoesController::class, 'index'])->name('vet.hospitalizations.index');
-                        Route::get('internacoes/internados', [VetInternacoesController::class, 'inpatients'])->name('vet.hospitalizations.inpatients');
+            Route::get('internacoes/internados', [VetInternacoesController::class, 'inpatients'])->name('vet.hospitalizations.inpatients');
 
             Route::get('internacoes/ocupacao', [VetInternacoesController::class, 'occupancy'])->name('vet.hospitalizations.occupancy');
             Route::get('prontuarios', [VetProntuariosController::class, 'index'])->name('vet.records.index');
@@ -317,7 +315,9 @@ Route::middleware(['authh', 'validaEmpresa'])->group(function () {
             Route::get('exames/tipos', [VetExamesController::class, 'types'])->name('vet.exams.types');
             Route::post('exames/tipos', [VetExamesController::class, 'storeType'])->name('vet.exams.types.store');
 
-            Route::resource('modelos-atendimento', ModeloAtendimentoController::class)->names('vet.modelos-atendimento');
+            Route::resource('modelos-atendimento', ModeloAtendimentoController::class)
+                ->names('vet.modelos-atendimento')
+                ->only(['index', 'create', 'store', 'edit', 'update']);
 
             Route::get('prontuarios/modelos-avaliacao/{modeloAvaliacao}', [VetProntuariosController::class, 'fetchAssessmentModel'])
                 ->name('vet.records.assessment-models.fetch');

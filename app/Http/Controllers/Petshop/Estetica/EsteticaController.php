@@ -663,8 +663,12 @@ class EsteticaController extends Controller
         }
     }
 
-    public function show()
+    public function show(string $id = null)
     {
-        return redirect()->route('estetica.esteticas.agend');
+        if ($id) {
+            return redirect()->route('esteticas.edit', $id);
+        }
+
+        return redirect()->route('esteticas.index');
     }
 }

@@ -23,6 +23,7 @@ class AgendaController extends Controller
     public function __construct()
     {
         $this->middleware('permission:vet_agenda_view', ['only' => ['index']]);
+        $this->middleware('permission:vet_agenda_create', ['only' => ['create']]);
     }
 
     public function index(Request $request): View|ViewFactory
@@ -100,6 +101,11 @@ class AgendaController extends Controller
             'upcomingAppointments' => $upcomingAppointments->all(),
             'statusLegend' => $statusLegend,
         ]);
+    }
+
+    public function create(Request $request): View|ViewFactory
+    {
+        return view('petshop.vet.agenda.agendar');
     }
 
     private function getEmpresaId(): ?int

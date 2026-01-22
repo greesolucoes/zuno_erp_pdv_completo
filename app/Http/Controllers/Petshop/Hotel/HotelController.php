@@ -32,7 +32,7 @@ class HotelController extends Controller
     {
         $this->middleware('permission:hoteis_view', ['only' => ['index', 'show', 'printEnderecoEntrega']]);
         $this->middleware('permission:hoteis_create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:hoteis_edit', ['only' => ['edit', 'update', 'move']]);
+        $this->middleware('permission:hoteis_edit', ['only' => ['edit', 'update', 'move', 'attachServicos']]);
         $this->middleware('permission:hoteis_delete', ['only' => ['destroy']]);
 
         $this->hotel_service = $hotel_service;
@@ -407,14 +407,9 @@ class HotelController extends Controller
         return redirect()->route('hoteis.index');
     }
 
-    public function show()
+    public function show(string $id)
     {
-        $empresa_id = Auth::user()?->empresa?->empresa_id;
-        dd('show');
-        $data = Hotel::where('empresa_id', $empresa_id)
-            ->paginate(env("PAGINACAO"));
-
-        return view('hoteis.agendamento.index', compact('data'));
+        return redirect()->route('hoteis.edit', $id);
     }
 
     public function move(Request $request, Hotel $hotel)
@@ -775,6 +770,25 @@ class HotelController extends Controller
         }
 
         return redirect()->route('hoteis.index');
+    }
+
+    public function attachServicos(Request $request, Hotel $hotel)
+    {
+        __validaObjetoEmpresa($hotel);
+
+        $validated = $request->validate([
+            'servico_ids' => ['array'],
+            'servico_ids.*' => ['integer', 'exists:servicos,id'],
+        ]);
+
+        $servicoIds = $validated['servico_ids'] ?? [];
+
+        if ($servicoIds) {
+            $hotel->servicos()->syncWithoutDetaching($servicoIds);
+            $this->hotel_service->updateValorTotal($hotel->id);
+        }
+
+        return redirect()->back()->with('flash_success', 'Serviços adicionados com sucesso!');
     }
 
     public function printEnderecoEntrega($id){

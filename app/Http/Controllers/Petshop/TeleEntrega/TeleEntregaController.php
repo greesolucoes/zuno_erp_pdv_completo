@@ -14,9 +14,14 @@ class TeleEntregaController extends Controller
     public function __construct()
     {
         $this->middleware('permission:tele_entregas_view', ['only' => ['index', 'show']]);
-        $this->middleware('permission:tele_entregas_create', ['only' => ['preStore', 'store']]);
+        $this->middleware('permission:tele_entregas_create', ['only' => ['create', 'preStore', 'store']]);
         $this->middleware('permission:tele_entregas_edit', ['only' => ['edit', 'update']]);
         $this->middleware('permission:tele_entregas_delete', ['only' => ['destroy']]);
+    }
+
+    public function create()
+    {
+      abort(501, 'Módulo de tele-entregas em desenvolvimento.');
     }
 
     public function index(Request $request)

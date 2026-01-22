@@ -101,7 +101,10 @@ class QuartoController extends Controller
         return redirect()->route('quartos.index');
     }
 
-    public function show(string $id) {}
+    public function show(string $id)
+    {
+        return redirect()->route('quartos.edit', $id);
+    }
 
     public function edit(string $id)
     {
