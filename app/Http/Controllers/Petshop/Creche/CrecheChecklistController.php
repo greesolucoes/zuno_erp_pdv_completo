@@ -36,7 +36,7 @@ class CrecheChecklistController extends Controller
         $especies = Especie::where('empresa_id', $empresaId)->get();
         $racas = Raca::where('empresa_id', $empresaId)->get();
 
-        return view('creche_checklist.create', compact('creche', 'checklist', 'especies', 'racas', 'tipo'));
+        return view('petshop.creche.checklist.create', compact('creche', 'checklist', 'especies', 'racas', 'tipo'));
     }
 
     public function store(Request $request, $crecheId)
@@ -107,7 +107,7 @@ class CrecheChecklistController extends Controller
 
         $animal = $creche->animal;
 
-        $p = view('creche_checklist.imprimir', compact('config', 'item', 'animal'));
+        $p = view('petshop.creche.checklist.imprimir', compact('config', 'item', 'animal'));
 
         $domPdf = new Dompdf(["enable_remote" => true]);
         $domPdf->loadHtml($p);

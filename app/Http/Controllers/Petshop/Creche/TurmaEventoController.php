@@ -68,7 +68,7 @@ class TurmaEventoController extends Controller
                 ->get();
         }
 
-        return view('turmas.eventos.index', compact(
+        return view('petshop.creche.turmas.eventos.index', compact(
             'turmas',
             'eventos',
             'servicos',
@@ -93,7 +93,7 @@ class TurmaEventoController extends Controller
 
         $turmaId = $request->get('turma_id');
 
-        return view('turmas.eventos.create', compact('turmas', 'servicos', 'turmaId'));
+        return view('petshop.creche.turmas.eventos.create', compact('turmas', 'servicos', 'turmaId'));
     }
 
     public function edit(Request $request, $id)
@@ -108,7 +108,7 @@ class TurmaEventoController extends Controller
 
         $turmaId = $request->get('turma_id');
 
-        return view('turmas.eventos.edit', compact('turmas', 'servicos', 'turmaId', 'item'));
+        return view('petshop.creche.turmas.eventos.edit', compact('turmas', 'servicos', 'turmaId', 'item'));
     }
 
     public function store(Request $request)

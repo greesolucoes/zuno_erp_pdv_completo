@@ -42,7 +42,7 @@ class TurmaController extends Controller
 
         $data = $query->paginate(env("PAGINACAO"))->appends($request->all());
 
-        return view('turmas.index', compact('data'));
+        return view('petshop.creche.turmas.index', compact('data'));
     }
 
     public function create()
@@ -50,7 +50,7 @@ class TurmaController extends Controller
         $empresa_id = Auth::user()?->empresa?->empresa_id;
         $funcionarios = Funcionario::where('empresa_id', $empresa_id)->get();
         $turma = new Turma();
-        return view('turmas.create', compact('funcionarios', 'turma'));
+        return view('petshop.creche.turmas.create', compact('funcionarios', 'turma'));
     }
 
     public function store(Request $request)
@@ -100,7 +100,7 @@ class TurmaController extends Controller
             ->whereDate('data_saida', '>=', now())
             ->count();
 
-        return view('turmas.edit', compact('turma', 'funcionarios', 'reservasAtivas'));
+        return view('petshop.creche.turmas.edit', compact('turma', 'funcionarios', 'reservasAtivas'));
     }
 
     public function update(Request $request, string $id)

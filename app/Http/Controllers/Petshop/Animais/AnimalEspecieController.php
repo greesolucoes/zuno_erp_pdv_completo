@@ -31,12 +31,12 @@ class AnimalEspecieController extends Controller
 
     $data = $query->paginate(env("PAGINACAO"))->appends($request->all());
 
-    return view('animais.especies.index', compact('data'));
+    return view('petshop.animais.especies.index', compact('data'));
   }
 
   public function create()
   {
-    return view('animais.especies.create');
+    return view('petshop.animais.especies.create');
   }
 
   public function store(Request $request)
@@ -76,7 +76,7 @@ class AnimalEspecieController extends Controller
     $item = Especie::findOrFail($id);
     __validaObjetoEmpresa($item);
 
-    return view('animais.especies.edit', compact('item'));
+    return view('petshop.animais.especies.edit', compact('item'));
   }
 
   public function update(Request $request, $id)

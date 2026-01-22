@@ -54,7 +54,7 @@ class AnimalPacienteController extends Controller
 
     $data = $query->paginate(env("PAGINACAO"))->appends($request->all());
 
-    return view('animais.pacientes.index', compact('data'));
+    return view('petshop.animais.pacientes.index', compact('data'));
   }
 
   public function crm(Request $request, HistoricoMedicoPacienteService $historyService, $id)
@@ -71,7 +71,7 @@ class AnimalPacienteController extends Controller
 
     $timeline = $historyService->build($empresaId, $animal, $year);
 
-    return view('animais.pacientes.crm', [
+    return view('petshop.animais.pacientes.crm', [
       'animal' => $animal,
       'selectedYear' => $timeline['selectedYear'],
       'availableYears' => $timeline['availableYears'],
@@ -91,7 +91,7 @@ class AnimalPacienteController extends Controller
     $clientes = Cliente::where('empresa_id', $empresa_id)->get();
 
 
-    return view('animais.pacientes.create', compact('pelagens', 'especies', 'racas', 'clientes'));
+    return view('petshop.animais.pacientes.create', compact('pelagens', 'especies', 'racas', 'clientes'));
   }
 
   public function store(Request $request)
@@ -167,7 +167,7 @@ class AnimalPacienteController extends Controller
       ->with('animal')
       ->paginate(env("PAGINACAO"));
 
-    return view('animais.pacientes.edit', compact('item', 'pelagens', 'especies', 'racas', 'clientes', 'data', "consultas", "agendamentos"));
+    return view('petshop.animais.pacientes.edit', compact('item', 'pelagens', 'especies', 'racas', 'clientes', 'data', "consultas", "agendamentos"));
   }
 
   public function update(Request $request, $id)
@@ -216,7 +216,7 @@ class AnimalPacienteController extends Controller
 
   public function import(Request $request)
   {
-    return view('animais.pacientes.import');
+    return view('petshop.animais.pacientes.import');
   }
 
   public function downloadModelo()

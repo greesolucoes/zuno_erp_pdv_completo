@@ -24,12 +24,12 @@ class TipoTeleEntregaController extends Controller
       $data = TipoTeleEntrega::where('empresa_id', $empresa_id)
       ->paginate(env("PAGINACAO"));
 
-      return view('tele_entregas.tipos.index', compact('data'));
+      return view('petshop.tele_entregas.tipos.index', compact('data'));
     }
 
     public function create()
     {
-      return view('tele_entregas.tipos.create',);
+      return view('petshop.tele_entregas.tipos.create');
     }
 
     public function store(Request $request)
@@ -66,7 +66,7 @@ class TipoTeleEntregaController extends Controller
       $item = TipoTeleEntrega::findOrFail($id);
       __validaObjetoEmpresa($item);
 
-      return view('tele_entregas.tipos.edit', compact('item'));
+      return view('petshop.tele_entregas.tipos.edit', compact('item'));
     }
 
     public function update(Request $request, $id)

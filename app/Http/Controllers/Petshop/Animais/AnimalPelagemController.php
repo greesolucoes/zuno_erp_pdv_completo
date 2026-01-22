@@ -30,12 +30,12 @@ class AnimalPelagemController extends Controller
 
     $data = $query->paginate(env("PAGINACAO"))->appends($request->all());
 
-    return view('animais.pelagens.index', compact('data'));
+    return view('petshop.animais.pelagens.index', compact('data'));
   }
 
   public function create()
   {
-    return view('animais.pelagens.create');
+    return view('petshop.animais.pelagens.create');
   }
 
   public function store(Request $request)
@@ -74,7 +74,7 @@ class AnimalPelagemController extends Controller
     $item = Pelagem::findOrFail($id);
     __validaObjetoEmpresa($item);
 
-    return view('animais.pelagens.edit', compact('item'));
+    return view('petshop.animais.pelagens.edit', compact('item'));
   }
 
   public function update(Request $request, $id)

@@ -36,7 +36,7 @@ class AnimalRacaController extends Controller
 
     $data = $query->paginate(env("PAGINACAO"))->appends($request->all());
 
-    return view('animais.racas.index', compact('data'));
+    return view('petshop.animais.racas.index', compact('data'));
   }
 
   public function create()
@@ -45,7 +45,7 @@ class AnimalRacaController extends Controller
 
     $especies = Especie::where('empresa_id', $empresa_id)->get();
 
-    return view('animais.racas.create', compact('especies'));
+    return view('petshop.animais.racas.create', compact('especies'));
   }
 
   public function store(Request $request)
@@ -91,7 +91,7 @@ class AnimalRacaController extends Controller
 
     $especies = Especie::where('empresa_id', $request->empresa_id)->get();
 
-    return view('animais.racas.edit', compact('item', 'especies'));
+    return view('petshop.animais.racas.edit', compact('item', 'especies'));
   }
 
   public function update(Request $request, $id)

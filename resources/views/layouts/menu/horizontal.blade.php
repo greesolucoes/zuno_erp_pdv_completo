@@ -571,47 +571,96 @@
                     @endcanany
                     @endif
 
-                    @if(__isActivePlan(Auth::user()->empresa, 'Pet Shop'))
-                    @canany([
-                        'pacientes_view', 'pacientes_create', 'pacientes_edit', 'pacientes_delete',
-                        'especies_view', 'especies_create', 'especies_edit', 'especies_delete',
-                        'racas_view', 'racas_create', 'racas_edit', 'racas_delete',
-                        'pelagens_view', 'pelagens_create', 'pelagens_edit', 'pelagens_delete',
-                        'diagnosticos_view', 'diagnosticos_create', 'diagnosticos_edit', 'diagnosticos_delete',
-                        'exames_view', 'exames_create', 'exames_edit', 'exames_delete',
-                        'consultas_view', 'consultas_create', 'consultas_edit', 'consultas_delete',
-                        'petshop_config_view', 'petshop_config_edit',
-                        'petshop_planos_view', 'petshop_planos_create', 'petshop_planos_edit', 'petshop_planos_delete',
-                        'petshop_planos_usuarios_view', 'petshop_planos_usuarios_create', 'petshop_planos_usuarios_edit', 'petshop_planos_usuarios_delete',
-                        'petshop_planos_usuarios_avulso_view', 'petshop_planos_usuarios_avulso_edit', 'petshop_planos_usuarios_avulso_delete',
-                        'vet_medicos_view', 'vet_medicos_create', 'vet_medicos_edit', 'vet_medicos_delete',
-                        'vet_salas_atendimento_view', 'vet_salas_atendimento_create', 'vet_salas_atendimento_edit', 'vet_salas_atendimento_delete',
-                        'vet_salas_internacao_view', 'vet_salas_internacao_create', 'vet_salas_internacao_edit', 'vet_salas_internacao_delete',
-                        'vet_checklist_view', 'vet_checklist_create', 'vet_checklist_edit', 'vet_checklist_delete',
-                        'vet_alergias_view', 'vet_alergias_create', 'vet_alergias_edit', 'vet_alergias_delete',
-                        'vet_condicoes_cronicas_view', 'vet_condicoes_cronicas_create', 'vet_condicoes_cronicas_edit', 'vet_condicoes_cronicas_delete',
-                        'vet_medicamentos_view', 'vet_medicamentos_create', 'vet_medicamentos_edit', 'vet_medicamentos_delete',
-                        'vet_modelos_atendimento_view', 'vet_modelos_atendimento_create', 'vet_modelos_atendimento_edit', 'vet_modelos_atendimento_delete',
-                        'vet_modelos_avaliacao_view', 'vet_modelos_avaliacao_create', 'vet_modelos_avaliacao_edit', 'vet_modelos_avaliacao_delete',
-                        'vet_modelos_prescricao_view', 'vet_modelos_prescricao_create', 'vet_modelos_prescricao_edit', 'vet_modelos_prescricao_delete',
-                        'vet_atendimentos_view', 'vet_atendimentos_create', 'vet_atendimentos_edit', 'vet_atendimentos_delete',
-                        'vet_internacoes_view', 'vet_internacoes_create', 'vet_internacoes_edit', 'vet_internacoes_delete',
-                        'vet_prontuarios_view', 'vet_prontuarios_create', 'vet_prontuarios_edit', 'vet_prontuarios_delete',
-                        'vet_exames_view', 'vet_exames_create', 'vet_exames_edit', 'vet_exames_delete',
-                        'vet_prescricoes_view', 'vet_prescricoes_create', 'vet_prescricoes_edit', 'vet_prescricoes_delete',
-                        'vet_vacinacoes_view', 'vet_vacinacoes_create', 'vet_vacinacoes_edit', 'vet_vacinacoes_delete',
-                        'vet_cartoes_vacinacao_view', 'vet_cartoes_vacinacao_create', 'vet_cartoes_vacinacao_edit', 'vet_cartoes_vacinacao_delete',
-                        'vet_agenda_view', 'vet_agenda_create', 'vet_agenda_edit', 'vet_agenda_delete',
-                        'vacinas_view', 'vacinas_create', 'vacinas_edit', 'vacinas_delete',
-                        'vacinacoes_view', 'vacinacoes_create', 'vacinacoes_edit', 'vacinacoes_delete',
-                        'tele_entregas_view', 'tele_entregas_create', 'tele_entregas_edit', 'tele_entregas_delete',
-                        'tipos_tele_entregas_view', 'tipos_tele_entregas_create', 'tipos_tele_entregas_edit', 'tipos_tele_entregas_delete',
-                        'hoteis_view', 'hoteis_create', 'hoteis_edit', 'hoteis_delete',
-                        'quartos_view', 'quartos_create', 'quartos_edit', 'quartos_delete',
-                        'creches_view', 'creches_create', 'creches_edit', 'creches_delete',
-                        'turmas_view', 'turmas_create', 'turmas_edit', 'turmas_delete',
-                        'esteticas_view', 'esteticas_create', 'esteticas_edit', 'esteticas_delete',
-                    ])
+                    @php
+                        $petshopPermissions = [
+                            'pacientes_view', 'pacientes_create', 'pacientes_edit', 'pacientes_delete',
+                            'especies_view', 'especies_create', 'especies_edit', 'especies_delete',
+                            'racas_view', 'racas_create', 'racas_edit', 'racas_delete',
+                            'pelagens_view', 'pelagens_create', 'pelagens_edit', 'pelagens_delete',
+                            'diagnosticos_view', 'diagnosticos_create', 'diagnosticos_edit', 'diagnosticos_delete',
+                            'exames_view', 'exames_create', 'exames_edit', 'exames_delete',
+                            'consultas_view', 'consultas_create', 'consultas_edit', 'consultas_delete',
+                            'petshop_config_view', 'petshop_config_edit',
+                            'petshop_planos_view', 'petshop_planos_create', 'petshop_planos_edit', 'petshop_planos_delete',
+                            'petshop_planos_usuarios_view', 'petshop_planos_usuarios_create', 'petshop_planos_usuarios_edit', 'petshop_planos_usuarios_delete',
+                            'petshop_planos_usuarios_avulso_view', 'petshop_planos_usuarios_avulso_edit', 'petshop_planos_usuarios_avulso_delete',
+                            'vet_medicos_view', 'vet_medicos_create', 'vet_medicos_edit', 'vet_medicos_delete',
+                            'vet_salas_atendimento_view', 'vet_salas_atendimento_create', 'vet_salas_atendimento_edit', 'vet_salas_atendimento_delete',
+                            'vet_salas_internacao_view', 'vet_salas_internacao_create', 'vet_salas_internacao_edit', 'vet_salas_internacao_delete',
+                            'vet_checklist_view', 'vet_checklist_create', 'vet_checklist_edit', 'vet_checklist_delete',
+                            'vet_alergias_view', 'vet_alergias_create', 'vet_alergias_edit', 'vet_alergias_delete',
+                            'vet_condicoes_cronicas_view', 'vet_condicoes_cronicas_create', 'vet_condicoes_cronicas_edit', 'vet_condicoes_cronicas_delete',
+                            'vet_medicamentos_view', 'vet_medicamentos_create', 'vet_medicamentos_edit', 'vet_medicamentos_delete',
+                            'vet_modelos_atendimento_view', 'vet_modelos_atendimento_create', 'vet_modelos_atendimento_edit', 'vet_modelos_atendimento_delete',
+                            'vet_modelos_avaliacao_view', 'vet_modelos_avaliacao_create', 'vet_modelos_avaliacao_edit', 'vet_modelos_avaliacao_delete',
+                            'vet_modelos_prescricao_view', 'vet_modelos_prescricao_create', 'vet_modelos_prescricao_edit', 'vet_modelos_prescricao_delete',
+                            'vet_atendimentos_view', 'vet_atendimentos_create', 'vet_atendimentos_edit', 'vet_atendimentos_delete',
+                            'vet_internacoes_view', 'vet_internacoes_create', 'vet_internacoes_edit', 'vet_internacoes_delete',
+                            'vet_prontuarios_view', 'vet_prontuarios_create', 'vet_prontuarios_edit', 'vet_prontuarios_delete',
+                            'vet_exames_view', 'vet_exames_create', 'vet_exames_edit', 'vet_exames_delete',
+                            'vet_prescricoes_view', 'vet_prescricoes_create', 'vet_prescricoes_edit', 'vet_prescricoes_delete',
+                            'vet_vacinacoes_view', 'vet_vacinacoes_create', 'vet_vacinacoes_edit', 'vet_vacinacoes_delete',
+                            'vet_cartoes_vacinacao_view', 'vet_cartoes_vacinacao_create', 'vet_cartoes_vacinacao_edit', 'vet_cartoes_vacinacao_delete',
+                            'vet_agenda_view', 'vet_agenda_create', 'vet_agenda_edit', 'vet_agenda_delete',
+                            'vacinas_view', 'vacinas_create', 'vacinas_edit', 'vacinas_delete',
+                            'vacinacoes_view', 'vacinacoes_create', 'vacinacoes_edit', 'vacinacoes_delete',
+                            'tele_entregas_view', 'tele_entregas_create', 'tele_entregas_edit', 'tele_entregas_delete',
+                            'tipos_tele_entregas_view', 'tipos_tele_entregas_create', 'tipos_tele_entregas_edit', 'tipos_tele_entregas_delete',
+                            'hoteis_view', 'hoteis_create', 'hoteis_edit', 'hoteis_delete',
+                            'quartos_view', 'quartos_create', 'quartos_edit', 'quartos_delete',
+                            'creches_view', 'creches_create', 'creches_edit', 'creches_delete',
+                            'turmas_view', 'turmas_create', 'turmas_edit', 'turmas_delete',
+                            'esteticas_view', 'esteticas_create', 'esteticas_edit', 'esteticas_delete',
+                        ];
+
+                        $petshopPetsPermissions = [
+                            'pacientes_view', 'especies_view', 'racas_view', 'pelagens_view',
+                            'petshop_planos_usuarios_view', 'petshop_planos_usuarios_avulso_view',
+                        ];
+
+                        $petshopPlanosPermissions = [
+                            'petshop_planos_view',
+                            'petshop_planos_usuarios_view',
+                            'petshop_planos_usuarios_avulso_view',
+                        ];
+
+                        $petshopVetPermissions = [
+                            'vet_atendimentos_view',
+                            'vet_medicos_view',
+                            'vet_salas_atendimento_view',
+                            'vet_salas_internacao_view',
+                            'vet_checklist_view',
+                            'vet_alergias_view',
+                            'vet_condicoes_cronicas_view',
+                            'vet_medicamentos_view',
+                            'vet_modelos_atendimento_view',
+                            'vet_modelos_avaliacao_view',
+                            'vet_modelos_prescricao_view',
+                            'vet_prontuarios_view',
+                            'vet_exames_view',
+                            'vet_prescricoes_view',
+                            'vet_vacinacoes_view',
+                            'vet_internacoes_view',
+                            'vacinas_view',
+                        ];
+
+                        $petshopHotelPermissions = [
+                            'hoteis_view',
+                            'quartos_view',
+                        ];
+
+                        $petshopCrechePermissions = [
+                            'creches_view',
+                            'turmas_view',
+                        ];
+
+                        $petshopEsteticaPermissions = [
+                            'esteticas_view',
+                        ];
+                    @endphp
+
+                    @if(__isActivePlan(Auth::user()->empresa, 'Pet Shop') || Auth::user()->canany($petshopPermissions))
+                    @canany($petshopPermissions)
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle arrow-none" href="#" id="petshop-menu" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="ri-bear-smile-fill"></i> <div class="arrow-down"></div>
@@ -619,39 +668,57 @@
                         <div class="dropdown-menu" aria-labelledby="petshop-menu">
                             <label>Pet Shop</label>
 
-                            @if (__isActivePlan(Auth::user()->empresa, 'Pets'))
+                            @if (__isActivePlan(Auth::user()->empresa, 'Pets') || Auth::user()->canany($petshopPetsPermissions))
                                 @if (Route::has('animais.pacientes.index'))
-                                <a href="{{ route('animais.pacientes.index') }}" class="dropdown-item">Pets</a>
+                                    @can('pacientes_view')
+                                    <a href="{{ route('animais.pacientes.index') }}" class="dropdown-item">Pets</a>
+                                    @endcan
                                 @endif
                                 @if (Route::has('animais.especies.index'))
-                                <a href="{{ route('animais.especies.index') }}" class="dropdown-item">Espécies</a>
+                                    @can('especies_view')
+                                    <a href="{{ route('animais.especies.index') }}" class="dropdown-item">Espécies</a>
+                                    @endcan
                                 @endif
                                 @if (Route::has('animais.racas.index'))
-                                <a href="{{ route('animais.racas.index') }}" class="dropdown-item">Raças</a>
+                                    @can('racas_view')
+                                    <a href="{{ route('animais.racas.index') }}" class="dropdown-item">Raças</a>
+                                    @endcan
                                 @endif
                                 @if (Route::has('animais.pelagens.index'))
-                                <a href="{{ route('animais.pelagens.index') }}" class="dropdown-item">Pelagens</a>
+                                    @can('pelagens_view')
+                                    <a href="{{ route('animais.pelagens.index') }}" class="dropdown-item">Pelagens</a>
+                                    @endcan
                                 @endif
                             @endif
 
-                            @if (__isActivePlan(Auth::user()->empresa, 'Planos') && Route::has('petshop.gerenciar.planos'))
-                            <a href="{{ route('petshop.gerenciar.planos') }}" class="dropdown-item">Gerenciar Planos</a>
+                            @if ((__isActivePlan(Auth::user()->empresa, 'Planos') || Auth::user()->canany($petshopPlanosPermissions)) && Route::has('petshop.gerenciar.planos'))
+                                @can('petshop_planos_view')
+                                <a href="{{ route('petshop.gerenciar.planos') }}" class="dropdown-item">Gerenciar Planos</a>
+                                @endcan
                             @endif
 
-                            @if (__isActivePlan(Auth::user()->empresa, 'Veterinario') && Route::has('vet.atendimentos.index'))
-                            <a href="{{ route('vet.atendimentos.index') }}" class="dropdown-item">Atendimento Veterinário</a>
+                            @if ((__isActivePlan(Auth::user()->empresa, 'Veterinario') || Auth::user()->canany($petshopVetPermissions)) && Route::has('vet.atendimentos.index'))
+                                @can('vet_atendimentos_view')
+                                <a href="{{ route('vet.atendimentos.index') }}" class="dropdown-item">Atendimento Veterinário</a>
+                                @endcan
                             @endif
 
-                            @if (__isActivePlan(Auth::user()->empresa, 'Hotel') && Route::has('hoteis.index'))
-                            <a href="{{ route('hoteis.index') }}" class="dropdown-item">Hotel - Reservas</a>
+                            @if ((__isActivePlan(Auth::user()->empresa, 'Hotel') || Auth::user()->canany($petshopHotelPermissions)) && Route::has('hoteis.index'))
+                                @can('hoteis_view')
+                                <a href="{{ route('hoteis.index') }}" class="dropdown-item">Hotel - Reservas</a>
+                                @endcan
                             @endif
 
-                            @if (__isActivePlan(Auth::user()->empresa, 'Creche') && Route::has('creches.index'))
-                            <a href="{{ route('creches.index') }}" class="dropdown-item">Creche - Reservas</a>
+                            @if ((__isActivePlan(Auth::user()->empresa, 'Creche') || Auth::user()->canany($petshopCrechePermissions)) && Route::has('creches.index'))
+                                @can('creches_view')
+                                <a href="{{ route('creches.index') }}" class="dropdown-item">Creche - Reservas</a>
+                                @endcan
                             @endif
 
-                            @if (__isActivePlan(Auth::user()->empresa, 'Estetica') && Route::has('esteticas.index'))
-                            <a href="{{ route('esteticas.index') }}" class="dropdown-item">Esteticista</a>
+                            @if ((__isActivePlan(Auth::user()->empresa, 'Estetica') || Auth::user()->canany($petshopEsteticaPermissions)) && Route::has('esteticas.index'))
+                                @can('esteticas_view')
+                                <a href="{{ route('esteticas.index') }}" class="dropdown-item">Esteticista</a>
+                                @endcan
                             @endif
 
                             @if (__isActivePlan(Auth::user()->empresa, 'Agendamentos-Pet') && Route::has('agendamentos.index'))

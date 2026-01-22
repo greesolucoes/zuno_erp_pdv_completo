@@ -43,7 +43,7 @@ class TeleEntregaController extends Controller
       // $tipos = TipoTeleEntrega::where('empresa_id', $empresa_id)->get();
       // return response()->json($tipos);
 
-      return view('tele_entregas.index', compact('data', 'clientes', 'status'));	
+      return view('petshop.tele_entregas.index', compact('data', 'clientes', 'status'));	
     }
 
     public function show(Request $request, $id)
@@ -56,7 +56,7 @@ class TeleEntregaController extends Controller
       $item = TeleEntrega::findOrFail($id);
       // return \response()->json($item);
 
-      return view('tele_entregas.show', compact('clientes', 'tipos', 'item'));
+      return view('petshop.tele_entregas.show', compact('clientes', 'tipos', 'item'));
     }
     
     public function preStore(Request $request){
@@ -153,7 +153,7 @@ class TeleEntregaController extends Controller
 
       $item->foi_pago = $item->foi_pago == 1 ? 'S' : 'N';
 
-      return view('tele_entregas.edit', compact('item', 'clientes', 'tipos'));
+      return view('petshop.tele_entregas.edit', compact('item', 'clientes', 'tipos'));
     }
 
     public function update(Request $request, $id)

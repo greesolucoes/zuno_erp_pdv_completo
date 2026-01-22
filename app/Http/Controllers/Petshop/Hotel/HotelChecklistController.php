@@ -36,7 +36,7 @@ class HotelChecklistController extends Controller
         $especies = Especie::where('empresa_id', $empresaId)->get();
         $racas = Raca::where('empresa_id', $empresaId)->get();
 
-        return view('hotel_checklist.create', compact('hotel', 'checklist', 'especies', 'racas','tipo'));
+        return view('petshop.hotel.checklist.create', compact('hotel', 'checklist', 'especies', 'racas','tipo'));
     
     }
 
@@ -108,7 +108,7 @@ $data = $request->except('_token', 'anexos', 'anexos_to_remove', 'anexos_url', '
 
         $config = Empresa::where('id', request()->empresa_id)->first();
 
-        $p = view('hotel_checklist.imprimir', compact('config', 'item', 'animal'));
+        $p = view('petshop.hotel.checklist.imprimir', compact('config', 'item', 'animal'));
 
         $domPdf = new Dompdf(["enable_remote" => true]);
         $domPdf->loadHtml($p);

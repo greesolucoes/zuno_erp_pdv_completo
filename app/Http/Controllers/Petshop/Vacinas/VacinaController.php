@@ -70,7 +70,7 @@ class VacinaController extends Controller
         $opcoesStatus = ['' => 'Todos os status'] + Vacina::opcoesStatus();
         $opcoesEspecies = ['' => 'Todas as espécies'] + $this->buscarOpcoesEspecies();
 
-        return view('vacina.vacinas.index', [
+        return view('petshop.vacinas.index', [
             'vaccines' => $vacinas,
             'groupOptions' => $opcoesGrupos,
             'speciesOptions' => $opcoesEspecies,
@@ -81,7 +81,7 @@ class VacinaController extends Controller
 
     public function create(): View|ViewFactory
     {
-        return view('vacina.vacinas.create', $this->montarDadosFormulario());
+        return view('petshop.vacinas.create', $this->montarDadosFormulario());
     }
 
     public function store(SalvarVacinaRequest $request): RedirectResponse
@@ -133,7 +133,7 @@ class VacinaController extends Controller
 
         $dadosFormulario = $this->montarDadosFormulario($this->formatarVacina($vacina));
 
-        return view('vacina.vacinas.edit', $dadosFormulario);
+        return view('petshop.vacinas.edit', $dadosFormulario);
     }
 
     public function update(SalvarVacinaRequest $request, Vacina $vacina): RedirectResponse
