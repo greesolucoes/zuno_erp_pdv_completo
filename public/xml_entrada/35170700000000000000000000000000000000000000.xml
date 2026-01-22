@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe xmlns="http://www.portalfiscal.inf.br/nfe">
+    <infNFe versao="4.00" Id="NFe35170700000000000000000000000000000000000000">
+      <ide>
+        <cUF>35</cUF>
+        <cNF>12345678</cNF>
+        <natOp>Venda de mercadoria</natOp>
+        <mod>55</mod>
+        <serie>1</serie>
+        <nNF>12345</nNF>
+        <dhEmi>2025-07-26T12:00:00-03:00</dhEmi>
+        <tpNF>1</tpNF>
+        <idDest>1</idDest>
+        <cMunFG>3550308</cMunFG>
+        <tpImp>1</tpImp>
+        <tpEmis>1</tpEmis>
+        <cDV>0</cDV>
+        <tpAmb>1</tpAmb>
+        <finNFe>1</finNFe>
+        <indFinal>1</indFinal>
+        <indPres>1</indPres>
+        <procEmi>0</procEmi>
+        <verProc>1.0</verProc>
+      </ide>
+      <emit>
+        <CNPJ>12345678000195</CNPJ>
+        <xNome>Empresa Emitente Ltda</xNome>
+        <enderEmit>
+          <xLgr>Rua das Flores</xLgr>
+          <nro>100</nro>
+          <xBairro>Centro</xBairro>
+          <cMun>3550308</cMun>
+          <xMun>São Paulo</xMun>
+          <UF>SP</UF>
+          <CEP>01000000</CEP>
+          <cPais>1058</cPais>
+          <xPais>Brasil</xPais>
+          <fone>1133334444</fone>
+        </enderEmit>
+        <IE>1234567890</IE>
+        <CRT>3</CRT>
+      </emit>
+      <dest>
+        <CNPJ>98765432000100</CNPJ>
+        <xNome>Cliente Exemplo S/A</xNome>
+        <enderDest>
+          <xLgr>Avenida Brasil</xLgr>
+          <nro>200</nro>
+          <xBairro>Centro</xBairro>
+          <cMun>3550308</cMun>
+          <xMun>São Paulo</xMun>
+          <UF>SP</UF>
+          <CEP>02000000</CEP>
+          <cPais>1058</cPais>
+          <xPais>Brasil</xPais>
+        </enderDest>
+        <indIEDest>1</indIEDest>
+        <IE>987654321</IE>
+      </dest>
+      <det nItem="1">
+        <prod>
+          <cProd>001</cProd>
+          <xProd>Produto Teste</xProd>
+          <NCM>61091000</NCM>
+          <CFOP>5102</CFOP>
+          <uCom>UN</uCom>
+          <qCom>10.00</qCom>
+          <vUnCom>100.00</vUnCom>
+          <vProd>1000.00</vProd>
+          <uTrib>UN</uTrib>
+          <qTrib>10.00</qTrib>
+          <vUnTrib>100.00</vUnTrib>
+        </prod>
+        <imposto>
+          <ICMS>
+            <ICMS00>
+              <orig>0</orig>
+              <CST>00</CST>
+              <modBC>3</modBC>
+              <vBC>1000.00</vBC>
+              <pICMS>18.00</pICMS>
+              <vICMS>180.00</vICMS>
+            </ICMS00>
+          </ICMS>
+        </imposto>
+      </det>
+      <transp>
+        <modFrete>1</modFrete>
+        <transporta>
+          <CNPJ>45678912000188</CNPJ>
+          <xNome>Transportadora Exemplo Ltda</xNome>
+          <IE>1122334455</IE>
+          <xEnder>Rodovia SP 101, km 10</xEnder>
+          <xMun>Campinas</xMun>
+          <UF>SP</UF>
+        </transporta>
+        <veicTransp>
+          <placa>ABC1234</placa>
+          <UF>SP</UF>
+          <RNTC>12345678</RNTC>
+        </veicTransp>
+      </transp>
+      <total>
+        <ICMSTot>
+          <vBC>1000.00</vBC>
+          <vICMS>180.00</vICMS>
+          <vProd>1000.00</vProd>
+          <vNF>1000.00</vNF>
+        </ICMSTot>
+      </total>
+      <infAdic>
+        <infCpl>Entrega via transportadora: Transportadora Exemplo Ltda</infCpl>
+      </infAdic>
+    </infNFe>
+  </NFe>
+  <protNFe versao="4.00">
+    <infProt>
+      <tpAmb>1</tpAmb>
+      <verAplic>SP_NFE_PL_009</verAplic>
+      <chNFe>35170700000000000000000000000000000000000000</chNFe>
+      <dhRecbto>2025-07-26T12:01:00-03:00</dhRecbto>
+      <nProt>135220000000000</nProt>
+      <digVal>abcde1234567890==</digVal>
+      <cStat>100</cStat>
+      <xMotivo>Autorizado o uso da NF-e</xMotivo>
+    </infProt>
+  </protNFe>
+</nfeProc>
