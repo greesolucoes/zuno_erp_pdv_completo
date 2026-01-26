@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o as s,c as a,a as t}from"./index-DKrHuM0u.js";const c={},i={style:{padding:"24px"}};function n(r,e){return s(),a("section",i,[...e[0]||(e[0]=[t("h1",null,"Nova NFS-e (Emissão simplificada)",-1)])])}const l=o(c,[["render",n]]);export{l as default};

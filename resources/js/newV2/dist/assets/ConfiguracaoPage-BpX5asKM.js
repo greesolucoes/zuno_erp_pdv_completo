@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o as t,c as n,a as r}from"./index-DKrHuM0u.js";const s={},a={style:{padding:"24px"}};function c(f,e){return t(),n("section",a,[...e[0]||(e[0]=[r("h1",null,"Configurações",-1)])])}const d=o(s,[["render",c]]);export{d as default};

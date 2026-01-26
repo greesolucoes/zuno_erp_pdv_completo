@@ -1,0 +1,1 @@
+import{d as t,p as n,c as a,a as s,u as r,o as p}from"./index-DKrHuM0u.js";const u={style:{padding:"24px"}},i=t({__name:"LogoutPage",setup(c){const o=r();return n(()=>{o.replace({name:"login"})}),(d,e)=>(p(),a("section",u,[...e[0]||(e[0]=[s("h1",null,"Saindo...",-1)])]))}});export{i as default};

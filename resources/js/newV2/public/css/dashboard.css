@@ -1,0 +1,366 @@
+.jdash {
+    position: relative;
+}
+
+/*.coluna {
+    float: left;
+    min-height: 1px;
+}*/
+
+.jdash .sector {
+    margin: 15px 0;
+    background: rgba(204, 204, 204, 0.1);
+    border: 1px dashed #bbb;
+    display: none;
+}
+
+.jdash .widget {
+    position: relative;
+    display: none;
+    /*border: 1px solid #bbb;*/
+    margin: 15px 0;
+    z-index: 5;
+    background-color: #f7f7f7;
+    border-top: solid 1px #9DB3A1;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.jdash .widget.fechado {
+    /*-webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;*/
+}
+
+.jdash .widget.movendo {
+    opacity: .65;
+    z-index: 10;
+}
+
+.jdash .cabecalho {
+    cursor: move;
+    margin: 0;
+    font-size: 20px;
+    color: #709E77;
+    padding: 10px;
+    position: relative;
+    font-weight: 400;
+    border-bottom: 1px solid #ECECEC;
+    background: #E4E4E4;
+    background: -moz-linear-gradient(top, #E4E4E4 0%, #f7f7f7 100%);
+    background: -webkit-linear-gradient(top, #E4E4E4 0%, #f7f7f7 100%);
+    background: linear-gradient(to bottom, #E4E4E4 0%, #f7f7f7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E4E4E4', endColorstr='#f7f7f7', GradientType=0);
+}
+
+.jdash .cabecalho img {
+    vertical-align: text-top;
+    padding-right: 10px;
+    padding-left: 5px;
+    height: 25px;
+}
+
+.jdash .widget.movendo,
+.jdash .widget.movendo .jdash .cabecalho {
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+}
+
+/*.jdash .cabecalho:hover {
+    color: #000;
+}*/
+
+.jdash .cabecalho-inner {
+    /*background: url(images/grain.png);
+    padding: 0 12px;*/
+}
+
+.jdash .widget.fechado .jdash .cabecalho {
+    border-bottom: 0;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.jdash-collapse {
+    position: absolute;
+    right: 5px;
+    top: 9px;
+    display: none;
+    height: 30px;
+    width: 30px;
+    background: url(images/arrows.png) no-repeat 11px 13px;
+    cursor: pointer;
+}
+
+.jdash-collapse:hover {
+    background-position: 11px -12px;
+}
+
+.jdash .widget.fechado .jdash-collapse {
+    background-position: -10px 12px;
+}
+
+.jdash .widget.fechado .jdash-collapse:hover {
+    background-position: -10px -13px;
+}
+
+.jdash .widget:hover .jdash-collapse {
+    display: block;
+}
+
+.jdash-toolbar {
+    padding-bottom: 8px;
+}
+
+.jdash .widget:hover .jdash-toolbar {
+    display: block;
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar button {
+    border: 1px solid #888;
+    padding: 4px 10px;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 10px;
+    color: #333;
+    cursor: default;
+    margin: 0 2px;
+    background: #ddd;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#ddd));
+    background: -webkit-linear-gradient(top, #fff, #ddd);
+    background: -moz-linear-gradient(top, #fff, #ddd);
+    background: -ms-linear-gradient(top, #fff, #ddd);
+    background: -o-linear-gradient(top, #fff, #ddd);
+    background: linear-gradient(top, #fff, #ddd);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#dddddd');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#dddddd')";
+    -webkit-box-shadow: 0 1px 0 0 #f6f6f6;
+    -moz-box-shadow: 0 1px 0 0 #f6f6f6;
+    box-shadow: 0 1px 0 0 #f6f6f6;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar button.left {
+    margin-right: 0;
+    -webkit-border-radius: 3px 0 0 3px;
+    -moz-border-radius: 3px 0 0 3px;
+    border-radius: 3px 0 0 3px;
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar button.center {
+    margin: 0;
+    border-left: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar button.right {
+    margin-left: 0;
+    border-left: 0;
+    -webkit-border-radius: 0 3px 3px 0;
+    -moz-border-radius: 0 3px 3px 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar button:active {
+    text-shadow: 0 1px 0 #ccc;
+    border-color: #555;
+    background: #999;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#ccc), to(#999));
+    background: -webkit-linear-gradient(top, #ccc, #999);
+    background: -moz-linear-gradient(top, #ccc, #999);
+    background: -ms-linear-gradient(top, #ccc, #999);
+    background: -o-linear-gradient(top, #ccc, #999);
+    background: linear-gradient(top, #ccc, #999);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc', endColorstr='#999999');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ccc', endColorstr='#999999')";
+    -webkit-box-shadow: inset 0 0 5px 0 #333, 0 1px 0 0 #f6f6f6;
+    -moz-box-shadow: inset 0 0 5px 0 #333, 0 1px 0 0 #f6f6f6;
+    box-shadow: inset 0 0 5px 0 #333, 0 1px 0 0 #f6f6f6;
+}
+
+.jdash-toolbar.compact {
+    position: absolute;
+    display: none;
+    right: 30px;
+    top: -1px;
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar.compact button {
+    padding: 3px 10px;
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar.compact a.jdash-icon {
+    position: relative;
+    top: 3px;
+    display: block;
+    float: left;
+    width: 12px;
+    height: 12px;
+    padding: 7px;
+    opacity: .3;
+    -ms-filter: "alpha(opacity=30)";
+    filter: alpha(opacity=30);
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar.compact a.jdash-icon:hover {
+    opacity: 1;
+    -ms-filter: "alpha(opacity=100)";
+    filter: alpha(opacity=100);
+}
+
+.jdash .widget .jdash .cabecalho .jdash-toolbar.compact a.jdash-icon img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -6px;
+    margin-top: -6px;
+}
+
+/*.jdash-info {
+    position: relative;
+    background: #f6f6f6 url(images/info.png) no-repeat 10px 11px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 9px 10px 8px 10px;
+    padding-left: 32px;
+    margin: -16px;
+    margin-bottom: 15px;
+    font-weight: normal;
+    color: #888;
+    font: italic 11px/18px "Lucida Grande",Verdana,Arial,sans-serif;
+}
+
+.jdash-info-arrow_fill, .jdash-info-arrow_stroke {
+    position: absolute;
+    left: 13px;
+    bottom: 100%;
+    width: 0;
+    height: 0;
+    border: 3px solid transparent;
+    border-bottom-color: #f4f4f4;
+    z-index: 2;
+}
+
+.jdash-info-arrow_stroke {
+    margin-bottom: 1px;
+    border-bottom-color: #ccc;
+    z-index: 1;
+}*/
+
+.jdash-body {
+    /*color: #666;*/
+    padding: 15px;
+    /*border: 1px solid #fff;
+    background: #fafafa;
+    background: -webkit-gradient(linear,0 0,0 100%,color-stop(0.8,#fcfcfc),color-stop(1,#fafafa));
+    background: -webkit-linear-gradient(top,#fcfcfc 80%,#fafafa);
+    background: -moz-linear-gradient(top,#fcfcfc 80%,#fafafa);
+    background: -ms-linear-gradient(top,#fcfcfc 80%,#fafafa);
+    background: -o-linear-gradient(top,#fcfcfc 80%,#fafafa);
+    background: linear-gradient(top,#fcfcfc 80%,#fafafa);
+    -webkit-border-radius: 0 0 2px 2px;
+    -moz-border-radius: 0 0 2px 2px;
+    border-radius: 0 0 2px 2px;*/
+}
+
+.jdash-body.table {
+    padding: 7px;
+    margin: 0;
+}
+
+.jdash-body.table table {
+    margin: 0;
+    background-color: transparent;
+}
+
+.jdash-body.table .table>thead>tr>th {
+    color: #709E77;
+    font-weight: normal;
+    vertical-align: bottom;
+    border-bottom: 1px solid #ECECEC;
+}
+
+/*.jdash .cabecalho .subtitle {
+    display: inline-block;
+    margin-left: 8px;
+    border-left: 1px solid rgba(0,0,0,.15);
+    padding-left: 8px;
+    font: 11px "Lucida Grande",Verdana,Arial,sans-serif;
+    color: #888;
+    overflow: hidden;
+    -webkit-box-shadow: inset 1px 0 0 rgba(255,255,255,.5);
+    -moz-box-shadow: inset 1px 0 0 rgba(255,255,255,.5);
+    box-shadow: inset 1px 0 0 rgba(255,255,255,.5);
+}
+
+.jdash .cabecalho:hover .subtitle {
+    color: #666;
+}*/
+
+.jdash-badge {
+    position: absolute;
+    top: -9px;
+    left: -7px;
+    padding: 0 4px;
+    height: 14px;
+    background: #d00;
+    font: bold 10px/14px "Lucida Grande", Verdana, Arial, sans-serif;
+    color: #fff;
+    z-index: 10;
+    border: 1px solid #900;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2);
+}
+
+.clear {
+    clear: both;
+}
+
+.jdash .widget ul.leaders span:first-child {
+    background: #f7f7f7;
+}
+
+.jdash .widget ul.leaders span+span {
+    background: #f7f7f7;
+}
+
+.jdash .widget a.btnAcesso {
+    background-color: #ECECEC;
+    border: solid 1px #ECECEC;
+    padding: 15px 0;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 32px;
+    color: #709E77;
+    width: 70px;
+}
+
+.jdash .widget a.btnAcesso:hover {
+    background-color: #e7e7e7;
+    color: #709E77;
+}
+
+.jdash .widget a.btnAcesso.adicionar {
+    background-color: transparent;
+    color: #ccc;
+    border: dashed 1px #ccc;
+}
+
+.jdash .widget a.btnAcesso.adicionar:hover {
+    background-color: #f1f1f1;
+    color: #aaa;
+}

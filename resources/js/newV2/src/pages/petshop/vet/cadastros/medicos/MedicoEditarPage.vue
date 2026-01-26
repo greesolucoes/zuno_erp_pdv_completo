@@ -1,0 +1,71 @@
+<script setup lang="ts">
+import { onMounted, ref } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import MedicoFormWizard from '../../../../../components/petshop/vet/cadastros/MedicoFormWizard.vue'
+import { createMedicoDraft, type MedicoDraft, type MedicoUpsertPayload } from '../../../../../composables/createMedicoDraft'
+import { getMedicoById, loadMedicosOptions, type Medico, type MedicosLoadOptions, updateMedico } from '../../../../../services/petshop/vet/cadastros/medicos.service'
+
+const router = useRouter()
+const route = useRoute()
+
+const medicoId = String(route.params.id ?? '')
+
+const options = ref<MedicosLoadOptions | null>(null)
+const loading = ref(false)
+const notFound = ref(false)
+
+const { draft, reset } = createMedicoDraft()
+
+function medicoToDraft(medico: Medico): MedicoDraft {
+  const { id: _id, created_at: _createdAt, ...rest } = medico
+  return rest
+}
+
+onMounted(async () => {
+  loading.value = true
+  try {
+    const [loadedOptions, medico] = await Promise.all([loadMedicosOptions(), getMedicoById(medicoId)])
+    options.value = loadedOptions
+    if (!medico) {
+      notFound.value = true
+      return
+    }
+    reset(medicoToDraft(medico))
+  } finally {
+    loading.value = false
+  }
+})
+
+async function onSave(payload: MedicoUpsertPayload) {
+  await updateMedico(medicoId, payload)
+  router.push({ name: 'petshop-vet-medicos' })
+}
+
+function onCancel() {
+  router.push({ name: 'petshop-vet-medicos' })
+}
+</script>
+
+<template>
+  <div v-if="loading" class="pnlCollapse semi-aberto">
+    <h2>Carregando...</h2>
+    <div class="retratil" style="padding: 10px 20px">Aguarde...</div>
+  </div>
+
+  <div v-else-if="notFound" class="pnlCollapse semi-aberto">
+    <h2>Médico não encontrado</h2>
+    <div class="retratil" style="padding: 10px 20px">
+      <button type="button" class="btn btn-lg btn-default" @click.prevent="onCancel">Voltar</button>
+    </div>
+  </div>
+
+  <MedicoFormWizard
+    v-else-if="options"
+    mode="edit"
+    :model-value="draft"
+    :load-options="options"
+    :on-save="onSave"
+    :on-cancel="onCancel"
+  />
+</template>
+

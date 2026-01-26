@@ -1,0 +1,1 @@
+import{_ as s}from"./_plugin-vue_export-helper-DlAUqK2U.js";import{o,c as t,a}from"./index-DKrHuM0u.js";const n={},r={style:{padding:"24px"}};function c(_,e){return o(),t("section",r,[...e[0]||(e[0]=[a("h1",null,"Nova NFS-e (ByPass)",-1)])])}const f=s(n,[["render",c]]);export{f as default};

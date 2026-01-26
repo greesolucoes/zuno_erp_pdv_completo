@@ -1,0 +1,1 @@
+import{d as a,c as o,a as s,h as n,t as r,f as l,k as i,o as u}from"./index-DKrHuM0u.js";const p={style:{padding:"24px"}},f=a({__name:"VisualizarPage",setup(d){const t=i();return(m,e)=>(u(),o("section",p,[e[1]||(e[1]=s("h1",null,"Visualizar NFS-e",-1)),s("p",null,[e[0]||(e[0]=s("b",null,"ID:",-1)),n(" "+r(l(t).params.id),1)])]))}});export{f as default};
