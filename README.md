@@ -65,3 +65,41 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # novoerp
+
+## Frontend (V1 Blade + V2 Vue)
+
+Este projeto tem 2 frontends:
+
+- **V1 (Blade + Vite do Laravel)**: `resources/js/app.js`
+- **V2 (Vue 3 + Inertia, monolito Laravel)**: `resources/js/inertia/app.js` (usa UI do `resources/js/newV2/src`)
+ - **V2 (Vue 3 + Inertia, monolito Laravel)**: `resources/js/v2/app.js` (usa UI do `resources/js/newV2/src`)
+
+### Requisitos
+
+- Node LTS (recomendado): use `.nvmrc`
+
+### Instalação
+
+```bash
+npm ci
+npm ci --prefix resources/js/newV2
+```
+
+### Dev
+
+- `npm run dev` (V1 + V2 via Vite do Laravel)
+
+### Build (produção)
+
+- `npm run build`
+
+### V2 (rotas)
+
+- V2 roda em `GET /v2/{any?}` (Inertia renderiza uma única página e o Vue Router do V2 cuida das subrotas).
+- Quando `users.ui_version = 1`, o middleware redireciona navegação HTML para `/v2/...`.
+
+### Assets do template V2
+
+O V2 depende de alguns assets estáticos (css/js/img/fonts) que ficam em `resources/js/newV2/public`.
+
+- Para sincronizar para `public/`, use: `npm run v2:assets` (também roda no `postinstall`).

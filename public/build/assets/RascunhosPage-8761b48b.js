@@ -1,0 +1,1 @@
+import{_ as o}from"./_plugin-vue_export-helper-c27b6911.js";import{o as s,a as t,b as n}from"./app-c190d680.js";import"./axios-f8694728.js";const r={},a={style:{padding:"24px"}};function c(_,e){return s(),t("section",a,[...e[0]||(e[0]=[n("h1",null,"Rascunhos",-1)])])}const f=o(r,[["render",c]]);export{f as default};

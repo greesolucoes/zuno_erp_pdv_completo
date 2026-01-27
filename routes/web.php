@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Maatwebsite\Excel\Row;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -123,8 +124,14 @@ Route::middleware(['validaEcommerce'])->group(function () {
 
 });
 
-Route::middleware(['authh', 'validaEmpresa'])->group(function () {
+Route::middleware(['authh', 'validaEmpresa', 'ui.version'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::post('/me/ui-version', [App\Http\Controllers\UiVersionController::class, 'update'])->name('me.ui-version');
+    Route::get('/v2/{any?}', function () {
+        return Inertia::render('V2Root', [
+            'title' => 'Sistema (V2)',
+        ]);
+    })->where('any', '.*')->name('v2');
 
     Route::middleware(['verificaMaster'])->group(function () {
         Route::get('/nfe-all', [App\Http\Controllers\HomeController::class, 'nfe'])->name('nfe-all');
@@ -1065,6 +1072,10 @@ Route::middleware(['verificaEmpresa', 'validaPlano', 'validaContrato'])->group(f
     Route::resource('config-geral', 'ConfigGeralController');
     Route::resource('config-api', 'ConfigApiController');
     Route::get('config-api-logs', 'ConfigApiController@logs')->name('config-api.logs');
+
+    Route::get('/{any}', function () {
+        abort(404);
+    })->where('any', '.*');
 
 });
 Route::resource('config', 'ConfigController');

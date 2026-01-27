@@ -1,0 +1,1 @@
+import{d as a,o,a as n,b as t,j as r,t as i,u as l,m as u}from"./app-c190d680.js";import"./axios-f8694728.js";const p={style:{padding:"24px"}},f=a({__name:"VisualizarPage",setup(d){const s=u();return(m,e)=>(o(),n("section",p,[e[1]||(e[1]=t("h1",null,"Visualizar NFS-e",-1)),t("p",null,[e[0]||(e[0]=t("b",null,"ID:",-1)),r(" "+i(l(s).params.id),1)])]))}});export{f as default};

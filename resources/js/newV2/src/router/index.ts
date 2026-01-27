@@ -1,7 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
+function resolveBase(): string {
+  try {
+    const w = window as any
+    const base = w?.__ERP_BOOTSTRAP__?.ui?.v2BasePath || w?.__ERP_BOOTSTRAP__?.v2_base_path
+    if (typeof base === 'string' && base.trim() !== '') return base
+
+    const pathname = String(w?.location?.pathname || '')
+    if (pathname === '/v2' || pathname.startsWith('/v2/')) return '/v2'
+  } catch {
+    // ignore
+  }
+  return '/'
+}
+
 export const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHistory(resolveBase()),
   routes: [
     { path: '/', redirect: '/home' },
     { path: '/login', name: 'login', component: () => import('../pages/login/LoginPage.vue') },
