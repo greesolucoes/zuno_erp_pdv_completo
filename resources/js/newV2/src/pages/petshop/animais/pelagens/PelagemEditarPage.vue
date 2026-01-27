@@ -23,12 +23,11 @@ function pelagemToDraft(pelagem: Pelagem): PelagemDraft {
 onMounted(async () => {
   loading.value = true
   try {
-    const [_, pelagem] = await Promise.all([loadPelagensOptions(), getPelagemById(pelagemId)])
-    if (!pelagem) {
-      notFound.value = true
-      return
-    }
+    await loadPelagensOptions()
+    const pelagem = await getPelagemById(pelagemId)
     reset(pelagemToDraft(pelagem))
+  } catch {
+    notFound.value = true
   } finally {
     loading.value = false
   }
@@ -59,4 +58,3 @@ function onCancel() {
 
   <PelagemFormWizard v-else mode="edit" :model-value="draft" :on-save="onSave" :on-cancel="onCancel" />
 </template>
-

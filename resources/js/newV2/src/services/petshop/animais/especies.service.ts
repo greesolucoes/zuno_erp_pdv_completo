@@ -1,69 +1,52 @@
 import type { EspecieDraft, EspecieUpsertPayload } from '../../../composables/createEspecieDraft'
+import { httpJson } from '../../http'
 
 export type Especie = EspecieDraft & {
   id: string
   created_at: string
 }
 
-let nextId = 1
-const db = new Map<string, Especie>()
-
-function nowIso() {
-  return new Date().toISOString()
-}
-
-function ensureSeeded() {
-  if (db.size) return
-
-  const nomes = ['Cachorro', 'Gato', 'Coelho', 'Pássaro', 'Hamster']
-  for (const nome of nomes) {
-    const especie: Especie = { id: String(nextId++), nome, created_at: nowIso() }
-    db.set(especie.id, especie)
+export type EspeciesListResponse = {
+  data: Especie[]
+  meta: {
+    current_page: number
+    last_page: number
+    per_page: number
+    total: number
   }
 }
 
 export async function loadEspeciesOptions(): Promise<Record<string, never>> {
-  ensureSeeded()
-  return {}
+  return httpJson<Record<string, never>>('/v2/api/petshop/especies/options')
 }
 
-export function listEspecies(search?: string): Especie[] {
-  ensureSeeded()
-  const all = Array.from(db.values())
-  const normalized = (search ?? '').trim().toLowerCase()
-  if (!normalized) return all
-  return all.filter((e) => e.nome.toLowerCase().includes(normalized))
+export async function listEspecies(params?: { busca?: string; page?: number }): Promise<EspeciesListResponse> {
+  const search = (params?.busca ?? '').trim()
+  const page = params?.page && params.page > 0 ? params.page : 1
+
+  const url = new URL('/v2/api/petshop/especies', window.location.origin)
+  if (search) url.searchParams.set('busca', search)
+  if (page && page !== 1) url.searchParams.set('page', String(page))
+
+  return httpJson<EspeciesListResponse>(url)
 }
 
-export async function getEspecieById(id: string): Promise<Especie | null> {
-  ensureSeeded()
-  return db.get(id) ?? null
+export async function getEspecieById(id: string): Promise<Especie> {
+  return httpJson<Especie>(`/v2/api/petshop/especies/${encodeURIComponent(id)}`)
 }
 
-export async function createEspecie(payload: EspecieUpsertPayload): Promise<Especie> {
-  ensureSeeded()
-
-  const especie: Especie = {
-    id: String(nextId++),
-    nome: payload.nome.trim(),
-    created_at: nowIso(),
-  }
-
-  db.set(especie.id, especie)
-  return especie
+export async function createEspecie(payload: EspecieUpsertPayload): Promise<{ id: string }> {
+  return httpJson<{ id: string }>('/v2/api/petshop/especies', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  })
 }
 
-export async function updateEspecie(id: string, payload: EspecieUpsertPayload): Promise<Especie | null> {
-  ensureSeeded()
-  const existing = db.get(id)
-  if (!existing) return null
-
-  const updated: Especie = {
-    ...existing,
-    nome: payload.nome.trim(),
-  }
-
-  db.set(id, updated)
-  return updated
+export async function updateEspecie(id: string, payload: EspecieUpsertPayload): Promise<{ ok: true }> {
+  return httpJson<{ ok: true }>(`/v2/api/petshop/especies/${encodeURIComponent(id)}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload),
+  })
 }
-

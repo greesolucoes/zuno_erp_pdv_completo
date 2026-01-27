@@ -1,1 +1,0 @@
-import{_ as o}from"./_plugin-vue_export-helper-c27b6911.js";import{o as t,a as s,b as r}from"./app-c190d680.js";import"./axios-f8694728.js";const a={},n={style:{padding:"24px"}};function c(i,e){return t(),s("section",n,[...e[0]||(e[0]=[r("h1",null,"NFS-e Recebidas",-1)])])}const f=o(a,[["render",c]]);export{f as default};

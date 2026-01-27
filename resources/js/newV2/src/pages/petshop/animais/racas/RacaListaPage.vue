@@ -1,21 +1,23 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataTable from '../../../../components/ui/DataTable.vue'
-import { listRacas, loadRacasOptions, type RacasLoadOptions } from '../../../../services/petshop/animais/racas.service'
+import { listRacas, loadRacasOptions, type Raca, type RacasLoadOptions } from '../../../../services/petshop/animais/racas.service'
 
 const router = useRouter()
 const route = useRoute()
 
 const busca = ref((route.query.busca as string) ?? '')
 const options = ref<RacasLoadOptions | null>(null)
+const loading = ref(false)
+const racas = ref<Raca[]>([])
+const meta = ref<{ current_page: number; last_page: number; per_page: number; total: number } | null>(null)
 
 const page = computed(() => {
   const raw = Array.isArray(route.query.page) ? route.query.page[0] : route.query.page
   const parsed = Number.parseInt(String(raw ?? '1'), 10)
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 1
 })
-const perPage = 10
 
 function formatDateTimeBr(input: string): string {
   const date = new Date(input)
@@ -34,11 +36,10 @@ type RacaRow = {
   cadastradoEm: string
 }
 
-const allRows = computed<RacaRow[]>(() => {
-  const racas = listRacas(busca.value)
+const rows = computed<RacaRow[]>(() => {
   const loadedOptions = options.value
 
-  return racas.map((r) => ({
+  return racas.value.map((r) => ({
     id: r.id,
     nome: r.nome,
     especie: loadedOptions ? findLabel(loadedOptions.especies, r.especie_id) : r.especie_id,
@@ -46,12 +47,8 @@ const allRows = computed<RacaRow[]>(() => {
   }))
 })
 
-const totalRows = computed(() => allRows.value.length)
-const totalPages = computed(() => Math.max(1, Math.ceil(totalRows.value / perPage)))
-const pageRows = computed(() => {
-  const start = (page.value - 1) * perPage
-  return allRows.value.slice(start, start + perPage)
-})
+const totalRows = computed(() => meta.value?.total ?? 0)
+const totalPages = computed(() => meta.value?.last_page ?? 1)
 
 function goToPage(targetPage: number) {
   const safePage = Math.min(Math.max(1, targetPage), totalPages.value)
@@ -73,12 +70,32 @@ function onRecarregar() {
   router.push({ name: 'petshop-racas', query: { ...route.query, page: undefined } })
 }
 
+async function fetchList() {
+  loading.value = true
+  try {
+    const res = await listRacas({ busca: busca.value, page: page.value })
+    racas.value = res.data
+    meta.value = res.meta
+  } finally {
+    loading.value = false
+  }
+}
+
 onMounted(() => {
   loadRacasOptions().then((o) => {
     options.value = o
   })
+  fetchList()
   // Os handlers e tooltips são inicializados pelo DefaultLayout (initLegacyUiBindings)
 })
+
+watch(
+  () => [route.query.page, route.query.busca],
+  () => {
+    busca.value = (route.query.busca as string) ?? ''
+    fetchList()
+  },
+)
 </script>
 
 <template>
@@ -132,8 +149,9 @@ onMounted(() => {
   </div>
 
   <DataTable
-    :rows="pageRows"
+    :rows="rows"
     :row-key="(r) => (r as any).id"
+    :loading="loading"
     :page="page"
     :total-pages="totalPages"
     :total-items="totalRows"
@@ -172,4 +190,3 @@ onMounted(() => {
     </template>
   </DataTable>
 </template>
-

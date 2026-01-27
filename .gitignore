@@ -27,4 +27,4 @@ __MACOSX/
 /node_modules/
 /public/hot
 /public/storage
-
+/public/build

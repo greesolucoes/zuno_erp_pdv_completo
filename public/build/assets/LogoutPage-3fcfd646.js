@@ -1,1 +1,0 @@
-import{d as t,q as n,o as a,a as s,b as r,f as p}from"./app-c190d680.js";import"./axios-f8694728.js";const u={style:{padding:"24px"}},m=t({__name:"LogoutPage",setup(c){const o=p();return n(()=>{o.replace({name:"login"})}),(d,e)=>(a(),s("section",u,[...e[0]||(e[0]=[r("h1",null,"Saindo...",-1)])]))}});export{m as default};

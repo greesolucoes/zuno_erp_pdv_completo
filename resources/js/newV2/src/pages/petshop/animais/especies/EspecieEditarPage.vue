@@ -23,12 +23,11 @@ function especieToDraft(especie: Especie): EspecieDraft {
 onMounted(async () => {
   loading.value = true
   try {
-    const [_, especie] = await Promise.all([loadEspeciesOptions(), getEspecieById(especieId)])
-    if (!especie) {
-      notFound.value = true
-      return
-    }
+    await loadEspeciesOptions()
+    const especie = await getEspecieById(especieId)
     reset(especieToDraft(especie))
+  } catch {
+    notFound.value = true
   } finally {
     loading.value = false
   }
@@ -59,4 +58,3 @@ function onCancel() {
 
   <EspecieFormWizard v-else mode="edit" :model-value="draft" :on-save="onSave" :on-cancel="onCancel" />
 </template>
-

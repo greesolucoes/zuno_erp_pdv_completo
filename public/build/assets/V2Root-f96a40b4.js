@@ -1,1 +1,0 @@
-import{d as e,o as t,c as o,u as a,R as c}from"./app-c190d680.js";import"./axios-f8694728.js";const s=e({__name:"App",setup(r){return(_,n)=>(t(),o(a(c)))}}),m=e({__name:"V2Root",setup(r){return(_,n)=>(t(),o(s))}});export{m as default};

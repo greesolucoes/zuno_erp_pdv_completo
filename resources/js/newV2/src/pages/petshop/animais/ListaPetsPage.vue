@@ -1,21 +1,24 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataTable from '../../../components/ui/DataTable.vue'
-import { listPets, loadPetsOptions, type PetsLoadOptions } from '../../../services/petshop/animais/pets.service'
+import { listPets, loadPetsOptions, type PetsLoadOptions, type Pet } from '../../../services/petshop/animais/pets.service'
 
 const router = useRouter()
 const route = useRoute()
 
 const busca = ref((route.query.busca as string) ?? '')
 const options = ref<PetsLoadOptions | null>(null)
+const loading = ref(false)
+const pets = ref<Pet[]>([])
+const meta = ref<{ current_page: number; last_page: number; per_page: number; total: number } | null>(null)
 
 const page = computed(() => {
   const raw = Array.isArray(route.query.page) ? route.query.page[0] : route.query.page
   const parsed = Number.parseInt(String(raw ?? '1'), 10)
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 1
 })
-const perPage = 10
+const perPage = computed(() => meta.value?.per_page ?? 10)
 
 type PetRow = {
   id: string
@@ -31,11 +34,10 @@ function findLabel(list: { id: string; label: string }[], id: string): string {
   return list.find((o) => o.id === id)?.label ?? id
 }
 
-const allRows = computed<PetRow[]>(() => {
+const rows = computed<PetRow[]>(() => {
   const loadedOptions = options.value
-  const pets = listPets(busca.value)
 
-  return pets.map((p) => {
+  return pets.value.map((p) => {
     const especie = loadedOptions ? findLabel(loadedOptions.especies, p.especie_id) : p.especie_id
     const racas = loadedOptions ? loadedOptions.racasByEspecie[p.especie_id] ?? [] : []
     const raca = loadedOptions ? findLabel(racas, p.raca_id) : p.raca_id
@@ -53,12 +55,8 @@ const allRows = computed<PetRow[]>(() => {
   })
 })
 
-const totalRows = computed(() => allRows.value.length)
-const totalPages = computed(() => Math.max(1, Math.ceil(totalRows.value / perPage)))
-const pageRows = computed(() => {
-  const start = (page.value - 1) * perPage
-  return allRows.value.slice(start, start + perPage)
-})
+const totalRows = computed(() => meta.value?.total ?? 0)
+const totalPages = computed(() => meta.value?.last_page ?? 1)
 
 function goToPage(targetPage: number) {
   const safePage = Math.min(Math.max(1, targetPage), totalPages.value)
@@ -80,12 +78,32 @@ function onRecarregar() {
   router.push({ name: 'petshop-lista-pets', query: { ...route.query, page: undefined } })
 }
 
+async function fetchList() {
+  loading.value = true
+  try {
+    const res = await listPets({ busca: busca.value, page: page.value })
+    pets.value = res.data
+    meta.value = res.meta
+  } finally {
+    loading.value = false
+  }
+}
+
 onMounted(() => {
   loadPetsOptions().then((o) => {
     options.value = o
   })
+  fetchList()
   // Os handlers e tooltips são inicializados pelo DefaultLayout (initLegacyUiBindings)
 })
+
+watch(
+  () => [route.query.page, route.query.busca],
+  () => {
+    busca.value = (route.query.busca as string) ?? ''
+    fetchList()
+  },
+)
 </script>
 
 <template>
@@ -141,8 +159,10 @@ onMounted(() => {
   </div>
 
   <DataTable
-    :rows="pageRows"
+    v-if="loading || rows.length"
+    :rows="rows"
     :row-key="(r) => (r as any).id"
+    :loading="loading"
     :page="page"
     :total-pages="totalPages"
     :total-items="totalRows"
@@ -186,5 +206,6 @@ onMounted(() => {
       </tr>
     </template>
   </DataTable>
-</template>
 
+  <span v-else class="sem-registros">Nenhum registro encontrado</span>
+</template>

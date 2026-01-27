@@ -24,13 +24,12 @@ function racaToDraft(raca: Raca): RacaDraft {
 onMounted(async () => {
   loading.value = true
   try {
-    const [loadedOptions, raca] = await Promise.all([loadRacasOptions(), getRacaById(racaId)])
+    const loadedOptions = await loadRacasOptions()
     options.value = loadedOptions
-    if (!raca) {
-      notFound.value = true
-      return
-    }
+    const raca = await getRacaById(racaId)
     reset(racaToDraft(raca))
+  } catch {
+    notFound.value = true
   } finally {
     loading.value = false
   }
@@ -61,4 +60,3 @@ function onCancel() {
 
   <RacaFormWizard v-else-if="options" mode="edit" :model-value="draft" :load-options="options" :on-save="onSave" :on-cancel="onCancel" />
 </template>
-
