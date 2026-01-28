@@ -32,7 +32,6 @@ class User extends Authenticatable
         'suporte',
         'status',
         'finalizacao_pdv',
-        'ui_version',
     ];
 
     /**
@@ -53,7 +52,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
-        'ui_version' => 'integer',
     ];
 
     public function empresa()

@@ -124,43 +124,74 @@ Route::middleware(['validaEcommerce'])->group(function () {
 
 });
 
-Route::middleware(['authh', 'validaEmpresa', 'ui.version'])->group(function () {
+Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-    Route::post('/me/ui-version', [App\Http\Controllers\UiVersionController::class, 'update'])->name('me.ui-version');
 
-        Route::prefix('v2/api')->group(function () {
+        Route::prefix('petshop/api')->group(function () {
             Route::prefix('petshop')->group(function () {
-            Route::get('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'index'])->name('v2.api.petshop.pets.index');
-            Route::get('pets/options', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'options'])->name('v2.api.petshop.pets.options');
-            Route::get('pets/{id}', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'show'])->name('v2.api.petshop.pets.show');
-            Route::post('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'store'])->name('v2.api.petshop.pets.store');
-            Route::put('pets/{id}', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'update'])->name('v2.api.petshop.pets.update');
+            Route::get('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'index'])->name('petshop.api.petshop.pets.index');
+            Route::get('pets/options', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'options'])->name('petshop.api.petshop.pets.options');
+            Route::get('pets/{id}', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'show'])->name('petshop.api.petshop.pets.show');
+            Route::post('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'store'])->name('petshop.api.petshop.pets.store');
+            Route::put('pets/{id}', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'update'])->name('petshop.api.petshop.pets.update');
 
-            Route::get('especies', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'index'])->name('v2.api.petshop.especies.index');
-            Route::get('especies/options', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'options'])->name('v2.api.petshop.especies.options');
-            Route::get('especies/{id}', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'show'])->name('v2.api.petshop.especies.show');
-            Route::post('especies', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'store'])->name('v2.api.petshop.especies.store');
-            Route::put('especies/{id}', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'update'])->name('v2.api.petshop.especies.update');
+            Route::get('especies', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'index'])->name('petshop.api.petshop.especies.index');
+            Route::get('especies/options', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'options'])->name('petshop.api.petshop.especies.options');
+            Route::get('especies/{id}', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'show'])->name('petshop.api.petshop.especies.show');
+            Route::post('especies', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'store'])->name('petshop.api.petshop.especies.store');
+            Route::put('especies/{id}', [App\Http\Controllers\V2\Api\Petshop\EspeciesController::class, 'update'])->name('petshop.api.petshop.especies.update');
 
-            Route::get('pelagens', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'index'])->name('v2.api.petshop.pelagens.index');
-            Route::get('pelagens/options', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'options'])->name('v2.api.petshop.pelagens.options');
-            Route::get('pelagens/{id}', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'show'])->name('v2.api.petshop.pelagens.show');
-            Route::post('pelagens', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'store'])->name('v2.api.petshop.pelagens.store');
-            Route::put('pelagens/{id}', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'update'])->name('v2.api.petshop.pelagens.update');
+            Route::get('pelagens', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'index'])->name('petshop.api.petshop.pelagens.index');
+            Route::get('pelagens/options', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'options'])->name('petshop.api.petshop.pelagens.options');
+            Route::get('pelagens/{id}', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'show'])->name('petshop.api.petshop.pelagens.show');
+            Route::post('pelagens', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'store'])->name('petshop.api.petshop.pelagens.store');
+            Route::put('pelagens/{id}', [App\Http\Controllers\V2\Api\Petshop\PelagensController::class, 'update'])->name('petshop.api.petshop.pelagens.update');
 
-            Route::get('racas', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'index'])->name('v2.api.petshop.racas.index');
-            Route::get('racas/options', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'options'])->name('v2.api.petshop.racas.options');
-            Route::get('racas/{id}', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'show'])->name('v2.api.petshop.racas.show');
-            Route::post('racas', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'store'])->name('v2.api.petshop.racas.store');
-            Route::put('racas/{id}', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'update'])->name('v2.api.petshop.racas.update');
+            Route::get('racas', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'index'])->name('petshop.api.petshop.racas.index');
+            Route::get('racas/options', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'options'])->name('petshop.api.petshop.racas.options');
+            Route::get('racas/{id}', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'show'])->name('petshop.api.petshop.racas.show');
+            Route::post('racas', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'store'])->name('petshop.api.petshop.racas.store');
+            Route::put('racas/{id}', [App\Http\Controllers\V2\Api\Petshop\RacasController::class, 'update'])->name('petshop.api.petshop.racas.update');
+
+            Route::prefix('vet')->group(function () {
+                Route::get('medicos', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicosController::class, 'index'])->name('petshop.api.petshop.vet.medicos.index');
+                Route::get('medicos/options', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicosController::class, 'options'])->name('petshop.api.petshop.vet.medicos.options');
+                Route::get('medicos/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicosController::class, 'show'])->name('petshop.api.petshop.vet.medicos.show');
+                Route::post('medicos', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicosController::class, 'store'])->name('petshop.api.petshop.vet.medicos.store');
+                Route::put('medicos/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicosController::class, 'update'])->name('petshop.api.petshop.vet.medicos.update');
+
+                Route::get('salas-atendimento', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasAtendimentoController::class, 'index'])->name('petshop.api.petshop.vet.salas-atendimento.index');
+                Route::get('salas-atendimento/options', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasAtendimentoController::class, 'options'])->name('petshop.api.petshop.vet.salas-atendimento.options');
+                Route::get('salas-atendimento/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasAtendimentoController::class, 'show'])->name('petshop.api.petshop.vet.salas-atendimento.show');
+                Route::post('salas-atendimento', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasAtendimentoController::class, 'store'])->name('petshop.api.petshop.vet.salas-atendimento.store');
+                Route::put('salas-atendimento/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasAtendimentoController::class, 'update'])->name('petshop.api.petshop.vet.salas-atendimento.update');
+
+                Route::get('medicamentos', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicamentosController::class, 'index'])->name('petshop.api.petshop.vet.medicamentos.index');
+                Route::get('medicamentos/options', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicamentosController::class, 'options'])->name('petshop.api.petshop.vet.medicamentos.options');
+                Route::get('medicamentos/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicamentosController::class, 'show'])->name('petshop.api.petshop.vet.medicamentos.show');
+                Route::post('medicamentos', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicamentosController::class, 'store'])->name('petshop.api.petshop.vet.medicamentos.store');
+                Route::put('medicamentos/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\MedicamentosController::class, 'update'])->name('petshop.api.petshop.vet.medicamentos.update');
+
+                Route::get('checklists', [App\Http\Controllers\V2\Api\Petshop\Vet\ChecklistsController::class, 'index'])->name('petshop.api.petshop.vet.checklists.index');
+                Route::get('checklists/options', [App\Http\Controllers\V2\Api\Petshop\Vet\ChecklistsController::class, 'options'])->name('petshop.api.petshop.vet.checklists.options');
+                Route::get('checklists/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ChecklistsController::class, 'show'])->name('petshop.api.petshop.vet.checklists.show');
+                Route::post('checklists', [App\Http\Controllers\V2\Api\Petshop\Vet\ChecklistsController::class, 'store'])->name('petshop.api.petshop.vet.checklists.store');
+                Route::put('checklists/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ChecklistsController::class, 'update'])->name('petshop.api.petshop.vet.checklists.update');
+
+                Route::get('salas-internacao', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasInternacaoController::class, 'index'])->name('petshop.api.petshop.vet.salas-internacao.index');
+                Route::get('salas-internacao/options', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasInternacaoController::class, 'options'])->name('petshop.api.petshop.vet.salas-internacao.options');
+                Route::get('salas-internacao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasInternacaoController::class, 'show'])->name('petshop.api.petshop.vet.salas-internacao.show');
+                Route::post('salas-internacao', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasInternacaoController::class, 'store'])->name('petshop.api.petshop.vet.salas-internacao.store');
+                Route::put('salas-internacao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasInternacaoController::class, 'update'])->name('petshop.api.petshop.vet.salas-internacao.update');
+            });
         });
     });
 
-    Route::get('/v2/{any?}', function () {
-        return Inertia::render('V2Root', [
-            'title' => 'Sistema (V2)',
+    Route::get('/petshop-ui/{any?}', function () {
+        return view('petshop.ui', [
+            'title' => 'Sistema (Petshop)',
         ]);
-    })->where('any', '.*')->name('v2');
+    })->where('any', '.*')->name('petshop-ui');
 
     Route::middleware(['verificaMaster'])->group(function () {
         Route::get('/nfe-all', [App\Http\Controllers\HomeController::class, 'nfe'])->name('nfe-all');

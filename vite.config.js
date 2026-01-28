@@ -15,7 +15,7 @@ export default defineConfig({
             input: [
                 'resources/sass/app.scss',
                 'resources/js/app.js',
-                'resources/js/v2/app.js',
+                'resources/js/petshop/src/main.ts',
             ],
             refresh: true,
         }),

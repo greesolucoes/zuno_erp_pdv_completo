@@ -35,7 +35,6 @@ class Kernel extends HttpKernel
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
-            \App\Http\Middleware\HandleInertiaRequests::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -86,7 +85,7 @@ class Kernel extends HttpKernel
         'validaContrato' => \App\Http\Middleware\ValidaContrato::class,
         'validaCardapio' => \App\Http\Middleware\ValidaCardapio::class,
         'authApp' => \App\Http\Middleware\AuthApp::class,
-        'ui.version' => \App\Http\Middleware\RedirectToV2IfSelected::class,
+        'ui.segment' => \App\Http\Middleware\RedirectToPetshopUiIfPetshopSegment::class,
     ];
 
     protected $routeMiddleware = [

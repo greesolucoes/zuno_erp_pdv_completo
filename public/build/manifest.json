@@ -1,262 +1,262 @@
 {
   "AtendimentoFormWizard.css": {
-    "file": "assets/AtendimentoFormWizard-79f5981d.css",
+    "file": "assets/AtendimentoFormWizard-6c989d11.css",
     "src": "AtendimentoFormWizard.css"
   },
   "ChecklistFormWizard.css": {
-    "file": "assets/ChecklistFormWizard-0c8c7a4b.css",
+    "file": "assets/ChecklistFormWizard-0374de3f.css",
     "src": "ChecklistFormWizard.css"
   },
   "EspecieFormWizard.css": {
-    "file": "assets/EspecieFormWizard-383507f9.css",
+    "file": "assets/EspecieFormWizard-baac772c.css",
     "src": "EspecieFormWizard.css"
   },
   "EsteticaFormWizard.css": {
-    "file": "assets/EsteticaFormWizard-b4360a96.css",
+    "file": "assets/EsteticaFormWizard-5f6b6c3f.css",
     "src": "EsteticaFormWizard.css"
   },
   "FilaFormWizard.css": {
-    "file": "assets/FilaFormWizard-25aaf3e2.css",
+    "file": "assets/FilaFormWizard-5612a759.css",
     "src": "FilaFormWizard.css"
   },
   "InternacaoFormWizard.css": {
-    "file": "assets/InternacaoFormWizard-aba2ae72.css",
+    "file": "assets/InternacaoFormWizard-893ef6f3.css",
     "src": "InternacaoFormWizard.css"
   },
   "ModeloAtendimentoFormWizard.css": {
-    "file": "assets/ModeloAtendimentoFormWizard-dbfedc55.css",
+    "file": "assets/ModeloAtendimentoFormWizard-c5d33c8c.css",
     "src": "ModeloAtendimentoFormWizard.css"
   },
   "ModeloAvaliacaoFormWizard.css": {
-    "file": "assets/ModeloAvaliacaoFormWizard-735029f6.css",
+    "file": "assets/ModeloAvaliacaoFormWizard-16044c06.css",
     "src": "ModeloAvaliacaoFormWizard.css"
   },
   "ModeloPrescricaoFormWizard.css": {
-    "file": "assets/ModeloPrescricaoFormWizard-da98a988.css",
+    "file": "assets/ModeloPrescricaoFormWizard-4b53556f.css",
     "src": "ModeloPrescricaoFormWizard.css"
   },
   "PelagemFormWizard.css": {
-    "file": "assets/PelagemFormWizard-6a6bbf6a.css",
+    "file": "assets/PelagemFormWizard-74c6dc5a.css",
     "src": "PelagemFormWizard.css"
   },
   "PetFormWizard.css": {
-    "file": "assets/PetFormWizard-e1c491e7.css",
+    "file": "assets/PetFormWizard-30355b1e.css",
     "src": "PetFormWizard.css"
   },
   "RacaFormWizard.css": {
-    "file": "assets/RacaFormWizard-07442f63.css",
+    "file": "assets/RacaFormWizard-a3cd57e2.css",
     "src": "RacaFormWizard.css"
   },
   "ReservaCrecheFormWizard.css": {
-    "file": "assets/ReservaCrecheFormWizard-2999a46a.css",
+    "file": "assets/ReservaCrecheFormWizard-0b1f749c.css",
     "src": "ReservaCrecheFormWizard.css"
   },
   "ReservaFormWizard.css": {
-    "file": "assets/ReservaFormWizard-00836423.css",
+    "file": "assets/ReservaFormWizard-d5ac4726.css",
     "src": "ReservaFormWizard.css"
   },
   "SalaAtendimentoFormWizard.css": {
-    "file": "assets/SalaAtendimentoFormWizard-710548f2.css",
+    "file": "assets/SalaAtendimentoFormWizard-3431da1f.css",
     "src": "SalaAtendimentoFormWizard.css"
   },
   "SalaInternacaoFormWizard.css": {
-    "file": "assets/SalaInternacaoFormWizard-67c7e667.css",
+    "file": "assets/SalaInternacaoFormWizard-ec712e6f.css",
     "src": "SalaInternacaoFormWizard.css"
   },
-  "_AtendimentoFormWizard-cac08311.js": {
+  "_AtendimentoFormWizard-301259f8.js": {
     "css": [
-      "assets/AtendimentoFormWizard-79f5981d.css"
+      "assets/AtendimentoFormWizard-6c989d11.css"
     ],
-    "file": "assets/AtendimentoFormWizard-cac08311.js",
+    "file": "assets/AtendimentoFormWizard-301259f8.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_ChecklistFormWizard-282d3364.js": {
+  "_ChecklistFormWizard-a057bf86.js": {
     "css": [
-      "assets/ChecklistFormWizard-0c8c7a4b.css"
+      "assets/ChecklistFormWizard-0374de3f.css"
     ],
-    "file": "assets/ChecklistFormWizard-282d3364.js",
+    "file": "assets/ChecklistFormWizard-a057bf86.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js": {
-    "file": "assets/DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
+  "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js": {
+    "file": "assets/DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
     "imports": [
-      "resources/js/v2/app.js"
+      "resources/js/petshop/src/main.ts"
     ]
   },
-  "_EspecieFormWizard-c71e91f2.js": {
+  "_EspecieFormWizard-7be50d95.js": {
     "css": [
-      "assets/EspecieFormWizard-383507f9.css"
+      "assets/EspecieFormWizard-baac772c.css"
     ],
-    "file": "assets/EspecieFormWizard-c71e91f2.js",
+    "file": "assets/EspecieFormWizard-7be50d95.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_EsteticaFormWizard-df464d7c.js": {
+  "_EsteticaFormWizard-710b9799.js": {
     "css": [
-      "assets/EsteticaFormWizard-b4360a96.css"
+      "assets/EsteticaFormWizard-5f6b6c3f.css"
     ],
-    "file": "assets/EsteticaFormWizard-df464d7c.js",
+    "file": "assets/EsteticaFormWizard-710b9799.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_FilaFormWizard-fe439fee.js": {
+  "_FilaFormWizard-c0d02494.js": {
     "css": [
-      "assets/FilaFormWizard-25aaf3e2.css"
+      "assets/FilaFormWizard-5612a759.css"
     ],
-    "file": "assets/FilaFormWizard-fe439fee.js",
+    "file": "assets/FilaFormWizard-c0d02494.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_InternacaoFormWizard-398dbebe.js": {
+  "_InternacaoFormWizard-b283b58d.js": {
     "css": [
-      "assets/InternacaoFormWizard-aba2ae72.css"
+      "assets/InternacaoFormWizard-893ef6f3.css"
     ],
-    "file": "assets/InternacaoFormWizard-398dbebe.js",
+    "file": "assets/InternacaoFormWizard-b283b58d.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-4c36740d.js": {
-    "file": "assets/MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-4c36740d.js",
+  "_MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-42fe98b4.js": {
+    "file": "assets/MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-42fe98b4.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js"
     ]
   },
-  "_MedicoFormWizard.vue_vue_type_script_setup_true_lang-16cb999a.js": {
-    "file": "assets/MedicoFormWizard.vue_vue_type_script_setup_true_lang-16cb999a.js",
+  "_MedicoFormWizard.vue_vue_type_script_setup_true_lang-455dbc8e.js": {
+    "file": "assets/MedicoFormWizard.vue_vue_type_script_setup_true_lang-455dbc8e.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js"
     ]
   },
-  "_ModeloAtendimentoFormWizard-080ca7cf.js": {
+  "_ModeloAtendimentoFormWizard-1960093d.js": {
     "css": [
-      "assets/ModeloAtendimentoFormWizard-dbfedc55.css"
+      "assets/ModeloAtendimentoFormWizard-c5d33c8c.css"
     ],
-    "file": "assets/ModeloAtendimentoFormWizard-080ca7cf.js",
+    "file": "assets/ModeloAtendimentoFormWizard-1960093d.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_ModeloAvaliacaoFormWizard-bf53564a.js": {
+  "_ModeloAvaliacaoFormWizard-ab52dc2f.js": {
     "css": [
-      "assets/ModeloAvaliacaoFormWizard-735029f6.css"
+      "assets/ModeloAvaliacaoFormWizard-16044c06.css"
     ],
-    "file": "assets/ModeloAvaliacaoFormWizard-bf53564a.js",
+    "file": "assets/ModeloAvaliacaoFormWizard-ab52dc2f.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_ModeloPrescricaoFormWizard-a860fc9d.js": {
+  "_ModeloPrescricaoFormWizard-d7526ed9.js": {
     "css": [
-      "assets/ModeloPrescricaoFormWizard-da98a988.css"
+      "assets/ModeloPrescricaoFormWizard-4b53556f.css"
     ],
-    "file": "assets/ModeloPrescricaoFormWizard-a860fc9d.js",
+    "file": "assets/ModeloPrescricaoFormWizard-d7526ed9.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_PelagemFormWizard-4edab998.js": {
+  "_PelagemFormWizard-9357beb5.js": {
     "css": [
-      "assets/PelagemFormWizard-6a6bbf6a.css"
+      "assets/PelagemFormWizard-74c6dc5a.css"
     ],
-    "file": "assets/PelagemFormWizard-4edab998.js",
+    "file": "assets/PelagemFormWizard-9357beb5.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_PetFormWizard-240b3b48.js": {
+  "_PetFormWizard-4d12162c.js": {
     "css": [
-      "assets/PetFormWizard-e1c491e7.css"
+      "assets/PetFormWizard-30355b1e.css"
     ],
-    "file": "assets/PetFormWizard-240b3b48.js",
+    "file": "assets/PetFormWizard-4d12162c.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_RacaFormWizard-90273b59.js": {
+  "_RacaFormWizard-dd7baa40.js": {
     "css": [
-      "assets/RacaFormWizard-07442f63.css"
+      "assets/RacaFormWizard-a3cd57e2.css"
     ],
-    "file": "assets/RacaFormWizard-90273b59.js",
+    "file": "assets/RacaFormWizard-dd7baa40.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_ReservaCrecheFormWizard-19cb8987.js": {
+  "_ReservaCrecheFormWizard-d2ad6641.js": {
     "css": [
-      "assets/ReservaCrecheFormWizard-2999a46a.css"
+      "assets/ReservaCrecheFormWizard-0b1f749c.css"
     ],
-    "file": "assets/ReservaCrecheFormWizard-19cb8987.js",
+    "file": "assets/ReservaCrecheFormWizard-d2ad6641.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_ReservaFormWizard-3b3fccf8.js": {
+  "_ReservaFormWizard-80f9d9e6.js": {
     "css": [
-      "assets/ReservaFormWizard-00836423.css"
+      "assets/ReservaFormWizard-d5ac4726.css"
     ],
-    "file": "assets/ReservaFormWizard-3b3fccf8.js",
+    "file": "assets/ReservaFormWizard-80f9d9e6.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_SalaAtendimentoFormWizard-4b55b062.js": {
+  "_SalaAtendimentoFormWizard-39daaffc.js": {
     "css": [
-      "assets/SalaAtendimentoFormWizard-710548f2.css"
+      "assets/SalaAtendimentoFormWizard-3431da1f.css"
     ],
-    "file": "assets/SalaAtendimentoFormWizard-4b55b062.js",
+    "file": "assets/SalaAtendimentoFormWizard-39daaffc.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_SalaInternacaoFormWizard-2ff5ed57.js": {
+  "_SalaInternacaoFormWizard-c28ebf6c.js": {
     "css": [
-      "assets/SalaInternacaoFormWizard-67c7e667.css"
+      "assets/SalaInternacaoFormWizard-ec712e6f.css"
     ],
-    "file": "assets/SalaInternacaoFormWizard-2ff5ed57.js",
+    "file": "assets/SalaInternacaoFormWizard-c28ebf6c.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "__plugin-vue_export-helper-c27b6911.js"
     ]
   },
-  "_VacinaFormWizard.vue_vue_type_script_setup_true_lang-b0de4e91.js": {
-    "file": "assets/VacinaFormWizard.vue_vue_type_script_setup_true_lang-b0de4e91.js",
+  "_VacinaFormWizard.vue_vue_type_script_setup_true_lang-b2613079.js": {
+    "file": "assets/VacinaFormWizard.vue_vue_type_script_setup_true_lang-b2613079.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "_legacyScripts-b8dbb126.js"
     ]
   },
@@ -272,22 +272,16 @@
       "_modeloAtendimento.service-b2152127.js"
     ]
   },
-  "_axios-f8694728.js": {
-    "file": "assets/axios-f8694728.js"
-  },
   "_checklist.service-298ef632.js": {
     "file": "assets/checklist.service-298ef632.js"
   },
-  "_especies.service-7c8b213a.js": {
-    "file": "assets/especies.service-7c8b213a.js",
-    "imports": [
-      "_http-937e0b44.js"
-    ]
+  "_especies.service-73aeea72.js": {
+    "file": "assets/especies.service-73aeea72.js"
   },
-  "_estetica.service-e7d3edf5.js": {
-    "file": "assets/estetica.service-e7d3edf5.js",
+  "_estetica.service-5c509d11.js": {
+    "file": "assets/estetica.service-5c509d11.js",
     "imports": [
-      "_pets.service-9587b145.js",
+      "_pets.service-50c642f9.js",
       "_medicos.service-2331a932.js"
     ]
   },
@@ -298,9 +292,6 @@
       "_checklist.service-298ef632.js",
       "_modeloAvaliacao.service-1bde92fd.js"
     ]
-  },
-  "_http-937e0b44.js": {
-    "file": "assets/http-937e0b44.js"
   },
   "_internacoes.service-46842153.js": {
     "file": "assets/internacoes.service-46842153.js",
@@ -313,10 +304,10 @@
   "_legacyScripts-b8dbb126.js": {
     "file": "assets/legacyScripts-b8dbb126.js"
   },
-  "_medicamentos.service-e76d385f.js": {
-    "file": "assets/medicamentos.service-e76d385f.js",
+  "_medicamentos.service-472a2130.js": {
+    "file": "assets/medicamentos.service-472a2130.js",
     "imports": [
-      "_especies.service-7c8b213a.js"
+      "_especies.service-73aeea72.js"
     ]
   },
   "_medicos.service-2331a932.js": {
@@ -331,35 +322,29 @@
   "_modeloPrescricao.service-f78d455d.js": {
     "file": "assets/modeloPrescricao.service-f78d455d.js"
   },
-  "_pelagens.service-3f7bef3d.js": {
-    "file": "assets/pelagens.service-3f7bef3d.js",
+  "_pelagens.service-2d9b25dd.js": {
+    "file": "assets/pelagens.service-2d9b25dd.js"
+  },
+  "_pets.service-50c642f9.js": {
+    "file": "assets/pets.service-50c642f9.js"
+  },
+  "_racas.service-fa9d3b77.js": {
+    "file": "assets/racas.service-fa9d3b77.js",
     "imports": [
-      "_http-937e0b44.js"
+      "_especies.service-73aeea72.js"
     ]
   },
-  "_pets.service-9587b145.js": {
-    "file": "assets/pets.service-9587b145.js",
+  "_reservas.service-97058b55.js": {
+    "file": "assets/reservas.service-97058b55.js",
     "imports": [
-      "_http-937e0b44.js"
-    ]
-  },
-  "_racas.service-97746b83.js": {
-    "file": "assets/racas.service-97746b83.js",
-    "imports": [
-      "_http-937e0b44.js"
-    ]
-  },
-  "_reservas.service-05e4fb9b.js": {
-    "file": "assets/reservas.service-05e4fb9b.js",
-    "imports": [
-      "_pets.service-9587b145.js",
+      "_pets.service-50c642f9.js",
       "_medicos.service-2331a932.js"
     ]
   },
-  "_reservas.service-f2f92641.js": {
-    "file": "assets/reservas.service-f2f92641.js",
+  "_reservas.service-f3d765cb.js": {
+    "file": "assets/reservas.service-f3d765cb.js",
     "imports": [
-      "_pets.service-9587b145.js",
+      "_pets.service-50c642f9.js",
       "_medicos.service-2331a932.js"
     ]
   },
@@ -369,1413 +354,1271 @@
   "_salasInternacao.service-147d3a7c.js": {
     "file": "assets/salasInternacao.service-147d3a7c.js"
   },
-  "_vacinas.service-25f6f9ec.js": {
-    "file": "assets/vacinas.service-25f6f9ec.js",
+  "_vacinas.service-6f89662e.js": {
+    "file": "assets/vacinas.service-6f89662e.js",
     "imports": [
-      "_especies.service-7c8b213a.js"
+      "_especies.service-73aeea72.js"
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-dc145a5d.js",
-    "imports": [
-      "_axios-f8694728.js"
-    ],
+    "file": "assets/app-0de7753b.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
-  "resources/js/newV2/src/layouts/DefaultLayout.css": {
-    "file": "assets/DefaultLayout-6663a80e.css",
-    "src": "resources/js/newV2/src/layouts/DefaultLayout.css"
+  "resources/js/petshop/src/layouts/DefaultLayout.css": {
+    "file": "assets/DefaultLayout-b8d06473.css",
+    "src": "resources/js/petshop/src/layouts/DefaultLayout.css"
   },
-  "resources/js/newV2/src/layouts/DefaultLayout.vue": {
+  "resources/js/petshop/src/layouts/DefaultLayout.vue": {
     "css": [
-      "assets/DefaultLayout-6663a80e.css"
+      "assets/DefaultLayout-b8d06473.css"
     ],
-    "file": "assets/DefaultLayout-3c8c2387.js",
+    "file": "assets/DefaultLayout-14ee4f4b.js",
     "imports": [
-      "resources/js/v2/app.js",
+      "resources/js/petshop/src/main.ts",
       "__plugin-vue_export-helper-c27b6911.js",
-      "_legacyScripts-b8dbb126.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/layouts/DefaultLayout.vue"
-  },
-  "resources/js/newV2/src/pages/dps/BypassPage.vue": {
-    "file": "assets/BypassPage-f48f2976.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/dps/BypassPage.vue"
-  },
-  "resources/js/newV2/src/pages/dps/PessoasPage.vue": {
-    "file": "assets/PessoasPage-9c4fcd3d.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_legacyScripts-b8dbb126.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/dps/PessoasPage.vue"
-  },
-  "resources/js/newV2/src/pages/dps/ServicoPage.vue": {
-    "file": "assets/ServicoPage-81f9f7fc.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/dps/ServicoPage.vue"
-  },
-  "resources/js/newV2/src/pages/dps/SimplificadaPage.vue": {
-    "file": "assets/SimplificadaPage-581dfe76.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/dps/SimplificadaPage.vue"
-  },
-  "resources/js/newV2/src/pages/home/HomePage.vue": {
-    "file": "assets/HomePage-51a33f3b.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_legacyScripts-b8dbb126.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/home/HomePage.vue"
-  },
-  "resources/js/newV2/src/pages/login/LoginPage.vue": {
-    "file": "assets/LoginPage-a87b0600.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_legacyScripts-b8dbb126.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/login/LoginPage.vue"
-  },
-  "resources/js/newV2/src/pages/logout/LogoutPage.vue": {
-    "file": "assets/LogoutPage-14acb219.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/logout/LogoutPage.vue"
-  },
-  "resources/js/newV2/src/pages/notas/EmitidasPage.vue": {
-    "file": "assets/EmitidasPage-f4856174.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/notas/EmitidasPage.vue"
-  },
-  "resources/js/newV2/src/pages/notas/RascunhosPage.vue": {
-    "file": "assets/RascunhosPage-4cdf50e4.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/notas/RascunhosPage.vue"
-  },
-  "resources/js/newV2/src/pages/notas/RecebidasPage.vue": {
-    "file": "assets/RecebidasPage-d85e9320.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/notas/RecebidasPage.vue"
-  },
-  "resources/js/newV2/src/pages/notas/VisualizarPage.vue": {
-    "file": "assets/VisualizarPage-1ad3c699.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/notas/VisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/perfil/ConfiguracaoPage.vue": {
-    "file": "assets/ConfiguracaoPage-ad34cf71.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/perfil/ConfiguracaoPage.vue"
-  },
-  "resources/js/newV2/src/pages/perfil/ServicosFavoritosPage.vue": {
-    "file": "assets/ServicosFavoritosPage-bf5eaa43.js",
-    "imports": [
-      "__plugin-vue_export-helper-c27b6911.js",
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/perfil/ServicosFavoritosPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue": {
-    "file": "assets/PetshopPlaceholderPage-49bbf0ee.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/agenda/AgendaGeralPage.css": {
-    "file": "assets/AgendaGeralPage-a852ef41.css",
-    "src": "resources/js/newV2/src/pages/petshop/agenda/AgendaGeralPage.css"
-  },
-  "resources/js/newV2/src/pages/petshop/agenda/AgendaGeralPage.vue": {
-    "css": [
-      "assets/AgendaGeralPage-a852ef41.css"
-    ],
-    "file": "assets/AgendaGeralPage-041a84c4.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_AtendimentoFormWizard-cac08311.js",
-      "_EsteticaFormWizard-df464d7c.js",
-      "_ReservaFormWizard-3b3fccf8.js",
-      "_ReservaCrecheFormWizard-19cb8987.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_estetica.service-e7d3edf5.js",
-      "_reservas.service-05e4fb9b.js",
-      "_reservas.service-f2f92641.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_legacyScripts-b8dbb126.js",
-      "_axios-f8694728.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/agenda/AgendaGeralPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/ListaPetsPage.vue": {
-    "file": "assets/ListaPetsPage-bc48e662.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_pets.service-9587b145.js",
-      "_axios-f8694728.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/ListaPetsPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/PetEditarPage.vue": {
-    "file": "assets/PetEditarPage-babb5901.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_PetFormWizard-240b3b48.js",
-      "_pets.service-9587b145.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/PetEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/PetNovoPage.vue": {
-    "file": "assets/PetNovoPage-a423d7a0.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_PetFormWizard-240b3b48.js",
-      "_pets.service-9587b145.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/PetNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/PetVisualizarPage.vue": {
-    "file": "assets/PetVisualizarPage-f66ab35f.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_PetFormWizard-240b3b48.js",
-      "_pets.service-9587b145.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/PetVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/especies/EspecieEditarPage.vue": {
-    "file": "assets/EspecieEditarPage-2df23f56.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_EspecieFormWizard-c71e91f2.js",
-      "_especies.service-7c8b213a.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/especies/EspecieEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/especies/EspecieListaPage.vue": {
-    "file": "assets/EspecieListaPage-ee4b7bc4.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_especies.service-7c8b213a.js",
-      "_axios-f8694728.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/especies/EspecieListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/especies/EspecieNovoPage.vue": {
-    "file": "assets/EspecieNovoPage-840b2da8.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_EspecieFormWizard-c71e91f2.js",
-      "_especies.service-7c8b213a.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/especies/EspecieNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/especies/EspecieVisualizarPage.vue": {
-    "file": "assets/EspecieVisualizarPage-f6393e1c.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_EspecieFormWizard-c71e91f2.js",
-      "_especies.service-7c8b213a.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/especies/EspecieVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemEditarPage.vue": {
-    "file": "assets/PelagemEditarPage-5fd7b307.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_PelagemFormWizard-4edab998.js",
-      "_pelagens.service-3f7bef3d.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemListaPage.vue": {
-    "file": "assets/PelagemListaPage-c8586ef0.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_pelagens.service-3f7bef3d.js",
-      "_axios-f8694728.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemNovoPage.vue": {
-    "file": "assets/PelagemNovoPage-67980aa9.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_PelagemFormWizard-4edab998.js",
-      "_pelagens.service-3f7bef3d.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemVisualizarPage.vue": {
-    "file": "assets/PelagemVisualizarPage-2ac4407f.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_PelagemFormWizard-4edab998.js",
-      "_pelagens.service-3f7bef3d.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/racas/RacaEditarPage.vue": {
-    "file": "assets/RacaEditarPage-e9043efd.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_RacaFormWizard-90273b59.js",
-      "_racas.service-97746b83.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/racas/RacaEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/racas/RacaListaPage.vue": {
-    "file": "assets/RacaListaPage-5ce633be.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_racas.service-97746b83.js",
-      "_axios-f8694728.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/racas/RacaListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/racas/RacaNovoPage.vue": {
-    "file": "assets/RacaNovoPage-8be0c497.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_RacaFormWizard-90273b59.js",
-      "_racas.service-97746b83.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/racas/RacaNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/animais/racas/RacaVisualizarPage.vue": {
-    "file": "assets/RacaVisualizarPage-3453a7a0.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_RacaFormWizard-90273b59.js",
-      "_racas.service-97746b83.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/animais/racas/RacaVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheEditarPage.vue": {
-    "file": "assets/ReservaCrecheEditarPage-95cdfabf.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ReservaCrecheFormWizard-19cb8987.js",
-      "_reservas.service-f2f92641.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheListaPage.vue": {
-    "file": "assets/ReservaCrecheListaPage-d9692c8e.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_reservas.service-f2f92641.js",
-      "_axios-f8694728.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheNovoPage.vue": {
-    "file": "assets/ReservaCrecheNovoPage-aeda8fc8.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ReservaCrecheFormWizard-19cb8987.js",
-      "_reservas.service-f2f92641.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheVisualizarPage.vue": {
-    "file": "assets/ReservaCrecheVisualizarPage-9df68764.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ReservaCrecheFormWizard-19cb8987.js",
-      "_reservas.service-f2f92641.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaEditarPage.vue": {
-    "file": "assets/EsteticaEditarPage-a7a03bfd.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_EsteticaFormWizard-df464d7c.js",
-      "_estetica.service-e7d3edf5.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaListaPage.vue": {
-    "file": "assets/EsteticaListaPage-3441d24a.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_estetica.service-e7d3edf5.js",
-      "_axios-f8694728.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaNovoPage.vue": {
-    "file": "assets/EsteticaNovoPage-49a043de.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_EsteticaFormWizard-df464d7c.js",
-      "_estetica.service-e7d3edf5.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaVisualizarPage.vue": {
-    "file": "assets/EsteticaVisualizarPage-787b1f92.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_EsteticaFormWizard-df464d7c.js",
-      "_estetica.service-e7d3edf5.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaEditarPage.vue": {
-    "file": "assets/ReservaEditarPage-20e8b851.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ReservaFormWizard-3b3fccf8.js",
-      "_reservas.service-05e4fb9b.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaListaPage.vue": {
-    "file": "assets/ReservaListaPage-522393d2.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_reservas.service-05e4fb9b.js",
-      "_axios-f8694728.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaNovoPage.vue": {
-    "file": "assets/ReservaNovoPage-7e523d14.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ReservaFormWizard-3b3fccf8.js",
-      "_reservas.service-05e4fb9b.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaVisualizarPage.vue": {
-    "file": "assets/ReservaVisualizarPage-22026d4b.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ReservaFormWizard-3b3fccf8.js",
-      "_reservas.service-05e4fb9b.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_pets.service-9587b145.js",
-      "_http-937e0b44.js",
-      "_medicos.service-2331a932.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoEditarPage.vue": {
-    "file": "assets/AtendimentoEditarPage-a0e2bd5d.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_AtendimentoFormWizard-cac08311.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoListaPage.vue": {
-    "file": "assets/AtendimentoListaPage-ff043e7f.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_axios-f8694728.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoNovoPage.vue": {
-    "file": "assets/AtendimentoNovoPage-e200f5f2.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_AtendimentoFormWizard-cac08311.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoVisualizarPage.vue": {
-    "file": "assets/AtendimentoVisualizarPage-92ae46c9.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_AtendimentoFormWizard-cac08311.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistEditarPage.vue": {
-    "file": "assets/ChecklistEditarPage-9709a1e4.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ChecklistFormWizard-282d3364.js",
-      "_checklist.service-298ef632.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistListaPage.vue": {
-    "file": "assets/ChecklistListaPage-a1583dae.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_checklist.service-298ef632.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistNovoPage.vue": {
-    "file": "assets/ChecklistNovoPage-49e35d56.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ChecklistFormWizard-282d3364.js",
-      "_checklist.service-298ef632.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistVisualizarPage.vue": {
-    "file": "assets/ChecklistVisualizarPage-30149f9f.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ChecklistFormWizard-282d3364.js",
-      "_checklist.service-298ef632.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoEditarPage.vue": {
-    "file": "assets/MedicamentoEditarPage-b4fed36c.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-4c36740d.js",
-      "_medicamentos.service-e76d385f.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "_especies.service-7c8b213a.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoListaPage.vue": {
-    "file": "assets/MedicamentoListaPage-a3a9eca5.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_medicamentos.service-e76d385f.js",
-      "_axios-f8694728.js",
-      "_especies.service-7c8b213a.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoNovoPage.vue": {
-    "file": "assets/MedicamentoNovoPage-02262d0f.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-4c36740d.js",
-      "_medicamentos.service-e76d385f.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "_especies.service-7c8b213a.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoVisualizarPage.vue": {
-    "file": "assets/MedicamentoVisualizarPage-aebf88c7.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-4c36740d.js",
-      "_medicamentos.service-e76d385f.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "_especies.service-7c8b213a.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoEditarPage.vue": {
-    "file": "assets/MedicoEditarPage-f4d5c273.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_MedicoFormWizard.vue_vue_type_script_setup_true_lang-16cb999a.js",
-      "_medicos.service-2331a932.js",
-      "_axios-f8694728.js",
       "_legacyScripts-b8dbb126.js"
     ],
     "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoEditarPage.vue"
+    "src": "resources/js/petshop/src/layouts/DefaultLayout.vue"
   },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoListaPage.vue": {
-    "file": "assets/MedicoListaPage-f8fe43c4.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_medicos.service-2331a932.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoNovoPage.vue": {
-    "file": "assets/MedicoNovoPage-d1343cff.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_MedicoFormWizard.vue_vue_type_script_setup_true_lang-16cb999a.js",
-      "_medicos.service-2331a932.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoVisualizarPage.vue": {
-    "file": "assets/MedicoVisualizarPage-49337df5.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_MedicoFormWizard.vue_vue_type_script_setup_true_lang-16cb999a.js",
-      "_medicos.service-2331a932.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoEditarPage.vue": {
-    "file": "assets/ModeloAtendimentoEditarPage-6c9b9a94.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloAtendimentoFormWizard-080ca7cf.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoListaPage.vue": {
-    "file": "assets/ModeloAtendimentoListaPage-cf4b19a2.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoNovoPage.vue": {
-    "file": "assets/ModeloAtendimentoNovoPage-94a38cde.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloAtendimentoFormWizard-080ca7cf.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoVisualizarPage.vue": {
-    "file": "assets/ModeloAtendimentoVisualizarPage-9567e0b8.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloAtendimentoFormWizard-080ca7cf.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoEditarPage.vue": {
-    "file": "assets/ModeloAvaliacaoEditarPage-1304faea.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloAvaliacaoFormWizard-bf53564a.js",
-      "_modeloAvaliacao.service-1bde92fd.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoListaPage.vue": {
-    "file": "assets/ModeloAvaliacaoListaPage-7155c957.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_modeloAvaliacao.service-1bde92fd.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoNovoPage.vue": {
-    "file": "assets/ModeloAvaliacaoNovoPage-af53c154.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloAvaliacaoFormWizard-bf53564a.js",
-      "_modeloAvaliacao.service-1bde92fd.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoVisualizarPage.vue": {
-    "file": "assets/ModeloAvaliacaoVisualizarPage-36cfa963.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloAvaliacaoFormWizard-bf53564a.js",
-      "_modeloAvaliacao.service-1bde92fd.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoEditarPage.vue": {
-    "file": "assets/ModeloPrescricaoEditarPage-5ff136c1.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloPrescricaoFormWizard-a860fc9d.js",
-      "_modeloPrescricao.service-f78d455d.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoListaPage.vue": {
-    "file": "assets/ModeloPrescricaoListaPage-ffd70208.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_modeloPrescricao.service-f78d455d.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoNovoPage.vue": {
-    "file": "assets/ModeloPrescricaoNovoPage-c27dfe38.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloPrescricaoFormWizard-a860fc9d.js",
-      "_modeloPrescricao.service-f78d455d.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoVisualizarPage.vue": {
-    "file": "assets/ModeloPrescricaoVisualizarPage-ba29b9d2.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_ModeloPrescricaoFormWizard-a860fc9d.js",
-      "_modeloPrescricao.service-f78d455d.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoEditarPage.vue": {
-    "file": "assets/SalaAtendimentoEditarPage-aa109e83.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_SalaAtendimentoFormWizard-4b55b062.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoListaPage.vue": {
-    "file": "assets/SalaAtendimentoListaPage-e8934ef9.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoNovoPage.vue": {
-    "file": "assets/SalaAtendimentoNovoPage-a215cc61.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_SalaAtendimentoFormWizard-4b55b062.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoVisualizarPage.vue": {
-    "file": "assets/SalaAtendimentoVisualizarPage-f206d2bb.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_SalaAtendimentoFormWizard-4b55b062.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoEditarPage.vue": {
-    "file": "assets/SalaInternacaoEditarPage-9992392e.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_SalaInternacaoFormWizard-2ff5ed57.js",
-      "_salasInternacao.service-147d3a7c.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoListaPage.vue": {
-    "file": "assets/SalaInternacaoListaPage-0a9af139.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_salasInternacao.service-147d3a7c.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoNovoPage.vue": {
-    "file": "assets/SalaInternacaoNovoPage-aff5331b.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_SalaInternacaoFormWizard-2ff5ed57.js",
-      "_salasInternacao.service-147d3a7c.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoVisualizarPage.vue": {
-    "file": "assets/SalaInternacaoVisualizarPage-a10607c2.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_SalaInternacaoFormWizard-2ff5ed57.js",
-      "_salasInternacao.service-147d3a7c.js",
-      "_axios-f8694728.js",
-      "__plugin-vue_export-helper-c27b6911.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaEditarPage.vue": {
-    "file": "assets/VacinaEditarPage-528be843.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_VacinaFormWizard.vue_vue_type_script_setup_true_lang-b0de4e91.js",
-      "_vacinas.service-25f6f9ec.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "_especies.service-7c8b213a.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaListaPage.vue": {
-    "file": "assets/VacinaListaPage-b2cb00a4.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_vacinas.service-25f6f9ec.js",
-      "_axios-f8694728.js",
-      "_especies.service-7c8b213a.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaNovoPage.vue": {
-    "file": "assets/VacinaNovoPage-2bdbb084.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_VacinaFormWizard.vue_vue_type_script_setup_true_lang-b0de4e91.js",
-      "_vacinas.service-25f6f9ec.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "_especies.service-7c8b213a.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaVisualizarPage.vue": {
-    "file": "assets/VacinaVisualizarPage-d3602322.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_VacinaFormWizard.vue_vue_type_script_setup_true_lang-b0de4e91.js",
-      "_vacinas.service-25f6f9ec.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "_especies.service-7c8b213a.js",
-      "_http-937e0b44.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoEditarPage.vue": {
-    "file": "assets/InternacaoEditarPage-d0e5d27c.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_InternacaoFormWizard-398dbebe.js",
-      "_internacoes.service-46842153.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_salasInternacao.service-147d3a7c.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoListaPage.vue": {
-    "file": "assets/InternacaoListaPage-60713441.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_internacoes.service-46842153.js",
-      "_axios-f8694728.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_salasInternacao.service-147d3a7c.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoNovoPage.vue": {
-    "file": "assets/InternacaoNovoPage-6294221b.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_InternacaoFormWizard-398dbebe.js",
-      "_internacoes.service-46842153.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_salasInternacao.service-147d3a7c.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoVisualizarPage.vue": {
-    "file": "assets/InternacaoVisualizarPage-c7c3aafa.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_InternacaoFormWizard-398dbebe.js",
-      "_internacoes.service-46842153.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_salasInternacao.service-147d3a7c.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoVisualizarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/prontuarios/consultas/ConsultasHistoricoPage.vue": {
-    "file": "assets/ConsultasHistoricoPage-9a23bd3e.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_fila.service-b0987900.js",
-      "_axios-f8694728.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_modeloAvaliacao.service-1bde92fd.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/prontuarios/consultas/ConsultasHistoricoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaEditarPage.vue": {
-    "file": "assets/FilaEditarPage-04f6db3c.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_FilaFormWizard-fe439fee.js",
-      "_fila.service-b0987900.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_modeloAvaliacao.service-1bde92fd.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaEditarPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaListaPage.vue": {
-    "file": "assets/FilaListaPage-aff3d0b3.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_DataTable.vue_vue_type_script_setup_true_lang-7560317c.js",
-      "_fila.service-b0987900.js",
-      "_axios-f8694728.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_modeloAvaliacao.service-1bde92fd.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaListaPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaNovoPage.vue": {
-    "file": "assets/FilaNovoPage-959cc4a9.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_FilaFormWizard-fe439fee.js",
-      "_fila.service-b0987900.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_modeloAvaliacao.service-1bde92fd.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaNovoPage.vue"
-  },
-  "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaVisualizarPage.vue": {
-    "file": "assets/FilaVisualizarPage-7c414273.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_FilaFormWizard-fe439fee.js",
-      "_fila.service-b0987900.js",
-      "_axios-f8694728.js",
-      "_legacyScripts-b8dbb126.js",
-      "__plugin-vue_export-helper-c27b6911.js",
-      "_atendimentos.service-a1ff4b05.js",
-      "_checklist.service-298ef632.js",
-      "_medicos.service-2331a932.js",
-      "_salasAtendimento.service-1d0b3f07.js",
-      "_modeloAtendimento.service-b2152127.js",
-      "_modeloAvaliacao.service-1bde92fd.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaVisualizarPage.vue"
-  },
-  "resources/js/v2/Pages/V2Root.vue": {
-    "file": "assets/V2Root-3fd89925.js",
-    "imports": [
-      "resources/js/v2/app.js",
-      "_axios-f8694728.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "resources/js/v2/Pages/V2Root.vue"
-  },
-  "resources/js/v2/app.js": {
+  "resources/js/petshop/src/main.ts": {
     "dynamicImports": [
-      "resources/js/newV2/src/pages/login/LoginPage.vue",
-      "resources/js/newV2/src/layouts/DefaultLayout.vue",
-      "resources/js/newV2/src/pages/home/HomePage.vue",
-      "resources/js/newV2/src/pages/notas/EmitidasPage.vue",
-      "resources/js/newV2/src/pages/notas/RecebidasPage.vue",
-      "resources/js/newV2/src/pages/notas/RascunhosPage.vue",
-      "resources/js/newV2/src/pages/notas/VisualizarPage.vue",
-      "resources/js/newV2/src/pages/perfil/ConfiguracaoPage.vue",
-      "resources/js/newV2/src/pages/perfil/ServicosFavoritosPage.vue",
-      "resources/js/newV2/src/pages/dps/PessoasPage.vue",
-      "resources/js/newV2/src/pages/dps/SimplificadaPage.vue",
-      "resources/js/newV2/src/pages/dps/BypassPage.vue",
-      "resources/js/newV2/src/pages/dps/ServicoPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/ListaPetsPage.vue",
-      "resources/js/newV2/src/pages/petshop/agenda/AgendaGeralPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/PetNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/PetEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/PetVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/especies/EspecieListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/especies/EspecieNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/especies/EspecieEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/especies/EspecieVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/racas/RacaListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/racas/RacaNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/racas/RacaEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/racas/RacaVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/animais/pelagens/PelagemVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/medicos/MedicoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/checklist/ChecklistVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/vacinas/VacinaVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/atendimentos/AtendimentoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/prontuarios/fila/FilaVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/prontuarios/consultas/ConsultasHistoricoPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/vet/internacoes/historico/InternacaoVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/hotel/reservas/ReservaVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/creche/reservas/ReservaCrecheVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaListaPage.vue",
-      "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaNovoPage.vue",
-      "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaEditarPage.vue",
-      "resources/js/newV2/src/pages/petshop/estetica/gerenciar/EsteticaVisualizarPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/petshop/PetshopPlaceholderPage.vue",
-      "resources/js/newV2/src/pages/logout/LogoutPage.vue",
-      "resources/js/v2/Pages/V2Root.vue"
+      "resources/js/petshop/src/pages/login/LoginPage.vue",
+      "resources/js/petshop/src/layouts/DefaultLayout.vue",
+      "resources/js/petshop/src/pages/home/HomePage.vue",
+      "resources/js/petshop/src/pages/notas/EmitidasPage.vue",
+      "resources/js/petshop/src/pages/notas/RecebidasPage.vue",
+      "resources/js/petshop/src/pages/notas/RascunhosPage.vue",
+      "resources/js/petshop/src/pages/notas/VisualizarPage.vue",
+      "resources/js/petshop/src/pages/perfil/ConfiguracaoPage.vue",
+      "resources/js/petshop/src/pages/perfil/ServicosFavoritosPage.vue",
+      "resources/js/petshop/src/pages/dps/PessoasPage.vue",
+      "resources/js/petshop/src/pages/dps/SimplificadaPage.vue",
+      "resources/js/petshop/src/pages/dps/BypassPage.vue",
+      "resources/js/petshop/src/pages/dps/ServicoPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/ListaPetsPage.vue",
+      "resources/js/petshop/src/pages/petshop/agenda/AgendaGeralPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/PetNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/PetEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/PetVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/especies/EspecieListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/especies/EspecieNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/especies/EspecieEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/especies/EspecieVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/racas/RacaListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/racas/RacaNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/racas/RacaEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/racas/RacaVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/prontuarios/consultas/ConsultasHistoricoPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaListaPage.vue",
+      "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaNovoPage.vue",
+      "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaEditarPage.vue",
+      "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaVisualizarPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue",
+      "resources/js/petshop/src/pages/logout/LogoutPage.vue"
     ],
-    "file": "assets/app-139598d8.js",
-    "imports": [
-      "_axios-f8694728.js"
-    ],
+    "file": "assets/main-6354b5a3.js",
     "isEntry": true,
-    "src": "resources/js/v2/app.js"
+    "src": "resources/js/petshop/src/main.ts"
+  },
+  "resources/js/petshop/src/pages/dps/BypassPage.vue": {
+    "file": "assets/BypassPage-d01dd50e.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/dps/BypassPage.vue"
+  },
+  "resources/js/petshop/src/pages/dps/PessoasPage.vue": {
+    "file": "assets/PessoasPage-f43d8757.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_legacyScripts-b8dbb126.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/dps/PessoasPage.vue"
+  },
+  "resources/js/petshop/src/pages/dps/ServicoPage.vue": {
+    "file": "assets/ServicoPage-7d49e995.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/dps/ServicoPage.vue"
+  },
+  "resources/js/petshop/src/pages/dps/SimplificadaPage.vue": {
+    "file": "assets/SimplificadaPage-414a2612.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/dps/SimplificadaPage.vue"
+  },
+  "resources/js/petshop/src/pages/home/HomePage.vue": {
+    "file": "assets/HomePage-e98203f7.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_legacyScripts-b8dbb126.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/home/HomePage.vue"
+  },
+  "resources/js/petshop/src/pages/login/LoginPage.vue": {
+    "file": "assets/LoginPage-a4ccc739.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_legacyScripts-b8dbb126.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/login/LoginPage.vue"
+  },
+  "resources/js/petshop/src/pages/logout/LogoutPage.vue": {
+    "file": "assets/LogoutPage-5543af1c.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/logout/LogoutPage.vue"
+  },
+  "resources/js/petshop/src/pages/notas/EmitidasPage.vue": {
+    "file": "assets/EmitidasPage-4deeb33e.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/notas/EmitidasPage.vue"
+  },
+  "resources/js/petshop/src/pages/notas/RascunhosPage.vue": {
+    "file": "assets/RascunhosPage-f536a15b.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/notas/RascunhosPage.vue"
+  },
+  "resources/js/petshop/src/pages/notas/RecebidasPage.vue": {
+    "file": "assets/RecebidasPage-de925ff4.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/notas/RecebidasPage.vue"
+  },
+  "resources/js/petshop/src/pages/notas/VisualizarPage.vue": {
+    "file": "assets/VisualizarPage-f8c95993.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/notas/VisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/perfil/ConfiguracaoPage.vue": {
+    "file": "assets/ConfiguracaoPage-c8ef1fc0.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/perfil/ConfiguracaoPage.vue"
+  },
+  "resources/js/petshop/src/pages/perfil/ServicosFavoritosPage.vue": {
+    "file": "assets/ServicosFavoritosPage-71d3a992.js",
+    "imports": [
+      "__plugin-vue_export-helper-c27b6911.js",
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/perfil/ServicosFavoritosPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue": {
+    "file": "assets/PetshopPlaceholderPage-499c0219.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/PetshopPlaceholderPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/agenda/AgendaGeralPage.css": {
+    "file": "assets/AgendaGeralPage-0581ad1f.css",
+    "src": "resources/js/petshop/src/pages/petshop/agenda/AgendaGeralPage.css"
+  },
+  "resources/js/petshop/src/pages/petshop/agenda/AgendaGeralPage.vue": {
+    "css": [
+      "assets/AgendaGeralPage-0581ad1f.css"
+    ],
+    "file": "assets/AgendaGeralPage-cb3896d1.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_AtendimentoFormWizard-301259f8.js",
+      "_EsteticaFormWizard-710b9799.js",
+      "_ReservaFormWizard-80f9d9e6.js",
+      "_ReservaCrecheFormWizard-d2ad6641.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_estetica.service-5c509d11.js",
+      "_reservas.service-f3d765cb.js",
+      "_reservas.service-97058b55.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_legacyScripts-b8dbb126.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_pets.service-50c642f9.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/agenda/AgendaGeralPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/ListaPetsPage.vue": {
+    "file": "assets/ListaPetsPage-2e9c0dc9.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_pets.service-50c642f9.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/ListaPetsPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/PetEditarPage.vue": {
+    "file": "assets/PetEditarPage-f3ba4aee.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_PetFormWizard-4d12162c.js",
+      "_pets.service-50c642f9.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/PetEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/PetNovoPage.vue": {
+    "file": "assets/PetNovoPage-072d55c5.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_PetFormWizard-4d12162c.js",
+      "_pets.service-50c642f9.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/PetNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/PetVisualizarPage.vue": {
+    "file": "assets/PetVisualizarPage-69e76734.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_PetFormWizard-4d12162c.js",
+      "_pets.service-50c642f9.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/PetVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/especies/EspecieEditarPage.vue": {
+    "file": "assets/EspecieEditarPage-f9c6273f.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_EspecieFormWizard-7be50d95.js",
+      "_especies.service-73aeea72.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/especies/EspecieEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/especies/EspecieListaPage.vue": {
+    "file": "assets/EspecieListaPage-ea072430.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/especies/EspecieListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/especies/EspecieNovoPage.vue": {
+    "file": "assets/EspecieNovoPage-d594ea27.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_EspecieFormWizard-7be50d95.js",
+      "_especies.service-73aeea72.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/especies/EspecieNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/especies/EspecieVisualizarPage.vue": {
+    "file": "assets/EspecieVisualizarPage-bea78139.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_EspecieFormWizard-7be50d95.js",
+      "_especies.service-73aeea72.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/especies/EspecieVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemEditarPage.vue": {
+    "file": "assets/PelagemEditarPage-46f411c0.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_PelagemFormWizard-9357beb5.js",
+      "_pelagens.service-2d9b25dd.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemListaPage.vue": {
+    "file": "assets/PelagemListaPage-b860584f.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_pelagens.service-2d9b25dd.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemNovoPage.vue": {
+    "file": "assets/PelagemNovoPage-08f2d30d.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_PelagemFormWizard-9357beb5.js",
+      "_pelagens.service-2d9b25dd.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemVisualizarPage.vue": {
+    "file": "assets/PelagemVisualizarPage-2d541632.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_PelagemFormWizard-9357beb5.js",
+      "_pelagens.service-2d9b25dd.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/pelagens/PelagemVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/racas/RacaEditarPage.vue": {
+    "file": "assets/RacaEditarPage-7242960b.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_RacaFormWizard-dd7baa40.js",
+      "_racas.service-fa9d3b77.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/racas/RacaEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/racas/RacaListaPage.vue": {
+    "file": "assets/RacaListaPage-1b182c19.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_racas.service-fa9d3b77.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/racas/RacaListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/racas/RacaNovoPage.vue": {
+    "file": "assets/RacaNovoPage-ba7d56e2.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_RacaFormWizard-dd7baa40.js",
+      "_racas.service-fa9d3b77.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/racas/RacaNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/animais/racas/RacaVisualizarPage.vue": {
+    "file": "assets/RacaVisualizarPage-a60fa38d.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_RacaFormWizard-dd7baa40.js",
+      "_racas.service-fa9d3b77.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/animais/racas/RacaVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheEditarPage.vue": {
+    "file": "assets/ReservaCrecheEditarPage-08731c12.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ReservaCrecheFormWizard-d2ad6641.js",
+      "_reservas.service-97058b55.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheListaPage.vue": {
+    "file": "assets/ReservaCrecheListaPage-80c1def9.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_reservas.service-97058b55.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheNovoPage.vue": {
+    "file": "assets/ReservaCrecheNovoPage-80d174df.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ReservaCrecheFormWizard-d2ad6641.js",
+      "_reservas.service-97058b55.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheVisualizarPage.vue": {
+    "file": "assets/ReservaCrecheVisualizarPage-91102e8e.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ReservaCrecheFormWizard-d2ad6641.js",
+      "_reservas.service-97058b55.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/creche/reservas/ReservaCrecheVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaEditarPage.vue": {
+    "file": "assets/EsteticaEditarPage-f2819447.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_EsteticaFormWizard-710b9799.js",
+      "_estetica.service-5c509d11.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaListaPage.vue": {
+    "file": "assets/EsteticaListaPage-827d95e7.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_estetica.service-5c509d11.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaNovoPage.vue": {
+    "file": "assets/EsteticaNovoPage-0c36db26.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_EsteticaFormWizard-710b9799.js",
+      "_estetica.service-5c509d11.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaVisualizarPage.vue": {
+    "file": "assets/EsteticaVisualizarPage-446a54ab.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_EsteticaFormWizard-710b9799.js",
+      "_estetica.service-5c509d11.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/estetica/gerenciar/EsteticaVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaEditarPage.vue": {
+    "file": "assets/ReservaEditarPage-a32202ad.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ReservaFormWizard-80f9d9e6.js",
+      "_reservas.service-f3d765cb.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaListaPage.vue": {
+    "file": "assets/ReservaListaPage-f1eff1f6.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_reservas.service-f3d765cb.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaNovoPage.vue": {
+    "file": "assets/ReservaNovoPage-142e8e7f.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ReservaFormWizard-80f9d9e6.js",
+      "_reservas.service-f3d765cb.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaVisualizarPage.vue": {
+    "file": "assets/ReservaVisualizarPage-ba6862fe.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ReservaFormWizard-80f9d9e6.js",
+      "_reservas.service-f3d765cb.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_pets.service-50c642f9.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/hotel/reservas/ReservaVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoEditarPage.vue": {
+    "file": "assets/AtendimentoEditarPage-d8e8a391.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_AtendimentoFormWizard-301259f8.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoListaPage.vue": {
+    "file": "assets/AtendimentoListaPage-851ea179.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoNovoPage.vue": {
+    "file": "assets/AtendimentoNovoPage-24f0037d.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_AtendimentoFormWizard-301259f8.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoVisualizarPage.vue": {
+    "file": "assets/AtendimentoVisualizarPage-a1f1c82a.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_AtendimentoFormWizard-301259f8.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/atendimentos/AtendimentoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistEditarPage.vue": {
+    "file": "assets/ChecklistEditarPage-b671432e.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ChecklistFormWizard-a057bf86.js",
+      "_checklist.service-298ef632.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistListaPage.vue": {
+    "file": "assets/ChecklistListaPage-9b51dd32.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_checklist.service-298ef632.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistNovoPage.vue": {
+    "file": "assets/ChecklistNovoPage-c154f971.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ChecklistFormWizard-a057bf86.js",
+      "_checklist.service-298ef632.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistVisualizarPage.vue": {
+    "file": "assets/ChecklistVisualizarPage-548bf6a9.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ChecklistFormWizard-a057bf86.js",
+      "_checklist.service-298ef632.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/checklist/ChecklistVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoEditarPage.vue": {
+    "file": "assets/MedicamentoEditarPage-89630724.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-42fe98b4.js",
+      "_medicamentos.service-472a2130.js",
+      "_legacyScripts-b8dbb126.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoListaPage.vue": {
+    "file": "assets/MedicamentoListaPage-8dc36a4a.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_medicamentos.service-472a2130.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoNovoPage.vue": {
+    "file": "assets/MedicamentoNovoPage-bd796d0b.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-42fe98b4.js",
+      "_medicamentos.service-472a2130.js",
+      "_legacyScripts-b8dbb126.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoVisualizarPage.vue": {
+    "file": "assets/MedicamentoVisualizarPage-ea115668.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_MedicamentoFormWizard.vue_vue_type_script_setup_true_lang-42fe98b4.js",
+      "_medicamentos.service-472a2130.js",
+      "_legacyScripts-b8dbb126.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/medicamentos/MedicamentoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoEditarPage.vue": {
+    "file": "assets/MedicoEditarPage-59694af8.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_MedicoFormWizard.vue_vue_type_script_setup_true_lang-455dbc8e.js",
+      "_medicos.service-2331a932.js",
+      "_legacyScripts-b8dbb126.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoListaPage.vue": {
+    "file": "assets/MedicoListaPage-ce3d0a57.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_medicos.service-2331a932.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoNovoPage.vue": {
+    "file": "assets/MedicoNovoPage-23419134.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_MedicoFormWizard.vue_vue_type_script_setup_true_lang-455dbc8e.js",
+      "_medicos.service-2331a932.js",
+      "_legacyScripts-b8dbb126.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoVisualizarPage.vue": {
+    "file": "assets/MedicoVisualizarPage-e1382db9.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_MedicoFormWizard.vue_vue_type_script_setup_true_lang-455dbc8e.js",
+      "_medicos.service-2331a932.js",
+      "_legacyScripts-b8dbb126.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/medicos/MedicoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoEditarPage.vue": {
+    "file": "assets/ModeloAtendimentoEditarPage-bed07860.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloAtendimentoFormWizard-1960093d.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoListaPage.vue": {
+    "file": "assets/ModeloAtendimentoListaPage-27764c13.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_modeloAtendimento.service-b2152127.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoNovoPage.vue": {
+    "file": "assets/ModeloAtendimentoNovoPage-fa62497c.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloAtendimentoFormWizard-1960093d.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoVisualizarPage.vue": {
+    "file": "assets/ModeloAtendimentoVisualizarPage-2f7fb8aa.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloAtendimentoFormWizard-1960093d.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAtendimento/ModeloAtendimentoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoEditarPage.vue": {
+    "file": "assets/ModeloAvaliacaoEditarPage-4ee90b0a.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloAvaliacaoFormWizard-ab52dc2f.js",
+      "_modeloAvaliacao.service-1bde92fd.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoListaPage.vue": {
+    "file": "assets/ModeloAvaliacaoListaPage-6105b9c6.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_modeloAvaliacao.service-1bde92fd.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoNovoPage.vue": {
+    "file": "assets/ModeloAvaliacaoNovoPage-263e7f85.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloAvaliacaoFormWizard-ab52dc2f.js",
+      "_modeloAvaliacao.service-1bde92fd.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoVisualizarPage.vue": {
+    "file": "assets/ModeloAvaliacaoVisualizarPage-d4ebd3b3.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloAvaliacaoFormWizard-ab52dc2f.js",
+      "_modeloAvaliacao.service-1bde92fd.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloAvaliacao/ModeloAvaliacaoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoEditarPage.vue": {
+    "file": "assets/ModeloPrescricaoEditarPage-df65fabb.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloPrescricaoFormWizard-d7526ed9.js",
+      "_modeloPrescricao.service-f78d455d.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoListaPage.vue": {
+    "file": "assets/ModeloPrescricaoListaPage-f88d001b.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_modeloPrescricao.service-f78d455d.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoNovoPage.vue": {
+    "file": "assets/ModeloPrescricaoNovoPage-7eb0533e.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloPrescricaoFormWizard-d7526ed9.js",
+      "_modeloPrescricao.service-f78d455d.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoVisualizarPage.vue": {
+    "file": "assets/ModeloPrescricaoVisualizarPage-ef91bd57.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_ModeloPrescricaoFormWizard-d7526ed9.js",
+      "_modeloPrescricao.service-f78d455d.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/modeloPrescricao/ModeloPrescricaoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoEditarPage.vue": {
+    "file": "assets/SalaAtendimentoEditarPage-6ddcd053.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_SalaAtendimentoFormWizard-39daaffc.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoListaPage.vue": {
+    "file": "assets/SalaAtendimentoListaPage-b61b0fdb.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_salasAtendimento.service-1d0b3f07.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoNovoPage.vue": {
+    "file": "assets/SalaAtendimentoNovoPage-9d0bc479.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_SalaAtendimentoFormWizard-39daaffc.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoVisualizarPage.vue": {
+    "file": "assets/SalaAtendimentoVisualizarPage-2dc04da9.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_SalaAtendimentoFormWizard-39daaffc.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/salasAtendimento/SalaAtendimentoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoEditarPage.vue": {
+    "file": "assets/SalaInternacaoEditarPage-445be27c.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_SalaInternacaoFormWizard-c28ebf6c.js",
+      "_salasInternacao.service-147d3a7c.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoListaPage.vue": {
+    "file": "assets/SalaInternacaoListaPage-eb044470.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_salasInternacao.service-147d3a7c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoNovoPage.vue": {
+    "file": "assets/SalaInternacaoNovoPage-3bdd4436.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_SalaInternacaoFormWizard-c28ebf6c.js",
+      "_salasInternacao.service-147d3a7c.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoVisualizarPage.vue": {
+    "file": "assets/SalaInternacaoVisualizarPage-207ac7a6.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_SalaInternacaoFormWizard-c28ebf6c.js",
+      "_salasInternacao.service-147d3a7c.js",
+      "__plugin-vue_export-helper-c27b6911.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/salasInternacao/SalaInternacaoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaEditarPage.vue": {
+    "file": "assets/VacinaEditarPage-84de1036.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_VacinaFormWizard.vue_vue_type_script_setup_true_lang-b2613079.js",
+      "_vacinas.service-6f89662e.js",
+      "_legacyScripts-b8dbb126.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaListaPage.vue": {
+    "file": "assets/VacinaListaPage-cfc308e3.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_vacinas.service-6f89662e.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaNovoPage.vue": {
+    "file": "assets/VacinaNovoPage-b4f14afb.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_VacinaFormWizard.vue_vue_type_script_setup_true_lang-b2613079.js",
+      "_vacinas.service-6f89662e.js",
+      "_legacyScripts-b8dbb126.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaVisualizarPage.vue": {
+    "file": "assets/VacinaVisualizarPage-5b4cfa49.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_VacinaFormWizard.vue_vue_type_script_setup_true_lang-b2613079.js",
+      "_vacinas.service-6f89662e.js",
+      "_legacyScripts-b8dbb126.js",
+      "_especies.service-73aeea72.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/cadastros/vacinas/VacinaVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoEditarPage.vue": {
+    "file": "assets/InternacaoEditarPage-f6c77399.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_InternacaoFormWizard-b283b58d.js",
+      "_internacoes.service-46842153.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_salasInternacao.service-147d3a7c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoListaPage.vue": {
+    "file": "assets/InternacaoListaPage-998bd03b.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_internacoes.service-46842153.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_salasInternacao.service-147d3a7c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoNovoPage.vue": {
+    "file": "assets/InternacaoNovoPage-3e05aca3.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_InternacaoFormWizard-b283b58d.js",
+      "_internacoes.service-46842153.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_salasInternacao.service-147d3a7c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoVisualizarPage.vue": {
+    "file": "assets/InternacaoVisualizarPage-6664b137.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_InternacaoFormWizard-b283b58d.js",
+      "_internacoes.service-46842153.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_salasInternacao.service-147d3a7c.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/internacoes/historico/InternacaoVisualizarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/prontuarios/consultas/ConsultasHistoricoPage.vue": {
+    "file": "assets/ConsultasHistoricoPage-42c575e3.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_fila.service-b0987900.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_modeloAvaliacao.service-1bde92fd.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/prontuarios/consultas/ConsultasHistoricoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaEditarPage.vue": {
+    "file": "assets/FilaEditarPage-15aee364.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_FilaFormWizard-c0d02494.js",
+      "_fila.service-b0987900.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_modeloAvaliacao.service-1bde92fd.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaEditarPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaListaPage.vue": {
+    "file": "assets/FilaListaPage-d2b350e7.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_DataTable.vue_vue_type_script_setup_true_lang-e13dddd6.js",
+      "_fila.service-b0987900.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_modeloAvaliacao.service-1bde92fd.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaListaPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaNovoPage.vue": {
+    "file": "assets/FilaNovoPage-6d8b6e67.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_FilaFormWizard-c0d02494.js",
+      "_fila.service-b0987900.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_modeloAvaliacao.service-1bde92fd.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaNovoPage.vue"
+  },
+  "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaVisualizarPage.vue": {
+    "file": "assets/FilaVisualizarPage-05fe6249.js",
+    "imports": [
+      "resources/js/petshop/src/main.ts",
+      "_FilaFormWizard-c0d02494.js",
+      "_fila.service-b0987900.js",
+      "_legacyScripts-b8dbb126.js",
+      "__plugin-vue_export-helper-c27b6911.js",
+      "_atendimentos.service-a1ff4b05.js",
+      "_checklist.service-298ef632.js",
+      "_medicos.service-2331a932.js",
+      "_salasAtendimento.service-1d0b3f07.js",
+      "_modeloAtendimento.service-b2152127.js",
+      "_modeloAvaliacao.service-1bde92fd.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "resources/js/petshop/src/pages/petshop/vet/prontuarios/fila/FilaVisualizarPage.vue"
   },
   "resources/sass/app.scss": {
     "file": "assets/app-3ea8b221.css",

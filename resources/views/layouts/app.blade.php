@@ -180,19 +180,6 @@
                             @endif
                         </div>
 
-                        @if(Auth::check() && (int)(Auth::user()->ui_version ?? 0) === 0)
-                        <div class="app-search dropdown d-lg-block d-none d-md-inline-block">
-                            <form method="POST" action="{{ route('me.ui-version') }}" class="d-inline">
-                                @csrf
-                                <input type="hidden" name="ui_version" value="1">
-                                <button type="submit" class="badge bg-success border border-light shadow p-1 rounded-3">
-                                    <i class="ri-flashlight-fill text-white"></i>
-                                    <span class="text-white">Nova versão</span>
-                                </button>
-                            </form>
-                        </div>
-                        @endif
-
                         @if(env("APP_ENV") == "demo")
                         <div class="app-search dropdown d-lg-block d-none d-md-inline-block">
                             <div class="app-search dropdown d-none d-lg-block">
