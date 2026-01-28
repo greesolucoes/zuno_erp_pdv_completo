@@ -127,7 +127,7 @@ Route::middleware(['validaEcommerce'])->group(function () {
 Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-        Route::prefix('petshop/api')->group(function () {
+        Route::prefix('v2/api')->group(function () {
             Route::prefix('petshop')->group(function () {
             Route::get('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'index'])->name('petshop.api.petshop.pets.index');
             Route::get('pets/options', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'options'])->name('petshop.api.petshop.pets.options');

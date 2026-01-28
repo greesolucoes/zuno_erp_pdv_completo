@@ -25,6 +25,9 @@
                 ui: {
                     basePath: "/v2",
                 },
+                api: {
+                    basePath: "/v2/api",
+                },
             };
         </script>
     </head>

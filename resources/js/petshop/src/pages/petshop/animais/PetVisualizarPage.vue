@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import PetFormWizard from '../../../components/petshop/animais/PetFormWizard.vue'
 import { createNovoPetDraft, type PetDraft } from '../../../composables/createNovoPetDraft'
 import { getPetById, loadPetsOptions, type Pet, type PetsLoadOptions } from '../../../services/petshop/animais/pets.service'
+import type { ApiError } from '../../../services/http'
 
 const router = useRouter()
 const route = useRoute()
@@ -26,11 +27,10 @@ onMounted(async () => {
   try {
     const [loadedOptions, pet] = await Promise.all([loadPetsOptions(), getPetById(petId)])
     options.value = loadedOptions
-    if (!pet) {
-      notFound.value = true
-      return
-    }
     reset(petToDraft(pet))
+  } catch (e) {
+    const err = e as ApiError
+    if (err?.status === 404) notFound.value = true
   } finally {
     loading.value = false
   }
