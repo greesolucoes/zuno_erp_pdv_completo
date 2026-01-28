@@ -37,20 +37,7 @@ const emit = defineEmits<{
           <slot name="row" :row="row" :index="index" />
         </template>
       </template>
-      <tr v-else-if="!loading">
-        <td colspan="99">
-          <slot name="empty">
-            <span class="sem-registros">{{ emptyText }}</span>
-          </slot>
-        </td>
-      </tr>
-      <tr v-else>
-        <td colspan="99">
-          <slot name="loading">
-            <span class="sem-registros">Nenhum registro encontrado</span>
-          </slot>
-        </td>
-      </tr>
+  
     </tbody>
   </table>
 

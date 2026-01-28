@@ -16,11 +16,7 @@ const homeTo = props.homeTo ?? '/home'
 const links: MenuLink[] =
   props.links ??
   [
-    { label: 'NFS-e Emitidas', to: '/notas/emitidas', iconSrc: '/img/menu-emitidas-35.svg', tooltip: 'NFS-e Emitidas' },
-    { label: 'NFS-e Recebidas', to: '/notas/recebidas', iconSrc: '/img/menu-recebidas-35.svg', tooltip: 'NFS-e Recebidas' },
-    { label: 'Rascunhos', to: '/notas/rascunhos', iconSrc: '/img/menu-rascunhos-35.svg', tooltip: 'Rascunhos' },
     { label: 'Configurações', to: '/perfil/configuracao', iconSrc: '/img/menu-config-35.svg', tooltip: 'Configurações' },
-    { label: 'Serviços Favoritos', to: '/perfil/servicos-favoritos', iconSrc: '/img/menu-favoritos-35.svg', tooltip: 'Serviços Favoritos' },
   ]
 
 const companyName = props.companyName ?? 'TEIXX DESENVOLVIMENTO E SOFTWARE LTDA'
@@ -77,12 +73,34 @@ const { setVariant } = useNavigationVariant()
               <span class="nome-mobile">Nova NFS-e</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
-              <li class="dropdown-header titulo-menu">Tipos de emissão:</li>
+              <li class="dropdown-header titulo-menu">Nota Fiscal de Serviço:</li>
               <li><RouterLink to="/dps/pessoas">Emissão completa</RouterLink></li>
-              <li><RouterLink to="/dps/simplificada">Emissão simplificada</RouterLink></li>
-              <li>
-                <RouterLink to="/dps/bypass">Emissão por decisão administrativa/judicial</RouterLink>
-              </li>
+              <li><RouterLink to="/dps/pessoas">Lista de emissão</RouterLink></li>
+              <li><RouterLink to="/dps/simplificada">Configurações</RouterLink></li>
+            
+            </ul>
+          </li>
+
+
+           <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-hover="dropdown"
+            >
+              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <span class="nome-mobile">Nova NFS-e</span>
+            </a>
+            <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
+              <li class="dropdown-header titulo-menu">Nota Fiscal Eletrônica:</li>
+              <li><RouterLink to="">Emissão completa</RouterLink></li>
+              <li><RouterLink to="">Lista de emissão</RouterLink></li>
+              <li><RouterLink to="">Buscar xml</RouterLink></li>
+              <li><RouterLink to="">Importar xml</RouterLink></li>
             </ul>
           </li>
 
@@ -96,11 +114,61 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/pet-store.svg" style="top: -2px" /><span class="caret"></span></div>
+              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <span class="nome-mobile">Novo Produto</span>
+            </a>
+            <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
+              <li class="dropdown-header titulo-menu" style="margin-top: 6px">Cadastro de produtos:</li>
+              <li><RouterLink to="">Produto</RouterLink></li>
+              <li><RouterLink to="">Categoria</RouterLink></li>
+              <li><RouterLink to="">Unidade de medidas</RouterLink></li>
+              <li><RouterLink to="">Marcas</RouterLink></li>
+              <li><RouterLink to="">Variação</RouterLink></li>
+              <li class="dropdown-header titulo-menu">Estoque:</li>
+              <li><RouterLink to="">Gerenciar estoque</RouterLink></li>
+              <li><RouterLink to="">Inventário</RouterLink></li>
+              <li><RouterLink to="">Transferência de estoque</RouterLink></li>
+
+            </ul>
+          </li>
+          
+           <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-hover="dropdown"
+            >
+              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <span class="nome-mobile">Novo Serviço</span>
+            </a>
+            <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
+              <li class="dropdown-header titulo-menu">Cadastro de serviços:</li>
+              <li><RouterLink to="">Serviço</RouterLink></li>
+              <li><RouterLink to="">Categoria</RouterLink></li>
+              <li><RouterLink to="">Ordem de Serviço</RouterLink></li>
+
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-hover="dropdown"
+            >
+              <div><img src="/img/menu-nova-35.svg" style="top: -2px" /><span class="caret"></span></div>
               <span class="nome-mobile">Petshop</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
-              <li class="dropdown-header titulo-menu" style="margin-top: 6px">Cadastros</li>
+              <li class="dropdown-header titulo-menu" style="margin-top: 6px">Petshop</li>
               <li class="dropdown-submenu">
                 <a href="javascript:void(0);">Cadastros (Pets)</a>
                 <ul class="dropdown-menu">
@@ -217,6 +285,90 @@ const { setVariant } = useNavigationVariant()
             </ul>
           </li>
 
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-hover="dropdown"
+            >
+              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <span class="nome-mobile">Nova NFS-e</span>
+            </a>
+            <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
+              <li class="dropdown-header titulo-menu">Vendas:</li>
+              <li><RouterLink to="">Todas as vendas</RouterLink></li>
+              <li><RouterLink to="">Nova venda</RouterLink></li>
+              <li><RouterLink to="">Orçamento de vendas</RouterLink></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-hover="dropdown"
+            >
+              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <span class="nome-mobile">Nova NFS-e</span>
+            </a>
+            <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
+              <li class="dropdown-header titulo-menu">Compras:</li>
+              <li><RouterLink to="">Lista de compras</RouterLink></li>
+              <li><RouterLink to="">Cotação de compras</RouterLink></li>
+              <li><RouterLink to="">Importar compras</RouterLink></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-hover="dropdown"
+            >
+              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <span class="nome-mobile">Nova NFS-e</span>
+            </a>
+            <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
+              <li class="dropdown-header titulo-menu">Financeiro:</li>
+              <li><RouterLink to="">Caixa</RouterLink></li>
+              <li><RouterLink to="">Contas a pagar</RouterLink></li>
+              <li><RouterLink to="">Contas a receber</RouterLink></li>
+            </ul>
+          </li>
+          
+          <li class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              data-toggle="dropdown"
+              role="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+              data-hover="dropdown"
+            >
+              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <span class="nome-mobile">Nova NFS-e</span>
+            </a>
+            <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
+              <li class="dropdown-header titulo-menu">Ponto de Vendas:</li>
+              <li><RouterLink to="">Vendas PDV</RouterLink></li>
+              <li><RouterLink to="">Abrir PDV</RouterLink></li>
+              <li><RouterLink to="">Trocas</RouterLink></li>
+            </ul>
+          </li>
+
           <li v-for="link in links" :key="link.to">
             <RouterLink
               :to="link.to"
@@ -241,6 +393,7 @@ const { setVariant } = useNavigationVariant()
             </RouterLink>
           </li>
 
+          
           <li class="divisor"></li>
 
           <li class="dropdown perfil">
@@ -264,6 +417,8 @@ const { setVariant } = useNavigationVariant()
               <li><RouterLink to="/logout">Sair com segurança</RouterLink></li>
             </ul>
           </li>
+
+
         </ul>
       </div>
     </div>
