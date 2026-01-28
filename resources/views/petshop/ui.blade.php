@@ -23,7 +23,7 @@
                 csrf_token: @json(csrf_token()),
                 user: @json(Auth::user()),
                 ui: {
-                    basePath: "/petshop-ui",
+                    basePath: "/v2",
                 },
             };
         </script>
@@ -37,4 +37,3 @@
         @vite(['resources/js/petshop/src/main.ts'])
     </body>
 </html>
-

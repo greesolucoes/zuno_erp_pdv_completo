@@ -57,7 +57,7 @@ class RedirectToPetshopUiIfPetshopSegment
 
         $path = ltrim($request->path(), '/');
 
-        if (str_starts_with($path, 'petshop-ui')) {
+        if (str_starts_with($path, 'v2')) {
             return false;
         }
 
@@ -86,10 +86,9 @@ class RedirectToPetshopUiIfPetshopSegment
         $path = ltrim($request->path(), '/');
 
         // Preserve the user's intended URL inside the SPA base path.
-        $target = $path === '' ? '/petshop-ui' : ('/petshop-ui/' . $path);
+        $target = $path === '' ? '/v2' : ('/v2/' . $path);
         $qs = $request->getQueryString();
 
         return $qs ? ($target . '?' . $qs) : $target;
     }
 }
-

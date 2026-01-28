@@ -187,11 +187,11 @@ Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
         });
     });
 
-    Route::get('/petshop-ui/{any?}', function () {
+    Route::get('/v2/{any?}', function () {
         return view('petshop.ui', [
             'title' => 'Sistema (Petshop)',
         ]);
-    })->where('any', '.*')->name('petshop-ui');
+    })->where('any', '.*')->name('v2');
 
     Route::middleware(['verificaMaster'])->group(function () {
         Route::get('/nfe-all', [App\Http\Controllers\HomeController::class, 'nfe'])->name('nfe-all');
