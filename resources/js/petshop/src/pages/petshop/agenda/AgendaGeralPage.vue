@@ -302,6 +302,7 @@ const listRows = computed(() => {
         </tr>
       </template>
     </DataTable>
+    <span class="sem-registros">Nenhum registro encontrado</span>
   </div>
 
   <div v-else class="agenda-grid">

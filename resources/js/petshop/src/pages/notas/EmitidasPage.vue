@@ -286,6 +286,7 @@ onMounted(() => {
       </tr>
     </template>
   </DataTable>
+  <span class="sem-registros">Nenhum registro encontrado</span>
 
   <div id="modalCancelamento" class="modal fade" tabindex="-1" role="dialog"></div>
 </template>
