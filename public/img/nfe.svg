@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="29.001" height="44" viewBox="0 0 29.001 44">
+  <g id="Grupo_597" data-name="Grupo 597" transform="translate(-623 -609)">
+    <g id="Grupo_590" data-name="Grupo 590">
+      <g id="Grupo_589" data-name="Grupo 589">
+
+        <!-- TROCA AQUI: agora é NFe (garantido), mantendo posição/estilo -->
+        <text x="628" y="616" fill="#80a47b"
+              font-family="Arial, sans-serif"
+              font-size="7.6"
+              font-weight="700"
+              letter-spacing="0.2"
+              dominant-baseline="hanging">
+          NFe
+        </text>
+
+        <rect id="Retângulo_429" data-name="Retângulo 429" width="19" height="3" transform="translate(628 625)" fill="#80a47b"/>
+        <rect id="Retângulo_432" data-name="Retângulo 432" width="19" height="3" transform="translate(628 630)" fill="#80a47b"/>
+        <path id="Subtração_114" data-name="Subtração 114" d="M-3925.5-4034h-1.5a10.076,10.076,0,0,0-3.636-3h5.135v3Zm-17.5,0h-1.5v-3h5.135a10.078,10.078,0,0,0-3.636,3Z" transform="translate(4572.5 4672)" fill="#80a47b"/>
+        <path id="Subtração_106" data-name="Subtração 106" d="M-3940.5-4003h-1.5a3,3,0,0,1-3-3v-29a3,3,0,0,1,3-3h23a3,3,0,0,1,3,3v29a3,3,0,0,1-3,3h-1.5a10,10,0,0,0-.458-3,2.009,2.009,0,0,0,1.958-2v-25a2,2,0,0,0-2-2h-19a2,2,0,0,0-2,2v25a2.01,2.01,0,0,0,1.958,2,9.995,9.995,0,0,0-.458,3Z" transform="translate(4568 4647)" fill="#80a47b"/>
+        <circle id="Elipse_129" data-name="Elipse 129" cx="9" cy="9" r="9" transform="translate(628.5 635)" fill="#d37a00"/>
+        <path id="Caminho_269" data-name="Caminho 269" d="M9.049-11.473h4.7v2.955h-4.7V-3.9H5.467V-8.518H.751v-2.955H5.467V-15.9H9.049Z" transform="translate(630.249 653.899)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

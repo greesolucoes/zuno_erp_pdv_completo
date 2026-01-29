@@ -92,7 +92,7 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <div><img src="/img/nfe.svg" /><span class="caret"></span></div>
               <span class="nome-mobile">Nova NFS-e</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
@@ -114,7 +114,7 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <div><img src="/img/cadastro-produto.svg" /><span class="caret"></span></div>
               <span class="nome-mobile">Novo Produto</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
@@ -142,7 +142,7 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <div><img src="/img/cadastro-servico.svg" /><span class="caret"></span></div>
               <span class="nome-mobile">Novo Serviço</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
@@ -164,7 +164,7 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/menu-nova-35.svg" style="top: -2px" /><span class="caret"></span></div>
+              <div><img src="/img/petshop.svg" style="top: -2px" /><span class="caret"></span></div>
               <span class="nome-mobile">Petshop</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
@@ -295,7 +295,7 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <div><img src="/img/vendas.svg" /><span class="caret"></span></div>
               <span class="nome-mobile">Nova NFS-e</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
@@ -316,7 +316,7 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <div><img src="/img/compras.svg" /><span class="caret"></span></div>
               <span class="nome-mobile">Nova NFS-e</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
@@ -337,7 +337,7 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <div><img src="/img/financeiro.svg" /><span class="caret"></span></div>
               <span class="nome-mobile">Nova NFS-e</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
@@ -358,7 +358,7 @@ const { setVariant } = useNavigationVariant()
               aria-expanded="false"
               data-hover="dropdown"
             >
-              <div><img src="/img/menu-nova-35.svg" /><span class="caret"></span></div>
+              <div><img src="/img/pos.svg" /><span class="caret"></span></div>
               <span class="nome-mobile">Nova NFS-e</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
