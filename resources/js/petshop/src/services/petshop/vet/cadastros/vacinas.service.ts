@@ -1,5 +1,5 @@
 import type { VacinaDraft, VacinaUpsertPayload } from '../../../../composables/createVacinaDraft'
-import { listEspecies, loadEspeciesOptions } from '../../animais/especies.service'
+import { listEspeciesSnapshot, loadEspeciesOptions } from '../../animais/especies.service'
 
 export type Vacina = VacinaDraft & {
   id: string
@@ -62,7 +62,7 @@ function ensureSeeded() {
   if (db.size) return
 
   void loadEspeciesOptions()
-  const especies = listEspecies()
+  const especies = listEspeciesSnapshot()
   const cachorroId = especies.find((e) => e.nome.toLowerCase() === 'cachorro')?.id ?? especies[0]?.id ?? '1'
   const gatoId = especies.find((e) => e.nome.toLowerCase() === 'gato')?.id ?? especies[1]?.id ?? cachorroId
 
@@ -151,7 +151,7 @@ function ensureSeeded() {
 
 export async function loadVacinasOptions(): Promise<VacinasLoadOptions> {
   ensureSeeded()
-  const species = listEspecies().map((e) => ({ id: e.id, label: e.nome }))
+  const species = listEspeciesSnapshot().map((e) => ({ id: e.id, label: e.nome }))
 
   return {
     products,
@@ -225,4 +225,3 @@ export async function updateVacina(id: string, payload: VacinaUpsertPayload): Pr
   db.set(id, updated)
   return updated
 }
-

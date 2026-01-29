@@ -1,5 +1,6 @@
 import type { RacaDraft, RacaUpsertPayload } from '../../../composables/createRacaDraft'
-import { loadEspeciesOptions, listEspecies } from './especies.service'
+import type { ApiError } from '../../http'
+import { apiGet, apiPost, apiPut } from '../../http'
 
 export type Raca = RacaDraft & {
   id: string
@@ -12,80 +13,44 @@ export type RacasLoadOptions = {
   especies: SelectOption[]
 }
 
-let nextId = 1
-const db = new Map<string, Raca>()
-
-function nowIso() {
-  return new Date().toISOString()
+export type PaginatedMeta = {
+  current_page: number
+  last_page: number
+  per_page: number
+  total: number
 }
 
-async function ensureSeeded() {
-  if (db.size) return
+export type PaginatedResponse<T> = {
+  data: T[]
+  meta: PaginatedMeta
+}
 
-  await loadEspeciesOptions()
-  const especies = listEspecies()
-  const cachorroId = especies.find((e) => e.nome.toLowerCase() === 'cachorro')?.id ?? especies[0]?.id ?? '1'
-  const gatoId = especies.find((e) => e.nome.toLowerCase() === 'gato')?.id ?? especies[1]?.id ?? cachorroId
-
-  const seeds: Array<Pick<Raca, 'nome' | 'especie_id'>> = [
-    { nome: 'SRD', especie_id: cachorroId },
-    { nome: 'Poodle', especie_id: cachorroId },
-    { nome: 'Labrador', especie_id: cachorroId },
-    { nome: 'Siamês', especie_id: gatoId },
-    { nome: 'Persa', especie_id: gatoId },
-  ]
-
-  for (const seed of seeds) {
-    const raca: Raca = { id: String(nextId++), created_at: nowIso(), ...seed }
-    db.set(raca.id, raca)
-  }
+export async function listRacas(params?: { busca?: string; page?: number }): Promise<PaginatedResponse<Raca>> {
+  return apiGet<PaginatedResponse<Raca>>('/petshop/racas', {
+    busca: params?.busca ?? '',
+    page: params?.page ?? 1,
+  })
 }
 
 export async function loadRacasOptions(): Promise<RacasLoadOptions> {
-  await ensureSeeded()
-  const especies = listEspecies().map((e) => ({ id: e.id, label: e.nome }))
-  return { especies }
-}
-
-export function listRacas(search?: string): Raca[] {
-  void ensureSeeded()
-  const all = Array.from(db.values())
-  const normalized = (search ?? '').trim().toLowerCase()
-  if (!normalized) return all
-  return all.filter((r) => r.nome.toLowerCase().includes(normalized) || r.especie_id.toLowerCase().includes(normalized))
+  return apiGet<RacasLoadOptions>('/petshop/racas/options')
 }
 
 export async function getRacaById(id: string): Promise<Raca | null> {
-  await ensureSeeded()
-  return db.get(id) ?? null
+  try {
+    return await apiGet<Raca>(`/petshop/racas/${encodeURIComponent(id)}`)
+  } catch (e) {
+    const err = e as Partial<ApiError> | null
+    if (err?.status === 404) return null
+    throw e
+  }
 }
 
-export async function createRaca(payload: RacaUpsertPayload): Promise<Raca> {
-  await ensureSeeded()
-
-  const raca: Raca = {
-    id: String(nextId++),
-    nome: payload.nome.trim(),
-    especie_id: payload.especie_id,
-    created_at: nowIso(),
-  }
-
-  db.set(raca.id, raca)
-  return raca
+export async function createRaca(payload: RacaUpsertPayload): Promise<{ id: string }> {
+  return apiPost<{ id: string }>('/petshop/racas', payload as any)
 }
 
-export async function updateRaca(id: string, payload: RacaUpsertPayload): Promise<Raca | null> {
-  await ensureSeeded()
-  const existing = db.get(id)
-  if (!existing) return null
-
-  const updated: Raca = {
-    ...existing,
-    nome: payload.nome.trim(),
-    especie_id: payload.especie_id,
-  }
-
-  db.set(id, updated)
-  return updated
+export async function updateRaca(id: string, payload: RacaUpsertPayload): Promise<{ ok: true }> {
+  return apiPut<{ ok: true }>(`/petshop/racas/${encodeURIComponent(id)}`, payload as any)
 }
 

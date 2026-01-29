@@ -1,65 +1,50 @@
 import type { PelagemDraft, PelagemUpsertPayload } from '../../../composables/createPelagemDraft'
+import type { ApiError } from '../../http'
+import { apiGet, apiPost, apiPut } from '../../http'
 
 export type Pelagem = PelagemDraft & {
   id: string
   created_at: string
 }
 
-let nextId = 1
-const db = new Map<string, Pelagem>()
-
-function nowIso() {
-  return new Date().toISOString()
+export type PaginatedMeta = {
+  current_page: number
+  last_page: number
+  per_page: number
+  total: number
 }
 
-function ensureSeeded() {
-  if (db.size) return
+export type PaginatedResponse<T> = {
+  data: T[]
+  meta: PaginatedMeta
+}
 
-  const nomes = ['Curta', 'Média', 'Longa']
-  for (const nome of nomes) {
-    const pelagem: Pelagem = { id: String(nextId++), nome, created_at: nowIso() }
-    db.set(pelagem.id, pelagem)
-  }
+export async function listPelagens(params?: { busca?: string; page?: number }): Promise<PaginatedResponse<Pelagem>> {
+  return apiGet<PaginatedResponse<Pelagem>>('/petshop/pelagens', {
+    busca: params?.busca ?? '',
+    page: params?.page ?? 1,
+  })
 }
 
 export async function loadPelagensOptions(): Promise<Record<string, never>> {
-  ensureSeeded()
-  return {}
-}
-
-export function listPelagens(search?: string): Pelagem[] {
-  ensureSeeded()
-  const all = Array.from(db.values())
-  const normalized = (search ?? '').trim().toLowerCase()
-  if (!normalized) return all
-  return all.filter((p) => p.nome.toLowerCase().includes(normalized))
+  return apiGet<Record<string, never>>('/petshop/pelagens/options')
 }
 
 export async function getPelagemById(id: string): Promise<Pelagem | null> {
-  ensureSeeded()
-  return db.get(id) ?? null
-}
-
-export async function createPelagem(payload: PelagemUpsertPayload): Promise<Pelagem> {
-  ensureSeeded()
-
-  const pelagem: Pelagem = {
-    id: String(nextId++),
-    nome: payload.nome.trim(),
-    created_at: nowIso(),
+  try {
+    return await apiGet<Pelagem>(`/petshop/pelagens/${encodeURIComponent(id)}`)
+  } catch (e) {
+    const err = e as Partial<ApiError> | null
+    if (err?.status === 404) return null
+    throw e
   }
-
-  db.set(pelagem.id, pelagem)
-  return pelagem
 }
 
-export async function updatePelagem(id: string, payload: PelagemUpsertPayload): Promise<Pelagem | null> {
-  ensureSeeded()
-  const existing = db.get(id)
-  if (!existing) return null
+export async function createPelagem(payload: PelagemUpsertPayload): Promise<{ id: string }> {
+  return apiPost<{ id: string }>('/petshop/pelagens', payload as any)
+}
 
-  const updated: Pelagem = { ...existing, nome: payload.nome.trim() }
-  db.set(id, updated)
-  return updated
+export async function updatePelagem(id: string, payload: PelagemUpsertPayload): Promise<{ ok: true }> {
+  return apiPut<{ ok: true }>(`/petshop/pelagens/${encodeURIComponent(id)}`, payload as any)
 }
 

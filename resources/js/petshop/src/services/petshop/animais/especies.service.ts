@@ -1,69 +1,69 @@
 import type { EspecieDraft, EspecieUpsertPayload } from '../../../composables/createEspecieDraft'
+import type { ApiError } from '../../http'
+import { apiGet, apiPost, apiPut } from '../../http'
 
 export type Especie = EspecieDraft & {
   id: string
   created_at: string
 }
 
-let nextId = 1
-const db = new Map<string, Especie>()
-
-function nowIso() {
-  return new Date().toISOString()
+export type PaginatedMeta = {
+  current_page: number
+  last_page: number
+  per_page: number
+  total: number
 }
 
-function ensureSeeded() {
-  if (db.size) return
+export type PaginatedResponse<T> = {
+  data: T[]
+  meta: PaginatedMeta
+}
 
-  const nomes = ['Cachorro', 'Gato', 'Coelho', 'Pássaro', 'Hamster']
-  for (const nome of nomes) {
-    const especie: Especie = { id: String(nextId++), nome, created_at: nowIso() }
-    db.set(especie.id, especie)
-  }
+const fallbackSnapshot: Especie[] = [
+  { id: '1', nome: 'CACHORRO', created_at: new Date().toISOString() },
+  { id: '2', nome: 'GATO', created_at: new Date().toISOString() },
+]
+
+let especiesSnapshot: Especie[] = fallbackSnapshot
+
+export async function listEspecies(params?: { busca?: string; page?: number }): Promise<PaginatedResponse<Especie>> {
+  return apiGet<PaginatedResponse<Especie>>('/petshop/especies', {
+    busca: params?.busca ?? '',
+    page: params?.page ?? 1,
+  })
 }
 
 export async function loadEspeciesOptions(): Promise<Record<string, never>> {
-  ensureSeeded()
-  return {}
+  try {
+    const [options, firstPage] = await Promise.all([
+      apiGet<Record<string, never>>('/petshop/especies/options'),
+      listEspecies({ page: 1 }),
+    ])
+    especiesSnapshot = firstPage.data.length ? firstPage.data : especiesSnapshot
+    return options
+  } catch {
+    return {}
+  }
 }
 
-export function listEspecies(search?: string): Especie[] {
-  ensureSeeded()
-  const all = Array.from(db.values())
-  const normalized = (search ?? '').trim().toLowerCase()
-  if (!normalized) return all
-  return all.filter((e) => e.nome.toLowerCase().includes(normalized))
+export function listEspeciesSnapshot(): Especie[] {
+  return especiesSnapshot
 }
 
 export async function getEspecieById(id: string): Promise<Especie | null> {
-  ensureSeeded()
-  return db.get(id) ?? null
-}
-
-export async function createEspecie(payload: EspecieUpsertPayload): Promise<Especie> {
-  ensureSeeded()
-
-  const especie: Especie = {
-    id: String(nextId++),
-    nome: payload.nome.trim(),
-    created_at: nowIso(),
+  try {
+    return await apiGet<Especie>(`/petshop/especies/${encodeURIComponent(id)}`)
+  } catch (e) {
+    const err = e as Partial<ApiError> | null
+    if (err?.status === 404) return null
+    throw e
   }
-
-  db.set(especie.id, especie)
-  return especie
 }
 
-export async function updateEspecie(id: string, payload: EspecieUpsertPayload): Promise<Especie | null> {
-  ensureSeeded()
-  const existing = db.get(id)
-  if (!existing) return null
-
-  const updated: Especie = {
-    ...existing,
-    nome: payload.nome.trim(),
-  }
-
-  db.set(id, updated)
-  return updated
+export async function createEspecie(payload: EspecieUpsertPayload): Promise<{ id: string }> {
+  return apiPost<{ id: string }>('/petshop/especies', payload as any)
 }
 
+export async function updateEspecie(id: string, payload: EspecieUpsertPayload): Promise<{ ok: true }> {
+  return apiPut<{ ok: true }>(`/petshop/especies/${encodeURIComponent(id)}`, payload as any)
+}

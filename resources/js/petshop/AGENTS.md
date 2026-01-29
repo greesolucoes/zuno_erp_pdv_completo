@@ -96,3 +96,15 @@ Use rotas previsíveis para manter consistência:
   - reset do valor dependente quando o pai mudar
 - Não duplicar formulários: **um** `*FormWizard.vue` por entidade.
 
+## Importante: UI legado (tooltips / menu dos “3 pontos”)
+
+Alguns comportamentos (ex.: tooltip e o menu suspenso da tabela com **Visualizar/Editar** via “3 pontos”) são inicializados por `initLegacyUiBindings()` (jQuery/Bootstrap).
+
+Regra prática:
+
+- Se a página **renderiza linhas/elementos depois de um fetch async** (ex.: listagem paginada via API), o binding do layout pode rodar antes do DOM existir.
+- Nesses casos, após atualizar o estado que gera o DOM, rode novamente o binding:
+  - `await nextTick()`
+  - `initLegacyUiBindings()`
+
+Exemplo: ao final de `fetchData()` em uma `*ListaPage.vue`, depois de setar `rows`.

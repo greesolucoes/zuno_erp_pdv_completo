@@ -1,5 +1,5 @@
 import type { MedicamentoDraft, MedicamentoUpsertPayload } from '../../../../composables/createMedicamentoDraft'
-import { listEspecies, loadEspeciesOptions } from '../../animais/especies.service'
+import { listEspeciesSnapshot, loadEspeciesOptions } from '../../animais/especies.service'
 
 export type Medicamento = MedicamentoDraft & {
   id: string
@@ -42,7 +42,7 @@ function ensureSeeded() {
   if (db.size) return
 
   void loadEspeciesOptions()
-  const especies = listEspecies()
+  const especies = listEspeciesSnapshot()
   const cachorroId = especies.find((e) => e.nome.toLowerCase() === 'cachorro')?.id ?? especies[0]?.id ?? '1'
   const gatoId = especies.find((e) => e.nome.toLowerCase() === 'gato')?.id ?? especies[1]?.id ?? cachorroId
 
@@ -117,7 +117,7 @@ function ensureSeeded() {
 
 export async function loadMedicamentosOptions(): Promise<MedicamentosLoadOptions> {
   ensureSeeded()
-  const especies = listEspecies().map((e) => ({ id: e.id, label: e.nome }))
+  const especies = listEspeciesSnapshot().map((e) => ({ id: e.id, label: e.nome }))
 
   return {
     produtos,

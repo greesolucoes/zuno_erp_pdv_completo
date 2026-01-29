@@ -1,20 +1,24 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataTable from '../../../../components/ui/DataTable.vue'
-import { listPelagens, loadPelagensOptions } from '../../../../services/petshop/animais/pelagens.service'
+import { listPelagens, loadPelagensOptions, type Pelagem } from '../../../../services/petshop/animais/pelagens.service'
+import { initLegacyUiBindings } from '../../../../utils/legacyScripts'
 
 const router = useRouter()
 const route = useRoute()
 
 const busca = ref((route.query.busca as string) ?? '')
+const loading = ref(false)
+const pelagens = ref<Pelagem[]>([])
+const totalPages = ref(1)
+const totalRows = ref(0)
 
 const page = computed(() => {
   const raw = Array.isArray(route.query.page) ? route.query.page[0] : route.query.page
   const parsed = Number.parseInt(String(raw ?? '1'), 10)
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 1
 })
-const perPage = 10
 
 function formatDateTimeBr(input: string): string {
   const date = new Date(input)
@@ -28,24 +32,31 @@ type PelagemRow = {
   cadastradoEm: string
 }
 
-const allRows = computed<PelagemRow[]>(() => {
-  const pelagens = listPelagens(busca.value)
-  return pelagens.map((p) => ({
+const rows = computed<PelagemRow[]>(() => {
+  return pelagens.value.map((p) => ({
     id: p.id,
     nome: p.nome,
     cadastradoEm: formatDateTimeBr(p.created_at),
   }))
 })
 
-const totalRows = computed(() => allRows.value.length)
-const totalPages = computed(() => Math.max(1, Math.ceil(totalRows.value / perPage)))
-const pageRows = computed(() => {
-  const start = (page.value - 1) * perPage
-  return allRows.value.slice(start, start + perPage)
-})
+async function fetchData() {
+  loading.value = true
+  try {
+    await loadPelagensOptions()
+    const list = await listPelagens({ busca: busca.value, page: page.value })
+    pelagens.value = list.data
+    totalPages.value = list.meta.last_page
+    totalRows.value = list.meta.total
+    await nextTick()
+    initLegacyUiBindings()
+  } finally {
+    loading.value = false
+  }
+}
 
 function goToPage(targetPage: number) {
-  const safePage = Math.min(Math.max(1, targetPage), totalPages.value)
+  const safePage = Math.min(Math.max(1, targetPage), totalPages.value || 1)
   router.push({ name: 'petshop-pelagens', query: { ...route.query, page: safePage === 1 ? undefined : String(safePage) } })
 }
 
@@ -65,9 +76,17 @@ function onRecarregar() {
 }
 
 onMounted(() => {
-  void loadPelagensOptions()
+  fetchData()
   // Os handlers e tooltips são inicializados pelo DefaultLayout (initLegacyUiBindings)
 })
+
+watch(
+  () => [route.query.page, route.query.busca],
+  () => {
+    busca.value = (route.query.busca as string) ?? ''
+    fetchData()
+  },
+)
 </script>
 
 <template>
@@ -121,11 +140,12 @@ onMounted(() => {
   </div>
 
   <DataTable
-    :rows="pageRows"
+    :rows="rows"
     :row-key="(r) => (r as any).id"
     :page="page"
     :total-pages="totalPages"
     :total-items="totalRows"
+    :loading="loading"
     @page-change="goToPage"
   >
     <template #head>
