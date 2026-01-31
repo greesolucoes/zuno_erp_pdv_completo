@@ -110,6 +110,79 @@ export const router = createRouter({
           component: () => import('../pages/produtos/categorias/CategoriaProdutoVisualizarPage.vue'),
           meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Categorias', 'Visualizar'], title: 'Visualizar categoria' },
         },
+        {
+          path: 'produtos/unidades',
+          name: 'unidades-medida',
+          component: () => import('../pages/produtos/unidades/UnidadesMedidaListaPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Unidades de medida'], title: 'Unidades de Medida' },
+        },
+        {
+          path: 'produtos/unidades/novo',
+          name: 'unidades-medida-novo',
+          component: () => import('../pages/produtos/unidades/UnidadeMedidaNovoPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Unidades de medida', 'Novo'], title: 'Nova unidade' },
+        },
+        {
+          path: 'produtos/unidades/:id/editar',
+          name: 'unidades-medida-editar',
+          component: () => import('../pages/produtos/unidades/UnidadeMedidaEditarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Unidades de medida', 'Editar'], title: 'Editar unidade' },
+        },
+        {
+          path: 'produtos/unidades/:id',
+          name: 'unidades-medida-visualizar',
+          component: () => import('../pages/produtos/unidades/UnidadeMedidaVisualizarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Unidades de medida', 'Visualizar'], title: 'Visualizar unidade' },
+        },
+        {
+          path: 'produtos/marcas',
+          name: 'marcas',
+          component: () => import('../pages/produtos/marcas/MarcasListaPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Marcas'], title: 'Marcas' },
+        },
+        {
+          path: 'produtos/marcas/novo',
+          name: 'marcas-novo',
+          component: () => import('../pages/produtos/marcas/MarcaNovoPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Marcas', 'Novo'], title: 'Nova marca' },
+        },
+        {
+          path: 'produtos/marcas/:id/editar',
+          name: 'marcas-editar',
+          component: () => import('../pages/produtos/marcas/MarcaEditarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Marcas', 'Editar'], title: 'Editar marca' },
+        },
+        {
+          path: 'produtos/marcas/:id',
+          name: 'marcas-visualizar',
+          component: () => import('../pages/produtos/marcas/MarcaVisualizarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Marcas', 'Visualizar'], title: 'Visualizar marca' },
+        },
+
+        {
+          path: 'servicos/categorias',
+          name: 'categorias-servico',
+          component: () => import('../pages/servicos/categorias/CategoriasServicoListaPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Serviços', 'Categorias'], title: 'Categorias de Serviço' },
+        },
+        {
+          path: 'servicos/categorias/novo',
+          name: 'categorias-servico-novo',
+          component: () => import('../pages/servicos/categorias/CategoriaServicoNovoPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Serviços', 'Categorias', 'Novo'], title: 'Nova categoria de serviço' },
+        },
+        {
+          path: 'servicos/categorias/:id/editar',
+          name: 'categorias-servico-editar',
+          component: () => import('../pages/servicos/categorias/CategoriaServicoEditarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Serviços', 'Categorias', 'Editar'], title: 'Editar categoria de serviço' },
+        },
+        {
+          path: 'servicos/categorias/:id',
+          name: 'categorias-servico-visualizar',
+          component: () => import('../pages/servicos/categorias/CategoriaServicoVisualizarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Serviços', 'Categorias', 'Visualizar'], title: 'Visualizar categoria de serviço' },
+        },
 
         {
           path: 'Petshop/ListaPets',

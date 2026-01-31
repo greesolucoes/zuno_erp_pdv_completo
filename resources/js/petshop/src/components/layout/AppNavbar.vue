@@ -121,8 +121,8 @@ const { setVariant } = useNavigationVariant()
               <li class="dropdown-header titulo-menu" style="margin-top: 6px">Cadastro de produtos:</li>
               <li><RouterLink to="/produtos">Produto</RouterLink></li>
               <li><RouterLink to="/produtos/categorias">Categoria</RouterLink></li>
-              <li><RouterLink to="">Unidade de medidas</RouterLink></li>
-              <li><RouterLink to="">Marcas</RouterLink></li>
+              <li><RouterLink to="/produtos/unidades">Unidade de medidas</RouterLink></li>
+              <li><RouterLink to="/produtos/marcas">Marcas</RouterLink></li>
               <li><RouterLink to="">Variação</RouterLink></li>
               <li class="dropdown-header titulo-menu">Estoque:</li>
               <li><RouterLink to="">Gerenciar estoque</RouterLink></li>
@@ -148,7 +148,7 @@ const { setVariant } = useNavigationVariant()
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
               <li class="dropdown-header titulo-menu">Cadastro de serviços:</li>
               <li><RouterLink to="">Serviço</RouterLink></li>
-              <li><RouterLink to="">Categoria</RouterLink></li>
+              <li><RouterLink to="/servicos/categorias">Categoria</RouterLink></li>
               <li><RouterLink to="">Ordem de Serviço</RouterLink></li>
 
             </ul>

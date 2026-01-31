@@ -142,6 +142,26 @@ Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
             Route::put('categorias-produto/{id}', [App\Http\Controllers\V2\Api\CategoriasProdutoController::class, 'update'])->name('api.v2.categorias-produto.update');
             Route::delete('categorias-produto/{id}', [App\Http\Controllers\V2\Api\CategoriasProdutoController::class, 'destroy'])->name('api.v2.categorias-produto.destroy');
 
+            Route::get('unidades-medida', [App\Http\Controllers\V2\Api\UnidadesMedidaController::class, 'index'])->name('api.v2.unidades-medida.index');
+            Route::get('unidades-medida/options', [App\Http\Controllers\V2\Api\UnidadesMedidaController::class, 'options'])->name('api.v2.unidades-medida.options');
+            Route::get('unidades-medida/{id}', [App\Http\Controllers\V2\Api\UnidadesMedidaController::class, 'show'])->name('api.v2.unidades-medida.show');
+            Route::post('unidades-medida', [App\Http\Controllers\V2\Api\UnidadesMedidaController::class, 'store'])->name('api.v2.unidades-medida.store');
+            Route::put('unidades-medida/{id}', [App\Http\Controllers\V2\Api\UnidadesMedidaController::class, 'update'])->name('api.v2.unidades-medida.update');
+            Route::delete('unidades-medida/{id}', [App\Http\Controllers\V2\Api\UnidadesMedidaController::class, 'destroy'])->name('api.v2.unidades-medida.destroy');
+
+            Route::get('marcas', [App\Http\Controllers\V2\Api\MarcasController::class, 'index'])->name('api.v2.marcas.index');
+            Route::get('marcas/{id}', [App\Http\Controllers\V2\Api\MarcasController::class, 'show'])->name('api.v2.marcas.show');
+            Route::post('marcas', [App\Http\Controllers\V2\Api\MarcasController::class, 'store'])->name('api.v2.marcas.store');
+            Route::put('marcas/{id}', [App\Http\Controllers\V2\Api\MarcasController::class, 'update'])->name('api.v2.marcas.update');
+            Route::delete('marcas/{id}', [App\Http\Controllers\V2\Api\MarcasController::class, 'destroy'])->name('api.v2.marcas.destroy');
+
+            Route::get('categorias-servico', [App\Http\Controllers\V2\Api\CategoriasServicoController::class, 'index'])->name('api.v2.categorias-servico.index');
+            Route::get('categorias-servico/options', [App\Http\Controllers\V2\Api\CategoriasServicoController::class, 'options'])->name('api.v2.categorias-servico.options');
+            Route::get('categorias-servico/{id}', [App\Http\Controllers\V2\Api\CategoriasServicoController::class, 'show'])->name('api.v2.categorias-servico.show');
+            Route::post('categorias-servico', [App\Http\Controllers\V2\Api\CategoriasServicoController::class, 'store'])->name('api.v2.categorias-servico.store');
+            Route::put('categorias-servico/{id}', [App\Http\Controllers\V2\Api\CategoriasServicoController::class, 'update'])->name('api.v2.categorias-servico.update');
+            Route::delete('categorias-servico/{id}', [App\Http\Controllers\V2\Api\CategoriasServicoController::class, 'destroy'])->name('api.v2.categorias-servico.destroy');
+
             Route::prefix('petshop')->group(function () {
             Route::get('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'index'])->name('petshop.api.petshop.pets.index');
             Route::get('pets/options', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'options'])->name('petshop.api.petshop.pets.options');
