@@ -125,6 +125,52 @@ async function request<T>(
   return payload as T
 }
 
+async function requestForm<T>(
+  method: 'POST' | 'PUT' | 'DELETE',
+  path: string,
+  form: FormData,
+  options?: ApiRequestOptions,
+): Promise<T> {
+  const url = `${resolveApiBasePath()}${path.startsWith('/') ? path : `/${path}`}`
+
+  const headers: Record<string, string> = {
+    Accept: 'application/json',
+    'X-Requested-With': 'XMLHttpRequest',
+  }
+
+  const csrf = resolveCsrfToken()
+  if (csrf) headers['X-CSRF-TOKEN'] = csrf
+
+  const resp = await fetch(url, {
+    method,
+    credentials: 'same-origin',
+    headers,
+    body: form,
+  })
+
+  const payload = await parseJsonSafely(resp)
+
+  if (!resp.ok) {
+    const message =
+      (payload as any)?.message ??
+      (typeof payload === 'string' ? payload : null) ??
+      `Erro HTTP ${resp.status}`
+    const err: ApiError = { status: resp.status, message, details: payload }
+    if (!options?.suppressErrorFeedback) {
+      feedback.error(toUserMessage(err))
+    }
+    throw err
+  }
+
+  const shouldShowSuccess = !options?.suppressSuccessFeedback
+  if (shouldShowSuccess) {
+    const message = options?.successMessage ?? ((payload as any)?.message as string | undefined) ?? 'Operação realizada com sucesso.'
+    feedback.success(message)
+  }
+
+  return payload as T
+}
+
 export function apiGet<T>(
   path: string,
   params?: Record<string, string | number | boolean | null | undefined>,
@@ -144,4 +190,12 @@ export function apiPut<T>(path: string, body: JsonValue, options?: ApiRequestOpt
 
 export function apiDelete<T>(path: string, options?: ApiRequestOptions): Promise<T> {
   return request<T>('DELETE', path, undefined, options)
+}
+
+export function apiPostForm<T>(path: string, form: FormData, options?: ApiRequestOptions): Promise<T> {
+  return requestForm<T>('POST', path, form, options)
+}
+
+export function apiPutForm<T>(path: string, form: FormData, options?: ApiRequestOptions): Promise<T> {
+  return requestForm<T>('PUT', path, form, options)
 }

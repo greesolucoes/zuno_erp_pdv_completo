@@ -147,7 +147,7 @@ const { setVariant } = useNavigationVariant()
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
               <li class="dropdown-header titulo-menu">Cadastro de serviços:</li>
-              <li><RouterLink to="">Serviço</RouterLink></li>
+              <li><RouterLink to="/servicos">Serviço</RouterLink></li>
               <li><RouterLink to="/servicos/categorias">Categoria</RouterLink></li>
               <li><RouterLink to="">Ordem de Serviço</RouterLink></li>
 

@@ -162,6 +162,13 @@ Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
             Route::put('categorias-servico/{id}', [App\Http\Controllers\V2\Api\CategoriasServicoController::class, 'update'])->name('api.v2.categorias-servico.update');
             Route::delete('categorias-servico/{id}', [App\Http\Controllers\V2\Api\CategoriasServicoController::class, 'destroy'])->name('api.v2.categorias-servico.destroy');
 
+            Route::get('servicos', [App\Http\Controllers\V2\Api\ServicosController::class, 'index'])->name('api.v2.servicos.index');
+            Route::get('servicos/options', [App\Http\Controllers\V2\Api\ServicosController::class, 'options'])->name('api.v2.servicos.options');
+            Route::get('servicos/{id}', [App\Http\Controllers\V2\Api\ServicosController::class, 'show'])->name('api.v2.servicos.show');
+            Route::post('servicos', [App\Http\Controllers\V2\Api\ServicosController::class, 'store'])->name('api.v2.servicos.store');
+            Route::put('servicos/{id}', [App\Http\Controllers\V2\Api\ServicosController::class, 'update'])->name('api.v2.servicos.update');
+            Route::delete('servicos/{id}', [App\Http\Controllers\V2\Api\ServicosController::class, 'destroy'])->name('api.v2.servicos.destroy');
+
             Route::prefix('petshop')->group(function () {
             Route::get('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'index'])->name('petshop.api.petshop.pets.index');
             Route::get('pets/options', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'options'])->name('petshop.api.petshop.pets.options');

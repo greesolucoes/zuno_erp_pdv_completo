@@ -185,6 +185,31 @@ export const router = createRouter({
         },
 
         {
+          path: 'servicos',
+          name: 'servicos',
+          component: () => import('../pages/servicos/ServicosListaPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Serviços'], title: 'Serviços' },
+        },
+        {
+          path: 'servicos/novo',
+          name: 'servicos-novo',
+          component: () => import('../pages/servicos/ServicoNovoPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Serviços', 'Novo'], title: 'Novo serviço' },
+        },
+        {
+          path: 'servicos/:id/editar',
+          name: 'servicos-editar',
+          component: () => import('../pages/servicos/ServicoEditarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Serviços', 'Editar'], title: 'Editar serviço' },
+        },
+        {
+          path: 'servicos/:id',
+          name: 'servicos-visualizar',
+          component: () => import('../pages/servicos/ServicoVisualizarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Serviços', 'Visualizar'], title: 'Visualizar serviço' },
+        },
+
+        {
           path: 'Petshop/ListaPets',
           name: 'petshop-lista-pets',
           component: () => import('../pages/petshop/animais/ListaPetsPage.vue'),
