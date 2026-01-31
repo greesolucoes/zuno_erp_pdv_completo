@@ -83,7 +83,7 @@ export async function loadReservasHotelOptions(): Promise<ReservasHotelLoadOptio
 
 export async function getReservaHotelById(id: string): Promise<ReservaHotel | null> {
   try {
-    return await apiGet<ReservaHotel>(`/petshop/hotel/reservas/${encodeURIComponent(id)}`)
+    return await apiGet<ReservaHotel>(`/petshop/hotel/reservas/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -103,4 +103,3 @@ export async function deleteReservaHotel(id: string): Promise<boolean> {
   await apiDelete<{ ok: true }>(`/petshop/hotel/reservas/${encodeURIComponent(id)}`)
   return true
 }
-

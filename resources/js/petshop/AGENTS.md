@@ -96,6 +96,38 @@ Use rotas previsíveis para manter consistência:
   - reset do valor dependente quando o pai mudar
 - Não duplicar formulários: **um** `*FormWizard.vue` por entidade.
 
+## Feedback global (obrigatório)
+
+O frontend do Petshop possui um sistema único de feedback (toast) que **deve estar presente em todas as requisições**.
+
+### Onde fica
+
+- Engine/store: `src/services/feedback.ts`
+- UI (render global): `src/components/ui/FeedbackToasts.vue` (montado em `src/App.vue`)
+- HTTP (fetch wrapper): `src/services/http.ts`
+
+### Regras
+
+- **Não** use `alert()`, `window.ExibirAlerta()` ou mensagens “ad hoc” em páginas novas. Use sempre:
+  - `import { feedback } from '@/services/feedback'` (ou caminho relativo)
+  - `feedback.success(...) | feedback.error(...) | feedback.info(...)`
+- Todo erro HTTP em `apiGet/apiPost/apiPut/apiDelete` já gera toast automaticamente.
+- Todo sucesso em `POST/PUT/DELETE` já gera toast automaticamente (GET não).
+- Evite “toast duplicado”: se a chamada já mostra feedback automático, não dispare outro manual, a não ser que esteja suprimindo o automático.
+
+### Opções por requisição (quando necessário)
+
+- Personalizar mensagem de sucesso:
+  - `apiPost('/rota', payload, { successMessage: 'Criado com sucesso.' })`
+- Suprimir sucesso automático (casos específicos):
+  - `apiPut('/rota', payload, { suppressSuccessFeedback: true })`
+- Suprimir erro automático (erros esperados, ex.: `404` tratado como `null`):
+  - `apiGet('/rota', params, { suppressErrorFeedback: true })`
+
+### Nota de validação (422)
+
+- Para `422`, o `http.ts` tenta exibir a primeira mensagem de validação (quando existir `errors` no payload).
+
 ## Importante: UI legado (tooltips / menu dos “3 pontos”)
 
 Alguns comportamentos (ex.: tooltip e o menu suspenso da tabela com **Visualizar/Editar** via “3 pontos”) são inicializados por `initLegacyUiBindings()` (jQuery/Bootstrap).

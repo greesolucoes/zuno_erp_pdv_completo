@@ -74,7 +74,7 @@ export async function loadEsteticaOptions(): Promise<EsteticaLoadOptions> {
 
 export async function getEsteticaById(id: string): Promise<Estetica | null> {
   try {
-    return await apiGet<Estetica>(`/petshop/estetica/gerenciar/${encodeURIComponent(id)}`)
+    return await apiGet<Estetica>(`/petshop/estetica/gerenciar/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null

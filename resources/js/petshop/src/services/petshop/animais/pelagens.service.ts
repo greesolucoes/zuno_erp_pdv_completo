@@ -32,7 +32,7 @@ export async function loadPelagensOptions(): Promise<Record<string, never>> {
 
 export async function getPelagemById(id: string): Promise<Pelagem | null> {
   try {
-    return await apiGet<Pelagem>(`/petshop/pelagens/${encodeURIComponent(id)}`)
+    return await apiGet<Pelagem>(`/petshop/pelagens/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -47,4 +47,3 @@ export async function createPelagem(payload: PelagemUpsertPayload): Promise<{ id
 export async function updatePelagem(id: string, payload: PelagemUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/pelagens/${encodeURIComponent(id)}`, payload as any)
 }
-

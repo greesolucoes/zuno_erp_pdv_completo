@@ -59,7 +59,7 @@ export async function loadMedicosOptions(params?: { available_only?: boolean; me
 
 export async function getMedicoById(id: string): Promise<Medico | null> {
   try {
-    return await apiGet<Medico>(`/petshop/vet/medicos/${encodeURIComponent(id)}`)
+    return await apiGet<Medico>(`/petshop/vet/medicos/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -74,4 +74,3 @@ export async function createMedico(payload: MedicoUpsertPayload): Promise<{ id: 
 export async function updateMedico(id: string, payload: MedicoUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/medicos/${encodeURIComponent(id)}`, payload as any)
 }
-

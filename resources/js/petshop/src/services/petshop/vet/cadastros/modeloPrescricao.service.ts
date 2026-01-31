@@ -44,7 +44,7 @@ export async function loadModeloPrescricaoOptions(): Promise<ModeloPrescricaoLoa
 
 export async function getModeloPrescricaoById(id: string): Promise<ModeloPrescricao | null> {
   try {
-    return await apiGet<ModeloPrescricao>(`/petshop/vet/modelos-prescricao/${encodeURIComponent(id)}`)
+    return await apiGet<ModeloPrescricao>(`/petshop/vet/modelos-prescricao/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -59,4 +59,3 @@ export async function createModeloPrescricao(payload: ModeloPrescricaoUpsertPayl
 export async function updateModeloPrescricao(id: string, payload: ModeloPrescricaoUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/modelos-prescricao/${encodeURIComponent(id)}`, payload as any)
 }
-

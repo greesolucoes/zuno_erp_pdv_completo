@@ -42,7 +42,7 @@ export async function loadModeloAtendimentoOptions(): Promise<ModeloAtendimentoL
 
 export async function getModeloAtendimentoById(id: string): Promise<ModeloAtendimento | null> {
   try {
-    return await apiGet<ModeloAtendimento>(`/petshop/vet/modelos-atendimento/${encodeURIComponent(id)}`)
+    return await apiGet<ModeloAtendimento>(`/petshop/vet/modelos-atendimento/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -57,4 +57,3 @@ export async function createModeloAtendimento(payload: ModeloAtendimentoUpsertPa
 export async function updateModeloAtendimento(id: string, payload: ModeloAtendimentoUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/modelos-atendimento/${encodeURIComponent(id)}`, payload as any)
 }
-

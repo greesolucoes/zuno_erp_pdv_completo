@@ -83,7 +83,7 @@ export async function loadReservasCrecheOptions(): Promise<ReservasCrecheLoadOpt
 
 export async function getReservaCrecheById(id: string): Promise<ReservaCreche | null> {
   try {
-    return await apiGet<ReservaCreche>(`/petshop/creche/reservas/${encodeURIComponent(id)}`)
+    return await apiGet<ReservaCreche>(`/petshop/creche/reservas/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -103,4 +103,3 @@ export async function deleteReservaCreche(id: string): Promise<boolean> {
   await apiDelete<{ ok: true }>(`/petshop/creche/reservas/${encodeURIComponent(id)}`)
   return true
 }
-

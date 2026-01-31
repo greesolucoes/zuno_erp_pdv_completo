@@ -58,7 +58,7 @@ export async function loadSalasInternacaoOptions(): Promise<SalasInternacaoLoadO
 
 export async function getSalaInternacaoById(id: string): Promise<SalaInternacao | null> {
   try {
-    return await apiGet<SalaInternacao>(`/petshop/vet/salas-internacao/${encodeURIComponent(id)}`)
+    return await apiGet<SalaInternacao>(`/petshop/vet/salas-internacao/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -73,4 +73,3 @@ export async function createSalaInternacao(payload: SalaInternacaoUpsertPayload)
 export async function updateSalaInternacao(id: string, payload: SalaInternacaoUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/salas-internacao/${encodeURIComponent(id)}`, payload as any)
 }
-

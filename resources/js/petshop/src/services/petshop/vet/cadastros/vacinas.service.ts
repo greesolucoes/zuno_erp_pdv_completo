@@ -60,7 +60,7 @@ export async function loadVacinasOptions(): Promise<VacinasLoadOptions> {
 
 export async function getVacinaById(id: string): Promise<Vacina | null> {
   try {
-    return await apiGet<Vacina>(`/petshop/vet/vacinas/${encodeURIComponent(id)}`)
+    return await apiGet<Vacina>(`/petshop/vet/vacinas/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -75,4 +75,3 @@ export async function createVacina(payload: VacinaUpsertPayload): Promise<{ id: 
 export async function updateVacina(id: string, payload: VacinaUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/vacinas/${encodeURIComponent(id)}`, payload as any)
 }
-

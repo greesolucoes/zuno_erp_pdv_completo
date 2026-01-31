@@ -58,7 +58,7 @@ export async function loadChecklistsOptions(): Promise<ChecklistsLoadOptions> {
 
 export async function getChecklistById(id: string): Promise<Checklist | null> {
   try {
-    return await apiGet<Checklist>(`/petshop/vet/checklists/${encodeURIComponent(id)}`)
+    return await apiGet<Checklist>(`/petshop/vet/checklists/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -73,4 +73,3 @@ export async function createChecklist(payload: ChecklistUpsertPayload): Promise<
 export async function updateChecklist(id: string, payload: ChecklistUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/checklists/${encodeURIComponent(id)}`, payload as any)
 }
-

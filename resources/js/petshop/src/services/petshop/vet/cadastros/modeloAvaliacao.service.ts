@@ -59,7 +59,7 @@ export async function loadModeloAvaliacaoOptions(): Promise<ModeloAvaliacaoLoadO
 
 export async function getModeloAvaliacaoById(id: string): Promise<ModeloAvaliacao | null> {
   try {
-    return await apiGet<ModeloAvaliacao>(`/petshop/vet/modelos-avaliacao/${encodeURIComponent(id)}`)
+    return await apiGet<ModeloAvaliacao>(`/petshop/vet/modelos-avaliacao/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -74,4 +74,3 @@ export async function createModeloAvaliacao(payload: ModeloAvaliacaoUpsertPayloa
 export async function updateModeloAvaliacao(id: string, payload: ModeloAvaliacaoUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/modelos-avaliacao/${encodeURIComponent(id)}`, payload as any)
 }
-

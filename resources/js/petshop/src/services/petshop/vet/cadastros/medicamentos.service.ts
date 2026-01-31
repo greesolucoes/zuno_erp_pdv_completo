@@ -53,7 +53,7 @@ export async function loadMedicamentosOptions(): Promise<MedicamentosLoadOptions
 
 export async function getMedicamentoById(id: string): Promise<Medicamento | null> {
   try {
-    return await apiGet<Medicamento>(`/petshop/vet/medicamentos/${encodeURIComponent(id)}`)
+    return await apiGet<Medicamento>(`/petshop/vet/medicamentos/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -68,4 +68,3 @@ export async function createMedicamento(payload: MedicamentoUpsertPayload): Prom
 export async function updateMedicamento(id: string, payload: MedicamentoUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/medicamentos/${encodeURIComponent(id)}`, payload as any)
 }
-

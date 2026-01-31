@@ -52,7 +52,7 @@ export function listEspeciesSnapshot(): Especie[] {
 
 export async function getEspecieById(id: string): Promise<Especie | null> {
   try {
-    return await apiGet<Especie>(`/petshop/especies/${encodeURIComponent(id)}`)
+    return await apiGet<Especie>(`/petshop/especies/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null

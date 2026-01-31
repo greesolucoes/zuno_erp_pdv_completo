@@ -38,7 +38,7 @@ export async function loadRacasOptions(): Promise<RacasLoadOptions> {
 
 export async function getRacaById(id: string): Promise<Raca | null> {
   try {
-    return await apiGet<Raca>(`/petshop/racas/${encodeURIComponent(id)}`)
+    return await apiGet<Raca>(`/petshop/racas/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -53,4 +53,3 @@ export async function createRaca(payload: RacaUpsertPayload): Promise<{ id: stri
 export async function updateRaca(id: string, payload: RacaUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/racas/${encodeURIComponent(id)}`, payload as any)
 }
-

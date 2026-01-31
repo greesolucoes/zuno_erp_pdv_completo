@@ -1,3 +1,5 @@
+import { feedback } from './feedback'
+
 type JsonValue = string | number | boolean | null | JsonValue[] | { [key: string]: JsonValue }
 
 declare global {
@@ -38,6 +40,12 @@ export type ApiError = {
   details?: unknown
 }
 
+export type ApiRequestOptions = {
+  suppressSuccessFeedback?: boolean
+  suppressErrorFeedback?: boolean
+  successMessage?: string
+}
+
 async function parseJsonSafely(resp: Response): Promise<unknown> {
   const contentType = resp.headers.get('content-type') ?? ''
   if (!contentType.includes('application/json')) {
@@ -47,7 +55,33 @@ async function parseJsonSafely(resp: Response): Promise<unknown> {
   return await resp.json().catch(() => null)
 }
 
-async function request<T>(method: 'GET' | 'POST' | 'PUT' | 'DELETE', path: string, body?: JsonValue): Promise<T> {
+function extractFirstValidationError(details: unknown): string | null {
+  const errors = (details as any)?.errors
+  if (!errors || typeof errors !== 'object') return null
+
+  for (const key of Object.keys(errors)) {
+    const value = (errors as any)[key]
+    if (Array.isArray(value) && value[0]) return String(value[0])
+    if (typeof value === 'string' && value) return value
+  }
+
+  return null
+}
+
+function toUserMessage(err: ApiError): string {
+  if (err.status === 401) return 'Sessão expirada. Faça login novamente.'
+  if (err.status === 403) return 'Você não tem permissão para realizar esta ação.'
+  if (err.status === 429) return 'Muitas requisições. Tente novamente em instantes.'
+  if (err.status === 422) return extractFirstValidationError(err.details) ?? err.message
+  return err.message
+}
+
+async function request<T>(
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE',
+  path: string,
+  body?: JsonValue,
+  options?: ApiRequestOptions,
+): Promise<T> {
   const url = `${resolveApiBasePath()}${path.startsWith('/') ? path : `/${path}`}`
 
   const headers: Record<string, string> = {
@@ -68,32 +102,46 @@ async function request<T>(method: 'GET' | 'POST' | 'PUT' | 'DELETE', path: strin
     body: body === undefined ? undefined : JSON.stringify(body),
   })
 
+  const payload = await parseJsonSafely(resp)
+
   if (!resp.ok) {
-    const payload = await parseJsonSafely(resp)
     const message =
       (payload as any)?.message ??
       (typeof payload === 'string' ? payload : null) ??
       `Erro HTTP ${resp.status}`
     const err: ApiError = { status: resp.status, message, details: payload }
+    if (!options?.suppressErrorFeedback) {
+      feedback.error(toUserMessage(err))
+    }
     throw err
   }
 
-  return (await parseJsonSafely(resp)) as T
+  const shouldShowSuccess = method !== 'GET' && !options?.suppressSuccessFeedback
+  if (shouldShowSuccess) {
+    const message = options?.successMessage ?? ((payload as any)?.message as string | undefined) ?? 'Operação realizada com sucesso.'
+    feedback.success(message)
+  }
+
+  return payload as T
 }
 
-export function apiGet<T>(path: string, params?: Record<string, string | number | boolean | null | undefined>): Promise<T> {
+export function apiGet<T>(
+  path: string,
+  params?: Record<string, string | number | boolean | null | undefined>,
+  options?: ApiRequestOptions,
+): Promise<T> {
   const qs = params ? toQuery(params) : ''
-  return request<T>('GET', `${path}${qs}`)
+  return request<T>('GET', `${path}${qs}`, undefined, options)
 }
 
-export function apiPost<T>(path: string, body: JsonValue): Promise<T> {
-  return request<T>('POST', path, body)
+export function apiPost<T>(path: string, body: JsonValue, options?: ApiRequestOptions): Promise<T> {
+  return request<T>('POST', path, body, options)
 }
 
-export function apiPut<T>(path: string, body: JsonValue): Promise<T> {
-  return request<T>('PUT', path, body)
+export function apiPut<T>(path: string, body: JsonValue, options?: ApiRequestOptions): Promise<T> {
+  return request<T>('PUT', path, body, options)
 }
 
-export function apiDelete<T>(path: string): Promise<T> {
-  return request<T>('DELETE', path)
+export function apiDelete<T>(path: string, options?: ApiRequestOptions): Promise<T> {
+  return request<T>('DELETE', path, undefined, options)
 }

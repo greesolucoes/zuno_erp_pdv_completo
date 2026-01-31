@@ -58,7 +58,7 @@ export async function loadSalasAtendimentoOptions(): Promise<SalasAtendimentoLoa
 
 export async function getSalaAtendimentoById(id: string): Promise<SalaAtendimento | null> {
   try {
-    return await apiGet<SalaAtendimento>(`/petshop/vet/salas-atendimento/${encodeURIComponent(id)}`)
+    return await apiGet<SalaAtendimento>(`/petshop/vet/salas-atendimento/${encodeURIComponent(id)}`, undefined, { suppressErrorFeedback: true })
   } catch (e) {
     const err = e as Partial<ApiError> | null
     if (err?.status === 404) return null
@@ -73,4 +73,3 @@ export async function createSalaAtendimento(payload: SalaAtendimentoUpsertPayloa
 export async function updateSalaAtendimento(id: string, payload: SalaAtendimentoUpsertPayload): Promise<{ ok: true }> {
   return apiPut<{ ok: true }>(`/petshop/vet/salas-atendimento/${encodeURIComponent(id)}`, payload as any)
 }
-
