@@ -135,6 +135,13 @@ Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
             Route::put('produtos/{id}', [App\Http\Controllers\V2\Api\ProdutosController::class, 'update'])->name('api.v2.produtos.update');
             Route::delete('produtos/{id}', [App\Http\Controllers\V2\Api\ProdutosController::class, 'destroy'])->name('api.v2.produtos.destroy');
 
+            Route::get('categorias-produto', [App\Http\Controllers\V2\Api\CategoriasProdutoController::class, 'index'])->name('api.v2.categorias-produto.index');
+            Route::get('categorias-produto/options', [App\Http\Controllers\V2\Api\CategoriasProdutoController::class, 'options'])->name('api.v2.categorias-produto.options');
+            Route::get('categorias-produto/{id}', [App\Http\Controllers\V2\Api\CategoriasProdutoController::class, 'show'])->name('api.v2.categorias-produto.show');
+            Route::post('categorias-produto', [App\Http\Controllers\V2\Api\CategoriasProdutoController::class, 'store'])->name('api.v2.categorias-produto.store');
+            Route::put('categorias-produto/{id}', [App\Http\Controllers\V2\Api\CategoriasProdutoController::class, 'update'])->name('api.v2.categorias-produto.update');
+            Route::delete('categorias-produto/{id}', [App\Http\Controllers\V2\Api\CategoriasProdutoController::class, 'destroy'])->name('api.v2.categorias-produto.destroy');
+
             Route::prefix('petshop')->group(function () {
             Route::get('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'index'])->name('petshop.api.petshop.pets.index');
             Route::get('pets/options', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'options'])->name('petshop.api.petshop.pets.options');

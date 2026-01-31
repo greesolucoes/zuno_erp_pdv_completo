@@ -86,6 +86,30 @@ export const router = createRouter({
           component: () => import('../pages/produtos/ProdutoVisualizarPage.vue'),
           meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Visualizar'], title: 'Visualizar produto' },
         },
+        {
+          path: 'produtos/categorias',
+          name: 'categorias-produto',
+          component: () => import('../pages/produtos/categorias/CategoriasProdutoListaPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Categorias'], title: 'Categorias de Produto' },
+        },
+        {
+          path: 'produtos/categorias/novo',
+          name: 'categorias-produto-novo',
+          component: () => import('../pages/produtos/categorias/CategoriaProdutoNovoPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Categorias', 'Novo'], title: 'Nova categoria' },
+        },
+        {
+          path: 'produtos/categorias/:id/editar',
+          name: 'categorias-produto-editar',
+          component: () => import('../pages/produtos/categorias/CategoriaProdutoEditarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Categorias', 'Editar'], title: 'Editar categoria' },
+        },
+        {
+          path: 'produtos/categorias/:id',
+          name: 'categorias-produto-visualizar',
+          component: () => import('../pages/produtos/categorias/CategoriaProdutoVisualizarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Categorias', 'Visualizar'], title: 'Visualizar categoria' },
+        },
 
         {
           path: 'Petshop/ListaPets',
