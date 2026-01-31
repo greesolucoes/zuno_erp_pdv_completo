@@ -1,6 +1,6 @@
-import { deleteEstetica, listEstetica, loadEsteticaOptions } from '../estetica/estetica.service'
-import { deleteReservaHotel, listReservasHotel, loadReservasHotelOptions } from '../hotel/reservas.service'
-import { deleteReservaCreche, listReservasCreche, loadReservasCrecheOptions } from '../creche/reservas.service'
+import { deleteEstetica, listAllEstetica, loadEsteticaOptions } from '../estetica/estetica.service'
+import { deleteReservaHotel, listAllReservasHotel, loadReservasHotelOptions } from '../hotel/reservas.service'
+import { deleteReservaCreche, listAllReservasCreche, loadReservasCrecheOptions } from '../creche/reservas.service'
 import { deleteAtendimento, listAtendimentos, loadAtendimentosOptions } from '../vet/atendimentos/atendimentos.service'
 
 export type AgendaSource = 'vet' | 'estetica' | 'hotel' | 'creche'
@@ -86,7 +86,7 @@ export async function listAgendaGeralItems(filters: AgendaGeralFilters): Promise
 
   const items: AgendaGeralItem[] = []
 
-  for (const e of listEstetica()) {
+  for (const e of await listAllEstetica()) {
     if (!withinRange(dateKey, e.data_agendamento)) continue
     const pet = esteticaOptions.pets.find((p) => p.id === e.animal_id)
     const col = esteticaOptions.colaboradores.find((c) => c.id === e.colaborador_id)
@@ -112,7 +112,7 @@ export async function listAgendaGeralItems(filters: AgendaGeralFilters): Promise
     })
   }
 
-  for (const r of listReservasHotel()) {
+  for (const r of await listAllReservasHotel()) {
     if (!withinRange(dateKey, r.checkin, r.checkout)) continue
     const pet = hotelOptions.pets.find((p) => p.id === r.animal_id)
     const quarto = hotelOptions.quartos.find((q) => q.id === r.quarto_id)
@@ -137,7 +137,7 @@ export async function listAgendaGeralItems(filters: AgendaGeralFilters): Promise
     })
   }
 
-  for (const r of listReservasCreche()) {
+  for (const r of await listAllReservasCreche()) {
     if (!withinRange(dateKey, r.data_entrada, r.data_saida)) continue
     const pet = crecheOptions.pets.find((p) => p.id === r.animal_id)
     const turma = crecheOptions.turmas.find((t) => t.id === r.turma_id)

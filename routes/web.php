@@ -183,6 +183,61 @@ Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
                 Route::get('salas-internacao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasInternacaoController::class, 'show'])->name('petshop.api.petshop.vet.salas-internacao.show');
                 Route::post('salas-internacao', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasInternacaoController::class, 'store'])->name('petshop.api.petshop.vet.salas-internacao.store');
                 Route::put('salas-internacao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\SalasInternacaoController::class, 'update'])->name('petshop.api.petshop.vet.salas-internacao.update');
+
+                Route::get('vacinas', [App\Http\Controllers\V2\Api\Petshop\Vet\VacinasController::class, 'index'])->name('petshop.api.petshop.vet.vacinas.index');
+                Route::get('vacinas/options', [App\Http\Controllers\V2\Api\Petshop\Vet\VacinasController::class, 'options'])->name('petshop.api.petshop.vet.vacinas.options');
+                Route::get('vacinas/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\VacinasController::class, 'show'])->name('petshop.api.petshop.vet.vacinas.show');
+                Route::post('vacinas', [App\Http\Controllers\V2\Api\Petshop\Vet\VacinasController::class, 'store'])->name('petshop.api.petshop.vet.vacinas.store');
+                Route::put('vacinas/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\VacinasController::class, 'update'])->name('petshop.api.petshop.vet.vacinas.update');
+                Route::delete('vacinas/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\VacinasController::class, 'destroy'])->name('petshop.api.petshop.vet.vacinas.destroy');
+
+                Route::get('modelos-atendimento', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAtendimentoController::class, 'index'])->name('petshop.api.petshop.vet.modelos-atendimento.index');
+                Route::get('modelos-atendimento/options', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAtendimentoController::class, 'options'])->name('petshop.api.petshop.vet.modelos-atendimento.options');
+                Route::get('modelos-atendimento/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAtendimentoController::class, 'show'])->name('petshop.api.petshop.vet.modelos-atendimento.show');
+                Route::post('modelos-atendimento', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAtendimentoController::class, 'store'])->name('petshop.api.petshop.vet.modelos-atendimento.store');
+                Route::put('modelos-atendimento/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAtendimentoController::class, 'update'])->name('petshop.api.petshop.vet.modelos-atendimento.update');
+                Route::delete('modelos-atendimento/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAtendimentoController::class, 'destroy'])->name('petshop.api.petshop.vet.modelos-atendimento.destroy');
+
+                Route::get('modelos-avaliacao', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAvaliacaoController::class, 'index'])->name('petshop.api.petshop.vet.modelos-avaliacao.index');
+                Route::get('modelos-avaliacao/options', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAvaliacaoController::class, 'options'])->name('petshop.api.petshop.vet.modelos-avaliacao.options');
+                Route::get('modelos-avaliacao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAvaliacaoController::class, 'show'])->name('petshop.api.petshop.vet.modelos-avaliacao.show');
+                Route::post('modelos-avaliacao', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAvaliacaoController::class, 'store'])->name('petshop.api.petshop.vet.modelos-avaliacao.store');
+                Route::put('modelos-avaliacao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAvaliacaoController::class, 'update'])->name('petshop.api.petshop.vet.modelos-avaliacao.update');
+                Route::delete('modelos-avaliacao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosAvaliacaoController::class, 'destroy'])->name('petshop.api.petshop.vet.modelos-avaliacao.destroy');
+
+                Route::get('modelos-prescricao', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosPrescricaoController::class, 'index'])->name('petshop.api.petshop.vet.modelos-prescricao.index');
+                Route::get('modelos-prescricao/options', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosPrescricaoController::class, 'options'])->name('petshop.api.petshop.vet.modelos-prescricao.options');
+                Route::get('modelos-prescricao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosPrescricaoController::class, 'show'])->name('petshop.api.petshop.vet.modelos-prescricao.show');
+                Route::post('modelos-prescricao', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosPrescricaoController::class, 'store'])->name('petshop.api.petshop.vet.modelos-prescricao.store');
+                Route::put('modelos-prescricao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosPrescricaoController::class, 'update'])->name('petshop.api.petshop.vet.modelos-prescricao.update');
+                Route::delete('modelos-prescricao/{id}', [App\Http\Controllers\V2\Api\Petshop\Vet\ModelosPrescricaoController::class, 'destroy'])->name('petshop.api.petshop.vet.modelos-prescricao.destroy');
+            });
+
+            Route::prefix('estetica')->group(function () {
+                Route::get('gerenciar', [App\Http\Controllers\V2\Api\Petshop\Estetica\GerenciarController::class, 'index'])->name('petshop.api.petshop.estetica.gerenciar.index');
+                Route::get('gerenciar/options', [App\Http\Controllers\V2\Api\Petshop\Estetica\GerenciarController::class, 'options'])->name('petshop.api.petshop.estetica.gerenciar.options');
+                Route::get('gerenciar/{id}', [App\Http\Controllers\V2\Api\Petshop\Estetica\GerenciarController::class, 'show'])->name('petshop.api.petshop.estetica.gerenciar.show');
+                Route::post('gerenciar', [App\Http\Controllers\V2\Api\Petshop\Estetica\GerenciarController::class, 'store'])->name('petshop.api.petshop.estetica.gerenciar.store');
+                Route::put('gerenciar/{id}', [App\Http\Controllers\V2\Api\Petshop\Estetica\GerenciarController::class, 'update'])->name('petshop.api.petshop.estetica.gerenciar.update');
+                Route::delete('gerenciar/{id}', [App\Http\Controllers\V2\Api\Petshop\Estetica\GerenciarController::class, 'destroy'])->name('petshop.api.petshop.estetica.gerenciar.destroy');
+            });
+
+            Route::prefix('creche')->group(function () {
+                Route::get('reservas', [App\Http\Controllers\V2\Api\Petshop\Creche\ReservasController::class, 'index'])->name('petshop.api.petshop.creche.reservas.index');
+                Route::get('reservas/options', [App\Http\Controllers\V2\Api\Petshop\Creche\ReservasController::class, 'options'])->name('petshop.api.petshop.creche.reservas.options');
+                Route::get('reservas/{id}', [App\Http\Controllers\V2\Api\Petshop\Creche\ReservasController::class, 'show'])->name('petshop.api.petshop.creche.reservas.show');
+                Route::post('reservas', [App\Http\Controllers\V2\Api\Petshop\Creche\ReservasController::class, 'store'])->name('petshop.api.petshop.creche.reservas.store');
+                Route::put('reservas/{id}', [App\Http\Controllers\V2\Api\Petshop\Creche\ReservasController::class, 'update'])->name('petshop.api.petshop.creche.reservas.update');
+                Route::delete('reservas/{id}', [App\Http\Controllers\V2\Api\Petshop\Creche\ReservasController::class, 'destroy'])->name('petshop.api.petshop.creche.reservas.destroy');
+            });
+
+            Route::prefix('hotel')->group(function () {
+                Route::get('reservas', [App\Http\Controllers\V2\Api\Petshop\Hotel\ReservasController::class, 'index'])->name('petshop.api.petshop.hotel.reservas.index');
+                Route::get('reservas/options', [App\Http\Controllers\V2\Api\Petshop\Hotel\ReservasController::class, 'options'])->name('petshop.api.petshop.hotel.reservas.options');
+                Route::get('reservas/{id}', [App\Http\Controllers\V2\Api\Petshop\Hotel\ReservasController::class, 'show'])->name('petshop.api.petshop.hotel.reservas.show');
+                Route::post('reservas', [App\Http\Controllers\V2\Api\Petshop\Hotel\ReservasController::class, 'store'])->name('petshop.api.petshop.hotel.reservas.store');
+                Route::put('reservas/{id}', [App\Http\Controllers\V2\Api\Petshop\Hotel\ReservasController::class, 'update'])->name('petshop.api.petshop.hotel.reservas.update');
+                Route::delete('reservas/{id}', [App\Http\Controllers\V2\Api\Petshop\Hotel\ReservasController::class, 'destroy'])->name('petshop.api.petshop.hotel.reservas.destroy');
             });
         });
     });

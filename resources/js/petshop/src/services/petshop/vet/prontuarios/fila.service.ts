@@ -1,7 +1,7 @@
 import type { FilaProntuarioDraft, FilaProntuarioUpsertPayload, TipoAtendimento } from '../../../../composables/createFilaProntuarioDraft'
 import { loadAtendimentosOptions } from '../atendimentos/atendimentos.service'
-import { listChecklists } from '../cadastros/checklist.service'
-import { listModelosAvaliacao } from '../cadastros/modeloAvaliacao.service'
+import { listChecklistsSnapshot } from '../cadastros/checklist.service'
+import { listAllModelosAvaliacao } from '../cadastros/modeloAvaliacao.service'
 
 export type FilaProntuario = FilaProntuarioDraft & {
   id: string
@@ -116,11 +116,9 @@ export async function loadFilaProntuariosOptions(): Promise<FilaProntuarioLoadOp
 
   const atendimentosOptions = await loadAtendimentosOptions()
 
-  const modelosAvaliacao = listModelosAvaliacao()
-    .filter((m) => m.status !== 'inativo')
-    .map((m) => ({ id: m.id, title: m.title, fields: m.fields }))
+  const modelosAvaliacao = (await listAllModelosAvaliacao({ status: 'ativo' })).map((m) => ({ id: m.id, title: m.title, fields: m.fields }))
 
-  const checklists = listChecklists()
+  const checklists = listChecklistsSnapshot()
     .filter((c) => c.status === 'ativo')
     .map((c) => ({ id: c.id, titulo: c.titulo, itens: c.itens }))
 

@@ -1,4 +1,6 @@
 import type { ChecklistDraft, ChecklistUpsertPayload } from '../../../../composables/createChecklistDraft'
+import type { ApiError } from '../../../http'
+import { apiGet, apiPost, apiPut } from '../../../http'
 
 export type Checklist = ChecklistDraft & {
   id: string
@@ -6,104 +8,69 @@ export type Checklist = ChecklistDraft & {
   updated_at: string
 }
 
-export type SelectOption<T extends string> = { value: T; label: string }
+export type SelectOption<T extends string = string> = { value: T; label: string }
 
 export type ChecklistsLoadOptions = {
-  tipos: SelectOption<'pre_atendimento' | 'internacao' | 'cirurgia' | 'banho_tosa'>[]
-  status: SelectOption<'ativo' | 'inativo'>[]
+  tipos: SelectOption[]
+  status: SelectOption[]
 }
 
-const tipos: ChecklistsLoadOptions['tipos'] = [
-  { value: 'pre_atendimento', label: 'Pré-atendimento' },
-  { value: 'internacao', label: 'Internação' },
-  { value: 'cirurgia', label: 'Cirurgia' },
-  { value: 'banho_tosa', label: 'Banho e tosa' },
-]
-
-const statusOptions: ChecklistsLoadOptions['status'] = [
-  { value: 'ativo', label: 'Ativo' },
-  { value: 'inativo', label: 'Inativo' },
-]
-
-let nextId = 1
-const db = new Map<string, Checklist>()
-
-function nowIso() {
-  return new Date().toISOString()
+export type PaginatedMeta = {
+  current_page: number
+  last_page: number
+  per_page: number
+  total: number
 }
 
-function ensureSeeded() {
-  if (db.size) return
-
-  const seeds: Array<Omit<Checklist, 'id'>> = [
-    {
-      titulo: 'Checklist de pré-atendimento',
-      tipo: 'pre_atendimento',
-      status: 'ativo',
-      descricao: 'Itens básicos antes do atendimento.',
-      itens: [{ texto: 'Confirmar dados do tutor' }, { texto: 'Checar sinais vitais' }, { texto: 'Registrar queixa principal' }],
-      created_at: nowIso(),
-      updated_at: nowIso(),
-    },
-    {
-      titulo: 'Checklist de internação',
-      tipo: 'internacao',
-      status: 'ativo',
-      descricao: '',
-      itens: [{ texto: 'Identificação da baia/leito' }, { texto: 'Plano de medicação' }],
-      created_at: nowIso(),
-      updated_at: nowIso(),
-    },
-  ]
-
-  for (const seed of seeds) {
-    const checklist: Checklist = { id: String(nextId++), ...seed }
-    db.set(checklist.id, checklist)
-  }
+export type PaginatedResponse<T> = {
+  data: T[]
+  meta: PaginatedMeta
 }
 
-export async function loadChecklistsOptions(): Promise<ChecklistsLoadOptions> {
-  ensureSeeded()
-  return { tipos, status: statusOptions }
+const fallbackSnapshot: Checklist[] = []
+let checklistsSnapshot: Checklist[] = fallbackSnapshot
+
+export function listChecklistsSnapshot(): Checklist[] {
+  return checklistsSnapshot
 }
 
-export function listChecklists(search?: string): Checklist[] {
-  ensureSeeded()
-  const all = Array.from(db.values())
-  const normalized = (search ?? '').trim().toLowerCase()
-  if (!normalized) return all
-
-  return all.filter((c) => {
-    const itensText = (c.itens ?? []).map((i) => i.texto).join(' ').toLowerCase()
-    return (
-      c.titulo.toLowerCase().includes(normalized) ||
-      c.tipo.toLowerCase().includes(normalized) ||
-      c.status.toLowerCase().includes(normalized) ||
-      c.descricao.toLowerCase().includes(normalized) ||
-      itensText.includes(normalized)
-    )
+export async function listChecklists(params?: { busca?: string; page?: number; status?: string; tipo?: string }): Promise<PaginatedResponse<Checklist>> {
+  return apiGet<PaginatedResponse<Checklist>>('/petshop/vet/checklists', {
+    busca: params?.busca ?? '',
+    page: params?.page ?? 1,
+    status: params?.status ?? '',
+    tipo: params?.tipo ?? '',
   })
 }
 
+export async function loadChecklistsOptions(): Promise<ChecklistsLoadOptions> {
+  try {
+    const [options, firstPage] = await Promise.all([
+      apiGet<ChecklistsLoadOptions>('/petshop/vet/checklists/options'),
+      listChecklists({ page: 1 }),
+    ])
+    checklistsSnapshot = firstPage.data.length ? firstPage.data : checklistsSnapshot
+    return options
+  } catch {
+    return { tipos: [], status: [] }
+  }
+}
+
 export async function getChecklistById(id: string): Promise<Checklist | null> {
-  ensureSeeded()
-  return db.get(id) ?? null
+  try {
+    return await apiGet<Checklist>(`/petshop/vet/checklists/${encodeURIComponent(id)}`)
+  } catch (e) {
+    const err = e as Partial<ApiError> | null
+    if (err?.status === 404) return null
+    throw e
+  }
 }
 
-export async function createChecklist(payload: ChecklistUpsertPayload): Promise<Checklist> {
-  ensureSeeded()
-  const now = nowIso()
-  const checklist: Checklist = { id: String(nextId++), ...payload, created_at: now, updated_at: now }
-  db.set(checklist.id, checklist)
-  return checklist
+export async function createChecklist(payload: ChecklistUpsertPayload): Promise<{ id: string }> {
+  return apiPost<{ id: string }>('/petshop/vet/checklists', payload as any)
 }
 
-export async function updateChecklist(id: string, payload: ChecklistUpsertPayload): Promise<Checklist | null> {
-  ensureSeeded()
-  const existing = db.get(id)
-  if (!existing) return null
-  const updated: Checklist = { ...existing, ...payload, id, updated_at: nowIso() }
-  db.set(id, updated)
-  return updated
+export async function updateChecklist(id: string, payload: ChecklistUpsertPayload): Promise<{ ok: true }> {
+  return apiPut<{ ok: true }>(`/petshop/vet/checklists/${encodeURIComponent(id)}`, payload as any)
 }
 

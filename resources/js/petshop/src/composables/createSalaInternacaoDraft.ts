@@ -1,7 +1,15 @@
 import { reactive } from 'vue'
 
-export type SalaInternacaoStatus = 'ativa' | 'inativa'
-export type SalaInternacaoTipo = 'enfermaria' | 'isolamento' | 'uti'
+export type SalaInternacaoStatus = 'disponivel' | 'ocupada' | 'reservada' | 'manutencao'
+export type SalaInternacaoTipo =
+  | 'internacao-geral'
+  | 'isolamento'
+  | 'terapia-intensiva'
+  | 'pos-operatorio'
+  | 'recuperacao'
+  | 'infectocontagioso'
+  | 'neonatal'
+  | 'outro'
 
 export type SalaInternacaoDraft = {
   nome: string
@@ -19,7 +27,7 @@ const emptyDraft: SalaInternacaoDraft = {
   nome: '',
   identificador: '',
   tipo: '',
-  status: 'ativa',
+  status: 'disponivel',
   capacidade: '',
   equipamentos: '',
   observacoes: '',
@@ -40,11 +48,10 @@ export function createSalaInternacaoDraft(initial?: Partial<SalaInternacaoDraft>
       capacidade: draft.capacidade.trim(),
       equipamentos: draft.equipamentos.trim(),
       observacoes: draft.observacoes.trim(),
-      status: draft.status === 'inativa' ? 'inativa' : 'ativa',
+      status: (draft.status || 'disponivel') as any,
       tipo: (draft.tipo || '') as any,
     }
   }
 
   return { draft, reset, toPayload }
 }
-

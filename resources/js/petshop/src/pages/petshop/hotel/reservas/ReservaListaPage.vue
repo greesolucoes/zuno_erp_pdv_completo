@@ -1,25 +1,29 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataTable from '../../../../components/ui/DataTable.vue'
 import {
   listReservasHotel,
   loadReservasHotelOptions,
+  type PaginatedResponse,
+  type ReservaHotel,
   type ReservasHotelLoadOptions,
 } from '../../../../services/petshop/hotel/reservas.service'
+import { initLegacyUiBindings } from '../../../../utils/legacyScripts'
 
 const router = useRouter()
 const route = useRoute()
 
 const busca = ref((route.query.busca as string) ?? '')
 const options = ref<ReservasHotelLoadOptions | null>(null)
+const loading = ref(false)
+const resp = ref<PaginatedResponse<ReservaHotel> | null>(null)
 
 const page = computed(() => {
   const raw = Array.isArray(route.query.page) ? route.query.page[0] : route.query.page
   const parsed = Number.parseInt(String(raw ?? '1'), 10)
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 1
 })
-const perPage = 10
 
 function formatDateTimeBr(input: string): string {
   const date = new Date(input)
@@ -51,9 +55,9 @@ type ReservaRow = {
   cadastradoEm: string
 }
 
-const allRows = computed<ReservaRow[]>(() => {
+const pageRows = computed<ReservaRow[]>(() => {
   const loaded = options.value
-  const reservas = listReservasHotel(busca.value)
+  const reservas = resp.value?.data ?? []
   return reservas.map((r) => {
     const pet = loaded?.pets.find((p) => p.id === r.animal_id) ?? null
     const quarto = loaded ? findLabel(loaded.quartos, r.quarto_id) : r.quarto_id
@@ -73,12 +77,8 @@ const allRows = computed<ReservaRow[]>(() => {
   })
 })
 
-const totalRows = computed(() => allRows.value.length)
-const totalPages = computed(() => Math.max(1, Math.ceil(totalRows.value / perPage)))
-const pageRows = computed(() => {
-  const start = (page.value - 1) * perPage
-  return allRows.value.slice(start, start + perPage)
-})
+const totalRows = computed(() => resp.value?.meta?.total ?? 0)
+const totalPages = computed(() => resp.value?.meta?.last_page ?? 1)
 
 function goToPage(targetPage: number) {
   const safePage = Math.min(Math.max(1, targetPage), totalPages.value)
@@ -100,11 +100,29 @@ function onRecarregar() {
   router.push({ name: 'petshop-hotel-reservas', query: { ...route.query, page: undefined } })
 }
 
+async function fetchData() {
+  loading.value = true
+  try {
+    const [loadedOptions, loaded] = await Promise.all([loadReservasHotelOptions(), listReservasHotel({ busca: busca.value, page: page.value })])
+    options.value = loadedOptions
+    resp.value = loaded
+  } finally {
+    loading.value = false
+    await nextTick()
+    initLegacyUiBindings()
+  }
+}
+
+watch(
+  () => [page.value, route.query.busca],
+  () => {
+    fetchData()
+  },
+  { immediate: true },
+)
+
 onMounted(() => {
-  loadReservasHotelOptions().then((o) => {
-    options.value = o
-  })
-  // Os handlers e tooltips são inicializados pelo DefaultLayout (initLegacyUiBindings)
+  initLegacyUiBindings()
 })
 </script>
 
@@ -114,6 +132,11 @@ onMounted(() => {
   </div>
 
   <h2>Reservas do Hotel</h2>
+
+  <div v-if="loading" class="pnlCollapse semi-aberto">
+    <h2>Carregando...</h2>
+    <div class="retratil" style="padding: 10px 20px">Aguarde...</div>
+  </div>
 
   <div id="pnlIdentificacao" class="pnlCollapse">
     <div class="retratil">
@@ -203,5 +226,4 @@ onMounted(() => {
       </tr>
     </template>
   </DataTable>
-  <span class="sem-registros">Nenhum registro encontrado</span>
 </template>

@@ -1,21 +1,25 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataTable from '../../../../../components/ui/DataTable.vue'
-import { listModelosPrescricao, loadModeloPrescricaoOptions, type ModeloPrescricaoLoadOptions } from '../../../../../services/petshop/vet/cadastros/modeloPrescricao.service'
+import { initLegacyUiBindings } from '../../../../../utils/legacyScripts'
+import { listModelosPrescricao, loadModeloPrescricaoOptions, type ModeloPrescricao, type ModeloPrescricaoLoadOptions } from '../../../../../services/petshop/vet/cadastros/modeloPrescricao.service'
 
 const router = useRouter()
 const route = useRoute()
 
 const busca = ref((route.query.busca as string) ?? '')
 const options = ref<ModeloPrescricaoLoadOptions | null>(null)
+const loading = ref(false)
+const modelos = ref<ModeloPrescricao[]>([])
+const totalPages = ref(1)
+const totalRows = ref(0)
 
 const page = computed(() => {
   const raw = Array.isArray(route.query.page) ? route.query.page[0] : route.query.page
   const parsed = Number.parseInt(String(raw ?? '1'), 10)
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 1
 })
-const perPage = 10
 
 function formatDateTimeBr(input: string): string {
   const date = new Date(input)
@@ -37,8 +41,7 @@ type Row = {
 
 const allRows = computed<Row[]>(() => {
   const loaded = options.value
-  const modelos = listModelosPrescricao(busca.value)
-  return modelos.map((m) => ({
+  return modelos.value.map((m) => ({
     id: m.id,
     titulo: m.title,
     categoria: m.category || '-',
@@ -47,15 +50,23 @@ const allRows = computed<Row[]>(() => {
   }))
 })
 
-const totalRows = computed(() => allRows.value.length)
-const totalPages = computed(() => Math.max(1, Math.ceil(totalRows.value / perPage)))
-const pageRows = computed(() => {
-  const start = (page.value - 1) * perPage
-  return allRows.value.slice(start, start + perPage)
-})
+async function fetchData() {
+  loading.value = true
+  try {
+    const [loadedOptions, list] = await Promise.all([loadModeloPrescricaoOptions(), listModelosPrescricao({ busca: busca.value, page: page.value })])
+    options.value = loadedOptions
+    modelos.value = list.data
+    totalPages.value = list.meta.last_page
+    totalRows.value = list.meta.total
+    await nextTick()
+    initLegacyUiBindings()
+  } finally {
+    loading.value = false
+  }
+}
 
 function goToPage(targetPage: number) {
-  const safePage = Math.min(Math.max(1, targetPage), totalPages.value)
+  const safePage = Math.min(Math.max(1, targetPage), totalPages.value || 1)
   router.push({ name: 'petshop-vet-modelo-prescricao', query: { ...route.query, page: safePage === 1 ? undefined : String(safePage) } })
 }
 
@@ -75,11 +86,17 @@ function onRecarregar() {
 }
 
 onMounted(() => {
-  loadModeloPrescricaoOptions().then((o) => {
-    options.value = o
-  })
+  fetchData()
   // Os handlers e tooltips são inicializados pelo DefaultLayout (initLegacyUiBindings)
 })
+
+watch(
+  () => [route.query.page, route.query.busca],
+  () => {
+    busca.value = (route.query.busca as string) ?? ''
+    fetchData()
+  },
+)
 </script>
 
 <template>
@@ -133,11 +150,12 @@ onMounted(() => {
   </div>
 
   <DataTable
-    :rows="pageRows"
+    :rows="allRows"
     :row-key="(r) => (r as any).id"
     :page="page"
     :total-pages="totalPages"
     :total-items="totalRows"
+    :loading="loading"
     @page-change="goToPage"
   >
     <template #head>
@@ -174,5 +192,4 @@ onMounted(() => {
       </tr>
     </template>
   </DataTable>
-  <span class="sem-registros">Nenhum registro encontrado</span>
 </template>

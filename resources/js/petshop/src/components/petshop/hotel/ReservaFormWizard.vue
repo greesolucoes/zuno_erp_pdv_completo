@@ -355,7 +355,7 @@ async function onPrimary() {
             <div class="col-md-12">
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Situação</span></label>
-                <select v-model="draft.estado" class="form-control" name="estado" :disabled="isReadOnly || estadoLocked">
+                <select v-model="draft.estado" class="form-control form-select2" name="estado" :disabled="isReadOnly || estadoLocked">
                   <option v-for="s in props.loadOptions.estados" :key="s.value" :value="s.value">{{ s.label }}</option>
                 </select>
                 <div v-if="estadoLocked" class="bd-callout bd-callout-info" style="margin: 10px 0 0">
@@ -446,7 +446,7 @@ async function onPrimary() {
             <div class="col-md-6">
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Tipo</span></label>
-                <select v-model="draft.servico_principal_id" class="form-control" name="servico_principal_id" :disabled="isReadOnly">
+                <select v-model="draft.servico_principal_id" class="form-control form-select2" name="servico_principal_id" :disabled="isReadOnly">
                   <option value=""></option>
                   <option v-for="s in props.loadOptions.servicoPrincipal" :key="s.id" :value="s.id">{{ s.label }}</option>
                 </select>
@@ -645,4 +645,3 @@ async function onPrimary() {
   text-align: right;
 }
 </style>
-

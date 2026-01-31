@@ -1,21 +1,25 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import DataTable from '../../../../../components/ui/DataTable.vue'
-import { listSalasAtendimento, loadSalasAtendimentoOptions, type SalasAtendimentoLoadOptions } from '../../../../../services/petshop/vet/cadastros/salasAtendimento.service'
+import { listSalasAtendimento, loadSalasAtendimentoOptions, type SalaAtendimento, type SalasAtendimentoLoadOptions } from '../../../../../services/petshop/vet/cadastros/salasAtendimento.service'
+import { initLegacyUiBindings } from '../../../../../utils/legacyScripts'
 
 const router = useRouter()
 const route = useRoute()
 
 const busca = ref((route.query.busca as string) ?? '')
 const options = ref<SalasAtendimentoLoadOptions | null>(null)
+const loading = ref(false)
+const salas = ref<SalaAtendimento[]>([])
+const totalPages = ref(1)
+const totalRows = ref(0)
 
 const page = computed(() => {
   const raw = Array.isArray(route.query.page) ? route.query.page[0] : route.query.page
   const parsed = Number.parseInt(String(raw ?? '1'), 10)
   return Number.isFinite(parsed) && parsed > 0 ? parsed : 1
 })
-const perPage = 10
 
 function formatDateTimeBr(input: string): string {
   const date = new Date(input)
@@ -38,8 +42,7 @@ type SalaRow = {
 
 const allRows = computed<SalaRow[]>(() => {
   const loaded = options.value
-  const salas = listSalasAtendimento(busca.value)
-  return salas.map((s) => ({
+  return salas.value.map((s) => ({
     id: s.id,
     sala: s.nome,
     tipo: loaded ? findLabel(loaded.tipos, s.tipo) : s.tipo,
@@ -49,15 +52,26 @@ const allRows = computed<SalaRow[]>(() => {
   }))
 })
 
-const totalRows = computed(() => allRows.value.length)
-const totalPages = computed(() => Math.max(1, Math.ceil(totalRows.value / perPage)))
-const pageRows = computed(() => {
-  const start = (page.value - 1) * perPage
-  return allRows.value.slice(start, start + perPage)
-})
+async function fetchData() {
+  loading.value = true
+  try {
+    const [loadedOptions, list] = await Promise.all([
+      loadSalasAtendimentoOptions(),
+      listSalasAtendimento({ busca: busca.value, page: page.value }),
+    ])
+    options.value = loadedOptions
+    salas.value = list.data
+    totalPages.value = list.meta.last_page
+    totalRows.value = list.meta.total
+    await nextTick()
+    initLegacyUiBindings()
+  } finally {
+    loading.value = false
+  }
+}
 
 function goToPage(targetPage: number) {
-  const safePage = Math.min(Math.max(1, targetPage), totalPages.value)
+  const safePage = Math.min(Math.max(1, targetPage), totalPages.value || 1)
   router.push({ name: 'petshop-vet-salas-atendimento', query: { ...route.query, page: safePage === 1 ? undefined : String(safePage) } })
 }
 
@@ -77,11 +91,17 @@ function onRecarregar() {
 }
 
 onMounted(() => {
-  loadSalasAtendimentoOptions().then((o) => {
-    options.value = o
-  })
+  fetchData()
   // Os handlers e tooltips são inicializados pelo DefaultLayout (initLegacyUiBindings)
 })
+
+watch(
+  () => [route.query.page, route.query.busca],
+  () => {
+    busca.value = (route.query.busca as string) ?? ''
+    fetchData()
+  },
+)
 </script>
 
 <template>
@@ -135,11 +155,12 @@ onMounted(() => {
   </div>
 
   <DataTable
-    :rows="pageRows"
+    :rows="allRows"
     :row-key="(r) => (r as any).id"
     :page="page"
     :total-pages="totalPages"
     :total-items="totalRows"
+    :loading="loading"
     @page-change="goToPage"
   >
     <template #head>
@@ -178,5 +199,4 @@ onMounted(() => {
       </tr>
     </template>
   </DataTable>
-  <span class="sem-registros">Nenhum registro encontrado</span>
 </template>

@@ -1,7 +1,7 @@
 import type { AtendimentoDraft, AtendimentoUpsertPayload } from '../../../../composables/createAtendimentoDraft'
-import { listChecklists } from '../cadastros/checklist.service'
-import { listMedicos, loadMedicosOptions } from '../cadastros/medicos.service'
-import { listSalasAtendimento, loadSalasAtendimentoOptions } from '../cadastros/salasAtendimento.service'
+import { listChecklistsSnapshot } from '../cadastros/checklist.service'
+import { listMedicosSnapshot, loadMedicosOptions } from '../cadastros/medicos.service'
+import { listSalasAtendimentoSnapshot, loadSalasAtendimentoOptions } from '../cadastros/salasAtendimento.service'
 import { listModelosAtendimento } from '../cadastros/modeloAtendimento.service'
 
 export type Atendimento = AtendimentoDraft & {
@@ -130,20 +130,20 @@ export async function loadAtendimentosOptions(): Promise<AtendimentoLoadOptions>
 
   const [medicosOptions] = await Promise.all([loadMedicosOptions(), loadSalasAtendimentoOptions()])
 
-  const veterinarios: SelectOption[] = listMedicos().map((m) => ({
+  const veterinarios: SelectOption[] = listMedicosSnapshot().map((m) => ({
     id: m.id,
     label: medicosOptions.funcionarios.find((f) => f.id === m.funcionario_id)?.label ?? `Médico ${m.id}`,
   }))
 
-  const salas = listSalasAtendimento()
-    .filter((s) => s.status === 'ativa')
+  const salas = listSalasAtendimentoSnapshot()
+    .filter((s) => s.status === 'disponivel')
     .map((s) => ({ id: s.id, label: s.nome }))
 
   const modelosAtendimento = listModelosAtendimento()
     .filter((m) => m.status !== 'inativo')
     .map((m) => ({ id: m.id, title: m.title, content: m.content }))
 
-  const checklists = listChecklists()
+  const checklists = listChecklistsSnapshot()
     .filter((c) => c.status === 'ativo')
     .map((c) => ({ id: c.id, titulo: c.titulo, itens: c.itens }))
 

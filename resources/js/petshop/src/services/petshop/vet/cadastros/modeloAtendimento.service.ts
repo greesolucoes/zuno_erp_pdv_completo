@@ -1,4 +1,6 @@
 import type { ModeloAtendimentoDraft, ModeloAtendimentoUpsertPayload } from '../../../../composables/createModeloAtendimentoDraft'
+import type { ApiError } from '../../../http'
+import { apiGet, apiPost, apiPut } from '../../../http'
 
 export type ModeloAtendimento = ModeloAtendimentoDraft & {
   id: string
@@ -13,88 +15,46 @@ export type ModeloAtendimentoLoadOptions = {
   status: SelectOption<'ativo' | 'inativo'>[]
 }
 
-const statusOptions: ModeloAtendimentoLoadOptions['status'] = [
-  { value: 'ativo', label: 'Ativo' },
-  { value: 'inativo', label: 'Inativo' },
-]
-
-const categories = ['Consulta', 'Internação', 'Cirurgia', 'Emergência']
-
-let nextId = 1
-const db = new Map<string, ModeloAtendimento>()
-
-function nowIso() {
-  return new Date().toISOString()
+export type PaginatedMeta = {
+  current_page: number
+  last_page: number
+  per_page: number
+  total: number
 }
 
-function ensureSeeded() {
-  if (db.size) return
-
-  const seed: Array<Omit<ModeloAtendimento, 'id'>> = [
-    {
-      title: 'Atendimento padrão (rascunho)',
-      category: 'Consulta',
-      notes: 'Modelo inicial. Complete o conteúdo depois.',
-      content: '',
-      created_at: nowIso(),
-      updated_at: nowIso(),
-    },
-    {
-      title: 'Atendimento clínico (publicado)',
-      category: 'Consulta',
-      status: 'ativo',
-      notes: 'Script padrão para consultas clínicas.',
-      content: '<p><b>Anamnese:</b> ...</p><p><b>Exame físico:</b> ...</p>',
-      created_at: nowIso(),
-      updated_at: nowIso(),
-    },
-  ]
-
-  for (const item of seed) {
-    const model: ModeloAtendimento = { id: String(nextId++), ...item }
-    db.set(model.id, model)
-  }
+export type PaginatedResponse<T> = {
+  data: T[]
+  meta: PaginatedMeta
 }
 
-export async function loadModeloAtendimentoOptions(): Promise<ModeloAtendimentoLoadOptions> {
-  ensureSeeded()
-  return { categories, status: statusOptions }
-}
-
-export function listModelosAtendimento(search?: string): ModeloAtendimento[] {
-  ensureSeeded()
-  const all = Array.from(db.values())
-  const normalized = (search ?? '').trim().toLowerCase()
-  if (!normalized) return all
-  return all.filter((m) => {
-    const status = (m.status ?? '').toLowerCase()
-    return (
-      m.title.toLowerCase().includes(normalized) ||
-      (m.category ?? '').toLowerCase().includes(normalized) ||
-      status.includes(normalized)
-    )
+export async function listModelosAtendimento(params?: { busca?: string; page?: number; category?: string; status?: string }): Promise<PaginatedResponse<ModeloAtendimento>> {
+  return apiGet<PaginatedResponse<ModeloAtendimento>>('/petshop/vet/modelos-atendimento', {
+    busca: params?.busca ?? '',
+    page: params?.page ?? 1,
+    category: params?.category ?? '',
+    status: params?.status ?? '',
   })
 }
 
+export async function loadModeloAtendimentoOptions(): Promise<ModeloAtendimentoLoadOptions> {
+  return apiGet<ModeloAtendimentoLoadOptions>('/petshop/vet/modelos-atendimento/options')
+}
+
 export async function getModeloAtendimentoById(id: string): Promise<ModeloAtendimento | null> {
-  ensureSeeded()
-  return db.get(id) ?? null
+  try {
+    return await apiGet<ModeloAtendimento>(`/petshop/vet/modelos-atendimento/${encodeURIComponent(id)}`)
+  } catch (e) {
+    const err = e as Partial<ApiError> | null
+    if (err?.status === 404) return null
+    throw e
+  }
 }
 
-export async function createModeloAtendimento(payload: ModeloAtendimentoUpsertPayload): Promise<ModeloAtendimento> {
-  ensureSeeded()
-  const now = nowIso()
-  const model: ModeloAtendimento = { id: String(nextId++), ...payload, created_at: now, updated_at: now }
-  db.set(model.id, model)
-  return model
+export async function createModeloAtendimento(payload: ModeloAtendimentoUpsertPayload): Promise<{ id: string }> {
+  return apiPost<{ id: string }>('/petshop/vet/modelos-atendimento', payload as any)
 }
 
-export async function updateModeloAtendimento(id: string, payload: ModeloAtendimentoUpsertPayload): Promise<ModeloAtendimento | null> {
-  ensureSeeded()
-  const existing = db.get(id)
-  if (!existing) return null
-  const updated: ModeloAtendimento = { ...existing, ...payload, id, updated_at: nowIso() }
-  db.set(id, updated)
-  return updated
+export async function updateModeloAtendimento(id: string, payload: ModeloAtendimentoUpsertPayload): Promise<{ ok: true }> {
+  return apiPut<{ ok: true }>(`/petshop/vet/modelos-atendimento/${encodeURIComponent(id)}`, payload as any)
 }
 

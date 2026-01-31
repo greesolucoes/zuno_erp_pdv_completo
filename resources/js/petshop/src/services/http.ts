@@ -93,3 +93,7 @@ export function apiPost<T>(path: string, body: JsonValue): Promise<T> {
 export function apiPut<T>(path: string, body: JsonValue): Promise<T> {
   return request<T>('PUT', path, body)
 }
+
+export function apiDelete<T>(path: string): Promise<T> {
+  return request<T>('DELETE', path)
+}

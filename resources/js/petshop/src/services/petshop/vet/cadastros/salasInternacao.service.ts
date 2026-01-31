@@ -1,4 +1,6 @@
 import type { SalaInternacaoDraft, SalaInternacaoUpsertPayload } from '../../../../composables/createSalaInternacaoDraft'
+import type { ApiError } from '../../../http'
+import { apiGet, apiPost, apiPut } from '../../../http'
 
 export type SalaInternacao = SalaInternacaoDraft & {
   id: string
@@ -6,106 +8,69 @@ export type SalaInternacao = SalaInternacaoDraft & {
   updated_at: string
 }
 
-export type SelectOption<T extends string> = { value: T; label: string }
+export type SelectOption<T extends string = string> = { value: T; label: string }
 
 export type SalasInternacaoLoadOptions = {
-  tipos: SelectOption<'enfermaria' | 'isolamento' | 'uti'>[]
-  status: SelectOption<'ativa' | 'inativa'>[]
+  tipos: SelectOption[]
+  status: SelectOption[]
 }
 
-const tipos: SalasInternacaoLoadOptions['tipos'] = [
-  { value: 'enfermaria', label: 'Enfermaria' },
-  { value: 'isolamento', label: 'Isolamento' },
-  { value: 'uti', label: 'UTI' },
-]
-
-const statusOptions: SalasInternacaoLoadOptions['status'] = [
-  { value: 'ativa', label: 'Ativa' },
-  { value: 'inativa', label: 'Inativa' },
-]
-
-let nextId = 1
-const db = new Map<string, SalaInternacao>()
-
-function nowIso() {
-  return new Date().toISOString()
+export type PaginatedMeta = {
+  current_page: number
+  last_page: number
+  per_page: number
+  total: number
 }
 
-function ensureSeeded() {
-  if (db.size) return
-
-  const seeds: Array<Omit<SalaInternacao, 'id'>> = [
-    {
-      nome: 'Internação 01',
-      identificador: 'I-01',
-      tipo: 'enfermaria',
-      status: 'ativa',
-      capacidade: '6',
-      equipamentos: 'Oxímetro; Bombas de infusão',
-      observacoes: '',
-      created_at: nowIso(),
-      updated_at: nowIso(),
-    },
-    {
-      nome: 'Isolamento',
-      identificador: 'ISO-01',
-      tipo: 'isolamento',
-      status: 'ativa',
-      capacidade: '2',
-      equipamentos: 'EPI; Autoclave',
-      observacoes: 'Uso exclusivo para casos infecciosos.',
-      created_at: nowIso(),
-      updated_at: nowIso(),
-    },
-  ]
-
-  for (const seed of seeds) {
-    const sala: SalaInternacao = { id: String(nextId++), ...seed }
-    db.set(sala.id, sala)
-  }
+export type PaginatedResponse<T> = {
+  data: T[]
+  meta: PaginatedMeta
 }
 
-export async function loadSalasInternacaoOptions(): Promise<SalasInternacaoLoadOptions> {
-  ensureSeeded()
-  return { tipos, status: statusOptions }
+const fallbackSnapshot: SalaInternacao[] = []
+let salasSnapshot: SalaInternacao[] = fallbackSnapshot
+
+export function listSalasInternacaoSnapshot(): SalaInternacao[] {
+  return salasSnapshot
 }
 
-export function listSalasInternacao(search?: string): SalaInternacao[] {
-  ensureSeeded()
-  const all = Array.from(db.values())
-  const normalized = (search ?? '').trim().toLowerCase()
-  if (!normalized) return all
-
-  return all.filter((s) => {
-    return (
-      s.nome.toLowerCase().includes(normalized) ||
-      s.identificador.toLowerCase().includes(normalized) ||
-      s.tipo.toLowerCase().includes(normalized) ||
-      s.status.toLowerCase().includes(normalized)
-    )
+export async function listSalasInternacao(params?: { busca?: string; page?: number; status?: string; tipo?: string }): Promise<PaginatedResponse<SalaInternacao>> {
+  return apiGet<PaginatedResponse<SalaInternacao>>('/petshop/vet/salas-internacao', {
+    busca: params?.busca ?? '',
+    page: params?.page ?? 1,
+    status: params?.status ?? '',
+    tipo: params?.tipo ?? '',
   })
 }
 
+export async function loadSalasInternacaoOptions(): Promise<SalasInternacaoLoadOptions> {
+  try {
+    const [options, firstPage] = await Promise.all([
+      apiGet<SalasInternacaoLoadOptions>('/petshop/vet/salas-internacao/options'),
+      listSalasInternacao({ page: 1 }),
+    ])
+    salasSnapshot = firstPage.data.length ? firstPage.data : salasSnapshot
+    return options
+  } catch {
+    return { tipos: [], status: [] }
+  }
+}
+
 export async function getSalaInternacaoById(id: string): Promise<SalaInternacao | null> {
-  ensureSeeded()
-  return db.get(id) ?? null
+  try {
+    return await apiGet<SalaInternacao>(`/petshop/vet/salas-internacao/${encodeURIComponent(id)}`)
+  } catch (e) {
+    const err = e as Partial<ApiError> | null
+    if (err?.status === 404) return null
+    throw e
+  }
 }
 
-export async function createSalaInternacao(payload: SalaInternacaoUpsertPayload): Promise<SalaInternacao> {
-  ensureSeeded()
-  const now = nowIso()
-  const sala: SalaInternacao = { id: String(nextId++), ...payload, created_at: now, updated_at: now }
-  db.set(sala.id, sala)
-  return sala
+export async function createSalaInternacao(payload: SalaInternacaoUpsertPayload): Promise<{ id: string }> {
+  return apiPost<{ id: string }>('/petshop/vet/salas-internacao', payload as any)
 }
 
-export async function updateSalaInternacao(id: string, payload: SalaInternacaoUpsertPayload): Promise<SalaInternacao | null> {
-  ensureSeeded()
-  const existing = db.get(id)
-  if (!existing) return null
-
-  const updated: SalaInternacao = { ...existing, ...payload, id, updated_at: nowIso() }
-  db.set(id, updated)
-  return updated
+export async function updateSalaInternacao(id: string, payload: SalaInternacaoUpsertPayload): Promise<{ ok: true }> {
+  return apiPut<{ ok: true }>(`/petshop/vet/salas-internacao/${encodeURIComponent(id)}`, payload as any)
 }
 

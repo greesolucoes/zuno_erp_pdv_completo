@@ -189,5 +189,4 @@ watch(
       </tr>
     </template>
   </DataTable>
-  <span class="sem-registros">Nenhum registro encontrado</span>
 </template>

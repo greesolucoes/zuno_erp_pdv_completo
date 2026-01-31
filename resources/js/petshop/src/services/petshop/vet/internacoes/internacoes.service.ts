@@ -1,7 +1,7 @@
 import type { InternacaoDraft, InternacaoUpsertPayload } from '../../../../composables/createInternacaoDraft'
 import { loadAtendimentosOptions } from '../atendimentos/atendimentos.service'
-import { listMedicos, loadMedicosOptions } from '../cadastros/medicos.service'
-import { listSalasInternacao } from '../cadastros/salasInternacao.service'
+import { listMedicosSnapshot, loadMedicosOptions } from '../cadastros/medicos.service'
+import { listSalasInternacaoSnapshot } from '../cadastros/salasInternacao.service'
 
 export type Internacao = InternacaoDraft & {
   id: string
@@ -118,11 +118,11 @@ export async function loadInternacoesOptions(): Promise<InternacoesLoadOptions> 
 
   const patients = atendimentosOptions.pacientes.map((p) => ({ id: p.id, label: p.label, tutor_nome: p.tutor_nome }))
 
-  const rooms = listSalasInternacao()
-    .filter((s) => s.status === 'ativa')
+  const rooms = listSalasInternacaoSnapshot()
+    .filter((s) => s.status === 'disponivel')
     .map((s) => ({ id: s.id, label: s.nome }))
 
-  const veterinarios = listMedicos().map((m) => ({
+  const veterinarios = listMedicosSnapshot().map((m) => ({
     id: m.id,
     label: medicosOptions.funcionarios.find((f) => f.id === m.funcionario_id)?.label ?? `Médico ${m.id}`,
   }))
@@ -167,4 +167,3 @@ export async function updateInternacao(id: string, payload: InternacaoUpsertPayl
   db.set(id, updated)
   return updated
 }
-

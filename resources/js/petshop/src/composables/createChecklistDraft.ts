@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
 
 export type ChecklistStatus = 'ativo' | 'inativo'
-export type ChecklistTipo = 'pre_atendimento' | 'internacao' | 'cirurgia' | 'banho_tosa'
+export type ChecklistTipo = 'atendimento' | 'prescricao' | 'prontuario' | 'vacinacoes' | 'interacoes'
 
 export type ChecklistItemDraft = {
   texto: string
@@ -54,4 +54,3 @@ export function createChecklistDraft(initial?: Partial<ChecklistDraft>) {
 
   return { draft, reset, toPayload }
 }
-

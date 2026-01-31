@@ -47,8 +47,8 @@ function goToPage(target: number) {
 </script>
 
 <template>
-  <div class="row paginacao">
-    <div class="col-md-6 indice">
+  <div class="paginacao">
+    <div class="indice">
       <ul class="pagination">
         <li :class="{ disabled: safePage <= 1 }">
           <a href="javascript:void(0);" aria-label="Anterior" @click.prevent="goToPage(safePage - 1)">
@@ -68,9 +68,16 @@ function goToPage(target: number) {
       </ul>
     </div>
 
-    <div class="col-md-6 descricao" v-if="typeof totalItems === 'number'">
-      Total de {{ totalItems }} registro(s)
-    </div>
+    <div class="descricao" v-if="typeof totalItems === 'number'">Total de {{ totalItems }} registro(s)</div>
   </div>
 </template>
 
+<style scoped>
+.paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+</style>

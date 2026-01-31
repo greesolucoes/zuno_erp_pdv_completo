@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, ref, watch } from 'vue'
 import type { PetDraft, PetUpsertPayload } from '../../../composables/createNovoPetDraft'
 import { createNovoPetDraft } from '../../../composables/createNovoPetDraft'
 import { initLegacyUiBindings, loadLegacyStyleOnce } from '../../../utils/legacyScripts'
@@ -138,6 +138,29 @@ onMounted(() => {
   initLegacyUiBindings()
 })
 
+function refreshSelect2ByName(name: string) {
+  const w = window as any
+  const $: any = w?.$
+  if (!$?.fn?.select2) return
+
+  try {
+    $(`select[name="${name}"].select2-hidden-accessible`).each(function (this: any) {
+      $(this).select2('destroy')
+    })
+  } catch {
+    // ignore
+  }
+}
+
+watch(
+  () => [step.value, draft.especie_id, racasDisponiveis.value.length],
+  async () => {
+    await nextTick()
+    refreshSelect2ByName('raca_id')
+    initLegacyUiBindings()
+  },
+)
+
 function openLegacyModal(selector: string) {
   if (isReadOnly.value) return
   const w = window as any
@@ -234,7 +257,7 @@ function onBack() {
             <div class="col-md-6">
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Sexo<span class="asterisco">*</span></span></label>
-                <select v-model="draft.sexo" class="form-control" name="sexo" :disabled="isReadOnly" required>
+                <select v-model="draft.sexo" class="form-control form-select2" name="sexo" :disabled="isReadOnly" required>
                   <option value="">Selecione</option>
                   <option value="M">Macho</option>
                   <option value="F">Fêmea</option>
@@ -254,7 +277,7 @@ function onBack() {
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Cliente/Tutor<span class="asterisco">*</span></span></label>
                 <div class="input-group input-group-lg">
-                  <select v-model="draft.cliente_id" class="form-control" name="cliente_id" :disabled="isReadOnly" required>
+                  <select v-model="draft.cliente_id" class="form-control form-select2" name="cliente_id" :disabled="isReadOnly" required>
                     <option value="">Selecione</option>
                     <option v-for="c in clientes" :key="c.id" :value="c.id">{{ c.label }}</option>
                   </select>
@@ -286,7 +309,7 @@ function onBack() {
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Espécie<span class="asterisco">*</span></span></label>
                 <div class="input-group input-group-lg">
-                  <select v-model="draft.especie_id" class="form-control" name="especie_id" :disabled="isReadOnly" required>
+                  <select v-model="draft.especie_id" class="form-control form-select2" name="especie_id" :disabled="isReadOnly" required>
                     <option value="">Selecione a espécie</option>
                     <option v-for="e in especies" :key="e.id" :value="e.id">{{ e.label }}</option>
                   </select>
@@ -303,7 +326,7 @@ function onBack() {
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Raça<span class="asterisco">*</span></span></label>
                 <div class="input-group input-group-lg">
-                  <select v-model="draft.raca_id" class="form-control" name="raca_id" :disabled="racaDisabled" required>
+                  <select v-model="draft.raca_id" class="form-control form-select2" name="raca_id" :disabled="racaDisabled" required>
                     <option value="">Selecione a raça</option>
                     <option v-for="r in racasDisponiveis" :key="r.id" :value="r.id">{{ r.label }}</option>
                   </select>
@@ -377,7 +400,7 @@ function onBack() {
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Pelagem</span></label>
                 <div class="input-group input-group-lg">
-                  <select v-model="draft.pelagem_id" class="form-control" name="pelagem_id" :disabled="isReadOnly">
+                  <select v-model="draft.pelagem_id" class="form-control form-select2" name="pelagem_id" :disabled="isReadOnly">
                     <option value="">Selecione a pelagem</option>
                     <option v-for="p in pelagens" :key="p.id" :value="p.id">{{ p.label }}</option>
                   </select>
@@ -408,7 +431,7 @@ function onBack() {
             <div class="col-md-4">
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Origem</span></label>
-                <select v-model="draft.origem_tipo" class="form-control" :disabled="isReadOnly">
+                <select v-model="draft.origem_tipo" class="form-control form-select2" :disabled="isReadOnly">
                   <option value="">Selecione</option>
                   <option value="NASCIMENTO">Nascimento</option>
                   <option value="ADOCAO">Adoção</option>
@@ -494,7 +517,7 @@ function onBack() {
             <div class="col-md-4">
               <div class="form-group form-group-lg">
                 <label class="control-label"><span>Possui pedigree?<span class="asterisco">*</span></span></label>
-                <select v-model="draft.tem_pedigree" class="form-control" name="tem_pedigree" :disabled="isReadOnly" required>
+                <select v-model="draft.tem_pedigree" class="form-control form-select2" name="tem_pedigree" :disabled="isReadOnly" required>
                   <option value="">Selecione</option>
                   <option value="S">Sim</option>
                   <option value="N">Não</option>
@@ -549,4 +572,3 @@ function onBack() {
   filter: brightness(0) invert(1);
 }
 </style>
-

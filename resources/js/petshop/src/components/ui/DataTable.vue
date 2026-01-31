@@ -37,12 +37,11 @@ const emit = defineEmits<{
           <slot name="row" :row="row" :index="index" />
         </template>
       </template>
-  
     </tbody>
   </table>
 
   <PaginationBar
-    v-if="showPagination && totalPages > 1"
+    v-if="showPagination"
     :page="page"
     :total-pages="totalPages"
     :total-items="totalItems"

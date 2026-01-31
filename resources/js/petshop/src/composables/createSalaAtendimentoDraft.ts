@@ -1,7 +1,7 @@
 import { reactive } from 'vue'
 
-export type SalaAtendimentoStatus = 'ativa' | 'inativa'
-export type SalaAtendimentoTipo = 'consultorio' | 'cirurgia' | 'banho_tosa'
+export type SalaAtendimentoStatus = 'disponivel' | 'manutencao' | 'indisponivel'
+export type SalaAtendimentoTipo = 'consultorio' | 'triagem' | 'vacinacao' | 'emergencia' | 'laboratorio' | 'outro'
 
 export type SalaAtendimentoDraft = {
   nome: string
@@ -19,7 +19,7 @@ const emptyDraft: SalaAtendimentoDraft = {
   nome: '',
   identificador: '',
   tipo: '',
-  status: 'ativa',
+  status: 'disponivel',
   capacidade: '',
   equipamentos: '',
   observacoes: '',
@@ -40,11 +40,10 @@ export function createSalaAtendimentoDraft(initial?: Partial<SalaAtendimentoDraf
       capacidade: draft.capacidade.trim(),
       equipamentos: draft.equipamentos.trim(),
       observacoes: draft.observacoes.trim(),
-      status: draft.status === 'inativa' ? 'inativa' : 'ativa',
+      status: (draft.status || 'disponivel') as any,
       tipo: (draft.tipo || '') as any,
     }
   }
 
   return { draft, reset, toPayload }
 }
-
