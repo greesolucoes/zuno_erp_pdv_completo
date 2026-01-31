@@ -16,6 +16,7 @@ const homeTo = props.homeTo ?? '/home'
 const links: MenuLink[] =
   props.links ??
   [
+    { label: 'Produtos', to: '/produtos', iconSrc: '/img/menu-nova-35.svg', tooltip: 'Produtos' },
     { label: 'NFS-e Emitidas', to: '/notas/emitidas', iconSrc: '/img/menu-emitidas-35.svg', tooltip: 'NFS-e Emitidas' },
     { label: 'NFS-e Recebidas', to: '/notas/recebidas', iconSrc: '/img/menu-recebidas-35.svg', tooltip: 'NFS-e Recebidas' },
     { label: 'Rascunhos', to: '/notas/rascunhos', iconSrc: '/img/menu-rascunhos-35.svg', tooltip: 'Rascunhos' },

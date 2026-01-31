@@ -128,6 +128,13 @@ Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
         Route::prefix('v2/api')->group(function () {
+            Route::get('produtos', [App\Http\Controllers\V2\Api\ProdutosController::class, 'index'])->name('api.v2.produtos.index');
+            Route::get('produtos/options', [App\Http\Controllers\V2\Api\ProdutosController::class, 'options'])->name('api.v2.produtos.options');
+            Route::get('produtos/{id}', [App\Http\Controllers\V2\Api\ProdutosController::class, 'show'])->name('api.v2.produtos.show');
+            Route::post('produtos', [App\Http\Controllers\V2\Api\ProdutosController::class, 'store'])->name('api.v2.produtos.store');
+            Route::put('produtos/{id}', [App\Http\Controllers\V2\Api\ProdutosController::class, 'update'])->name('api.v2.produtos.update');
+            Route::delete('produtos/{id}', [App\Http\Controllers\V2\Api\ProdutosController::class, 'destroy'])->name('api.v2.produtos.destroy');
+
             Route::prefix('petshop')->group(function () {
             Route::get('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'index'])->name('petshop.api.petshop.pets.index');
             Route::get('pets/options', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'options'])->name('petshop.api.petshop.pets.options');

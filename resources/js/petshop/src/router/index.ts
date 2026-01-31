@@ -63,6 +63,31 @@ export const router = createRouter({
         { path: 'dps/servico', name: 'dps-servico', component: () => import('../pages/dps/ServicoPage.vue') },
 
         {
+          path: 'produtos',
+          name: 'produtos',
+          component: () => import('../pages/produtos/ProdutosListaPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos'], title: 'Produtos' },
+        },
+        {
+          path: 'produtos/novo',
+          name: 'produtos-novo',
+          component: () => import('../pages/produtos/ProdutoNovoPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Novo'], title: 'Novo produto' },
+        },
+        {
+          path: 'produtos/:id/editar',
+          name: 'produtos-editar',
+          component: () => import('../pages/produtos/ProdutoEditarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Editar'], title: 'Editar produto' },
+        },
+        {
+          path: 'produtos/:id',
+          name: 'produtos-visualizar',
+          component: () => import('../pages/produtos/ProdutoVisualizarPage.vue'),
+          meta: { breadcrumbs: ['Cadastros', 'Produtos', 'Visualizar'], title: 'Visualizar produto' },
+        },
+
+        {
           path: 'Petshop/ListaPets',
           name: 'petshop-lista-pets',
           component: () => import('../pages/petshop/animais/ListaPetsPage.vue'),
