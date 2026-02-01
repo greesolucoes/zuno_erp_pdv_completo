@@ -125,7 +125,7 @@ const { setVariant } = useNavigationVariant()
               <li><RouterLink to="/produtos/marcas">Marcas</RouterLink></li>
               <li><RouterLink to="">Variação</RouterLink></li>
               <li class="dropdown-header titulo-menu">Estoque:</li>
-              <li><RouterLink to="">Gerenciar estoque</RouterLink></li>
+              <li><RouterLink to="/estoque">Gerenciar estoque</RouterLink></li>
               <li><RouterLink to="">Inventário</RouterLink></li>
               <li><RouterLink to="">Transferência de estoque</RouterLink></li>
 
@@ -338,13 +338,13 @@ const { setVariant } = useNavigationVariant()
               data-hover="dropdown"
             >
               <div><img src="/img/financeiro.svg" /><span class="caret"></span></div>
-              <span class="nome-mobile">Nova NFS-e</span>
+              <span class="nome-mobile">Financeiro</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
               <li class="dropdown-header titulo-menu">Financeiro:</li>
               <li><RouterLink to="">Caixa</RouterLink></li>
-              <li><RouterLink to="">Contas a pagar</RouterLink></li>
-              <li><RouterLink to="">Contas a receber</RouterLink></li>
+              <li><RouterLink to="/financeiro/contas-pagar">Contas a pagar</RouterLink></li>
+              <li><RouterLink to="/financeiro/contas-receber">Contas a receber</RouterLink></li>
             </ul>
           </li>
           
@@ -359,7 +359,7 @@ const { setVariant } = useNavigationVariant()
               data-hover="dropdown"
             >
               <div><img src="/img/pos.svg" /><span class="caret"></span></div>
-              <span class="nome-mobile">Nova NFS-e</span>
+              <span class="nome-mobile">PDV</span>
             </a>
             <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px">
               <li class="dropdown-header titulo-menu">Ponto de Vendas:</li>

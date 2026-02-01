@@ -169,6 +169,37 @@ Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
             Route::put('servicos/{id}', [App\Http\Controllers\V2\Api\ServicosController::class, 'update'])->name('api.v2.servicos.update');
             Route::delete('servicos/{id}', [App\Http\Controllers\V2\Api\ServicosController::class, 'destroy'])->name('api.v2.servicos.destroy');
 
+            Route::get('estoque', [App\Http\Controllers\V2\Api\EstoqueController::class, 'index'])->name('api.v2.estoque.index');
+            Route::get('estoque/options', [App\Http\Controllers\V2\Api\EstoqueController::class, 'options'])->name('api.v2.estoque.options');
+            Route::get('estoque/{id}', [App\Http\Controllers\V2\Api\EstoqueController::class, 'show'])->name('api.v2.estoque.show');
+            Route::post('estoque', [App\Http\Controllers\V2\Api\EstoqueController::class, 'store'])->name('api.v2.estoque.store');
+            Route::put('estoque/{id}', [App\Http\Controllers\V2\Api\EstoqueController::class, 'update'])->name('api.v2.estoque.update');
+            Route::delete('estoque/{id}', [App\Http\Controllers\V2\Api\EstoqueController::class, 'destroy'])->name('api.v2.estoque.destroy');
+
+            Route::get('estoque/retiradas', [App\Http\Controllers\V2\Api\RetiradasEstoqueController::class, 'index'])->name('api.v2.estoque.retiradas.index');
+            Route::get('estoque/retiradas/options', [App\Http\Controllers\V2\Api\RetiradasEstoqueController::class, 'options'])->name('api.v2.estoque.retiradas.options');
+            Route::post('estoque/retiradas', [App\Http\Controllers\V2\Api\RetiradasEstoqueController::class, 'store'])->name('api.v2.estoque.retiradas.store');
+            Route::delete('estoque/retiradas/{id}', [App\Http\Controllers\V2\Api\RetiradasEstoqueController::class, 'destroy'])->name('api.v2.estoque.retiradas.destroy');
+
+            Route::get('estoque/apontamentos', [App\Http\Controllers\V2\Api\ApontamentosController::class, 'index'])->name('api.v2.estoque.apontamentos.index');
+            Route::get('estoque/apontamentos/options', [App\Http\Controllers\V2\Api\ApontamentosController::class, 'options'])->name('api.v2.estoque.apontamentos.options');
+            Route::post('estoque/apontamentos', [App\Http\Controllers\V2\Api\ApontamentosController::class, 'store'])->name('api.v2.estoque.apontamentos.store');
+            Route::get('estoque/apontamentos/{id}/imprimir', [App\Http\Controllers\V2\Api\ApontamentosController::class, 'imprimir'])->name('api.v2.estoque.apontamentos.imprimir');
+
+            Route::get('contas-pagar', [App\Http\Controllers\V2\Api\ContasPagarController::class, 'index'])->name('api.v2.contas-pagar.index');
+            Route::get('contas-pagar/options', [App\Http\Controllers\V2\Api\ContasPagarController::class, 'options'])->name('api.v2.contas-pagar.options');
+            Route::get('contas-pagar/{id}', [App\Http\Controllers\V2\Api\ContasPagarController::class, 'show'])->name('api.v2.contas-pagar.show');
+            Route::post('contas-pagar', [App\Http\Controllers\V2\Api\ContasPagarController::class, 'store'])->name('api.v2.contas-pagar.store');
+            Route::put('contas-pagar/{id}', [App\Http\Controllers\V2\Api\ContasPagarController::class, 'update'])->name('api.v2.contas-pagar.update');
+            Route::delete('contas-pagar/{id}', [App\Http\Controllers\V2\Api\ContasPagarController::class, 'destroy'])->name('api.v2.contas-pagar.destroy');
+
+            Route::get('contas-receber', [App\Http\Controllers\V2\Api\ContasReceberController::class, 'index'])->name('api.v2.contas-receber.index');
+            Route::get('contas-receber/options', [App\Http\Controllers\V2\Api\ContasReceberController::class, 'options'])->name('api.v2.contas-receber.options');
+            Route::get('contas-receber/{id}', [App\Http\Controllers\V2\Api\ContasReceberController::class, 'show'])->name('api.v2.contas-receber.show');
+            Route::post('contas-receber', [App\Http\Controllers\V2\Api\ContasReceberController::class, 'store'])->name('api.v2.contas-receber.store');
+            Route::put('contas-receber/{id}', [App\Http\Controllers\V2\Api\ContasReceberController::class, 'update'])->name('api.v2.contas-receber.update');
+            Route::delete('contas-receber/{id}', [App\Http\Controllers\V2\Api\ContasReceberController::class, 'destroy'])->name('api.v2.contas-receber.destroy');
+
             Route::prefix('petshop')->group(function () {
             Route::get('pets', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'index'])->name('petshop.api.petshop.pets.index');
             Route::get('pets/options', [App\Http\Controllers\V2\Api\Petshop\PetsController::class, 'options'])->name('petshop.api.petshop.pets.options');

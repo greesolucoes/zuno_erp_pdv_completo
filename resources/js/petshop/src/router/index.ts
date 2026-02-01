@@ -210,6 +210,87 @@ export const router = createRouter({
         },
 
         {
+          path: 'estoque',
+          name: 'estoque',
+          component: () => import('../pages/estoque/EstoqueListaPage.vue'),
+          meta: { breadcrumbs: ['Estoque', 'Gerenciar estoque'], title: 'Estoque' },
+        },
+        {
+          path: 'estoque/novo',
+          name: 'estoque-novo',
+          component: () => import('../pages/estoque/EstoqueNovoPage.vue'),
+          meta: { breadcrumbs: ['Estoque', 'Gerenciar estoque', 'Novo'], title: 'Adicionar estoque' },
+        },
+        {
+          path: 'estoque/:id/editar',
+          name: 'estoque-editar',
+          component: () => import('../pages/estoque/EstoqueEditarPage.vue'),
+          meta: { breadcrumbs: ['Estoque', 'Gerenciar estoque', 'Editar'], title: 'Editar estoque' },
+        },
+        {
+          path: 'estoque/retirada',
+          name: 'estoque-retirada',
+          component: () => import('../pages/estoque/RetiradaEstoquePage.vue'),
+          meta: { breadcrumbs: ['Estoque', 'Retirada'], title: 'Retirada de Estoque' },
+        },
+        {
+          path: 'estoque/apontamento',
+          name: 'estoque-apontamento',
+          component: () => import('../pages/estoque/ApontamentoProducaoPage.vue'),
+          meta: { breadcrumbs: ['Estoque', 'Apontamento'], title: 'Apontamento de Produção' },
+        },
+
+        {
+          path: 'financeiro/contas-pagar',
+          name: 'contas-pagar',
+          component: () => import('../pages/financeiro/contasPagar/ContasPagarListaPage.vue'),
+          meta: { breadcrumbs: ['Financeiro', 'Contas a pagar'], title: 'Contas a pagar' },
+        },
+        {
+          path: 'financeiro/contas-pagar/novo',
+          name: 'contas-pagar-novo',
+          component: () => import('../pages/financeiro/contasPagar/ContaPagarNovoPage.vue'),
+          meta: { breadcrumbs: ['Financeiro', 'Contas a pagar', 'Novo'], title: 'Nova conta a pagar' },
+        },
+        {
+          path: 'financeiro/contas-pagar/:id/editar',
+          name: 'contas-pagar-editar',
+          component: () => import('../pages/financeiro/contasPagar/ContaPagarEditarPage.vue'),
+          meta: { breadcrumbs: ['Financeiro', 'Contas a pagar', 'Editar'], title: 'Editar conta a pagar' },
+        },
+        {
+          path: 'financeiro/contas-pagar/:id',
+          name: 'contas-pagar-visualizar',
+          component: () => import('../pages/financeiro/contasPagar/ContaPagarVisualizarPage.vue'),
+          meta: { breadcrumbs: ['Financeiro', 'Contas a pagar', 'Visualizar'], title: 'Visualizar conta a pagar' },
+        },
+
+        {
+          path: 'financeiro/contas-receber',
+          name: 'contas-receber',
+          component: () => import('../pages/financeiro/contasReceber/ContasReceberListaPage.vue'),
+          meta: { breadcrumbs: ['Financeiro', 'Contas a receber'], title: 'Contas a receber' },
+        },
+        {
+          path: 'financeiro/contas-receber/novo',
+          name: 'contas-receber-novo',
+          component: () => import('../pages/financeiro/contasReceber/ContaReceberNovoPage.vue'),
+          meta: { breadcrumbs: ['Financeiro', 'Contas a receber', 'Novo'], title: 'Nova conta a receber' },
+        },
+        {
+          path: 'financeiro/contas-receber/:id/editar',
+          name: 'contas-receber-editar',
+          component: () => import('../pages/financeiro/contasReceber/ContaReceberEditarPage.vue'),
+          meta: { breadcrumbs: ['Financeiro', 'Contas a receber', 'Editar'], title: 'Editar conta a receber' },
+        },
+        {
+          path: 'financeiro/contas-receber/:id',
+          name: 'contas-receber-visualizar',
+          component: () => import('../pages/financeiro/contasReceber/ContaReceberVisualizarPage.vue'),
+          meta: { breadcrumbs: ['Financeiro', 'Contas a receber', 'Visualizar'], title: 'Visualizar conta a receber' },
+        },
+
+        {
           path: 'Petshop/ListaPets',
           name: 'petshop-lista-pets',
           component: () => import('../pages/petshop/animais/ListaPetsPage.vue'),
