@@ -61,6 +61,8 @@ export const router = createRouter({
         { path: 'dps/simplificada', name: 'dps-simplificada', component: () => import('../pages/dps/SimplificadaPage.vue') },
         { path: 'dps/bypass', name: 'dps-bypass', component: () => import('../pages/dps/BypassPage.vue') },
         { path: 'dps/servico', name: 'dps-servico', component: () => import('../pages/dps/ServicoPage.vue') },
+        { path: 'dps/tributacao', name: 'dps-tributacao', component: () => import('../pages/dps/TributacaoPage.vue') },
+        { path: 'dps/emitir-nfse', name: 'dps-emitir-nfse', component: () => import('../pages/dps/EmitirNFSePage.vue') },
 
         {
           path: 'produtos',

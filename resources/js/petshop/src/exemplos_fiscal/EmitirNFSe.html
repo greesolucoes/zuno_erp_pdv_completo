@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>NFS-e | Portal Contribuinte</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link href="/EmissorNacional/Content/Base?v=PNNgqFMeiX_JCCYDv-3Z3MCHsfnKA_V8oEHE8c3GJic1" rel="stylesheet" />
+
+
+    <link href="/EmissorNacional/Content/Passos?v=h9LYsnO-1oEZh2yqdueeg3K5lLMDMIKYutNGSwsplYc1" rel="stylesheet" />
+
+
+    <script type="text/javascript">
+        window.UrlBase = "https://www.nfse.gov.br/emissornacional/";
+        window.UrlRest = "https://restnfseprod.srv.cd.serpro";
+        window.sessionStorage.setItem("accessToken", 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdXRobWV0aG9kIjoiU0VOSEEiLCJ1bmlxdWVfbmFtZSI6IiIsImluc2NyaWNhbyI6IjY0Mzg4MzQ4MDAwMTgwIiwidGlwb19pbnNjcmljYW8iOiJDTlBKIiwibm9tZSI6IiIsInJvbGUiOiJDT05UUklCVUlOVEUiLCJuYmYiOjE3Njk5MDk4MjUsImV4cCI6MTc2OTk5OTgyNSwiaWF0IjoxNzY5OTA5ODI1LCJpc3MiOiJodHRwOi8vd3d3LnNlcnByby5nb3YuYnIifQ.OqdXgmYmBfxAQcLKmuR40L-MU9svX16dXoVHR6T4v8Q');
+    </script>
+    <script src="/EmissorNacional/Scripts/Base?v=9aYlZCGNwOnQ9M-uWKF6qWROrguA9sBYeGWayB9cXLg1"></script>
+
+
+    <script src="/EmissorNacional/Scripts/AssinaturaNFSe?v=DONRiX2zVuUaDJOtoHW9yX0-TdaU8UfqnD-BxsIXjCU1"></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand completa">
+                    <a href="/EmissorNacional/"><img src="/EmissorNacional/img/logo-nfse-assinatura-horizontal.svg" /></a>
+                </div>
+                <div class="navbar-brand simples">
+                    <a href="/EmissorNacional/"><img src="/EmissorNacional/img/logo-header-simples.svg" /></a>
+                </div>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/EmissorNacional/" data-toggle="tooltip" data-placement="bottom" title="Principal">
+                            <div><img src="/EmissorNacional/img/menu-home-35.svg" /></div><span class="nome-mobile">Página Principal</span></a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                            <div><img src="/EmissorNacional/img/menu-nova-35.svg" /><span class="caret"></span></div><span class="nome-mobile">Nova NFS-e</span>
+                        </a>
+                        <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px;">
+                            <li class="dropdown-header titulo-menu">Tipos de emissão:</li>
+                            <li>
+                                <a href="/EmissorNacional/DPS/Pessoas">Emissão completa</a>
+                            </li>
+                            <li>
+                                <a href="/EmissorNacional/DPS/Simplificada">Emissão simplificada</a>
+                            </li>
+                            <li>
+                                <a href="/EmissorNacional/ByPass/Pessoas">Emissão por decisão administrativa/judicial</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="/EmissorNacional/Notas/Emitidas" data-toggle="tooltip" data-placement="bottom" title="NFS-e Emitidas">
+                            <div><img src="/EmissorNacional/img/menu-emitidas-35.svg" style="top: -10px;" /></div><span class="nome-mobile">NFS-e Emitidas</span></a>
+                    </li>
+                    <li>
+                        <a href="/EmissorNacional/Notas/Recebidas" data-toggle="tooltip" data-placement="bottom" title="NFS-e Recebidas">
+                            <div><img src="/EmissorNacional/img/menu-recebidas-35.svg" /></div><span class="nome-mobile">NFS-e Recebidas</span></a>
+                    </li>
+                    <li>
+                        <a href="/EmissorNacional/Notas/Rascunhos" data-toggle="tooltip" data-placement="bottom" title="Rascunhos">
+                            <div><img src="/EmissorNacional/img/menu-rascunhos-35.svg" /></div><span class="nome-mobile">Rascunhos</span></a>
+                    </li>
+
+                    <!-- MAN desabilitado em Produção Restrita
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                           role="button" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                            <div><img src="~/img/menu-apuracao-35.svg" /><span class="caret"></span></div><span class="nome-mobile">Apuração Nacional</span>
+                        </a>
+                        <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px;">
+                            <li class="dropdown-header titulo-menu">Apuração Nacional:</li>
+                            <li>
+                                <a href="">Pré-Apuração</a>
+                            </li>
+                            <li>
+                                <a href="">Apuração</a>
+                            </li>
+                            <li>
+                                <a href="">Arrecadação</a>
+                            </li>
+                            <li>
+                                <a href="">Créditos/Débitos</a>
+                            </li>
+                        </ul>
+                    </li>
+                    -->
+
+                    <li>
+                        <a href="/EmissorNacional/Perfil/Configuracao" data-toggle="tooltip" data-placement="bottom" title="Configurações">
+                            <div><img src="/EmissorNacional/img/menu-config-35.svg" /></div><span class="nome-mobile">Configurações</span></a>
+                    </li>
+                    <li>
+                        <a href="/EmissorNacional/Perfil/ServicosFavoritos" data-toggle="tooltip" data-placement="bottom" title="Serviços Favoritos">
+                            <div><img src="/EmissorNacional/img/menu-favoritos-35.svg" style="top: -2px;" /></div><span class="nome-mobile">Serviços Favoritos</span></a>
+                    </li>
+                    <li class="divisor"></li>
+                    <li class="dropdown perfil">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-hover="dropdown">
+                            <div><img style="top: 2px" src="/EmissorNacional/img/menu-user-35.svg" /><span class="caret"></span></div>
+                        </a>
+                        <ul class="dropdown-menu main-menu" style="right: -5px; margin-top: 5px;">
+                            <li class="dropdown-header">
+                                TEIXX DESENVOLVIMENTO E SOFTWARE LTDA<br />
+                                <span>CNPJ: </span><span class="cnpj">64388348000180</span><br />
+                            </li>
+                            <li><a href="/EmissorNacional/Login/Sair">Sair com segurança</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default navbar-breadcrumbs">
+        <div class="container">
+            <div class="breadcrumbs">
+                <span class="nome-sistema">
+        <a href="/EmissorNacional/">
+            <i class="fa fa-home"></i>Home
+        </a>
+    </span>
+                <span class="separador">::</span>
+
+                <a href="/EmissorNacional/DPS/Pessoas/NovaNFSe" title="Emiss&#227;o Completa">Emiss&#227;o Completa</a>
+                <span class="separador">::</span> Emitir NFS-e
+            </div>
+        </div>
+    </nav>
+
+    <div class="container container-fluid-xl container-body">
+
+
+
+
+        <div class="wizard">
+            <div class="wizard-inner">
+                <div class="connecting-line"></div>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="aberto">
+                        <a href="/EmissorNacional/DPS/Pessoas?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090">
+                            <span class="round-tab">
+                                <img class="passos-pessoas" src="/EmissorNacional/img/passos-pessoas-aberto-ico.svg" />
+                            </span>
+                        </a>
+                        <a href="/EmissorNacional/DPS/Pessoas?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090" class="tag">
+                            <span class="tag-text">Pessoas</span>
+                        </a>
+                    </li>
+                    <li class="aberto">
+                        <a href="/EmissorNacional/DPS/Servico?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090">
+                            <span class="round-tab">
+                                <img class="passos-servico" src="/EmissorNacional/img/passos-servico-aberto-ico.svg" />
+                            </span>
+                        </a>
+                        <a href="/EmissorNacional/DPS/Servico?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090" class="tag">
+                            <span class="tag-text">Servi&#231;o</span>
+                        </a>
+                    </li>
+                    <li class="aberto">
+                        <a href="/EmissorNacional/DPS/Tributacao?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090">
+                            <span class="round-tab">
+                                <img class="passos-valores" src="/EmissorNacional/img/passos-valores-aberto-ico.svg" />
+                            </span>
+                        </a>
+                        <a href="/EmissorNacional/DPS/Tributacao?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090" class="tag">
+                            <span class="tag-text">Valores</span>
+                        </a>
+                    </li>
+                    <li class="ativo">
+                        <a href="javascript:void(0);">
+                            <span class="round-tab">
+                                <img class="passos-nfse" src="/EmissorNacional/img/passos-nfse-ativo-ico.svg" />
+                            </span>
+                        </a>
+                        <a href="javascript:void(0);" class="tag">
+                            <span class="tag-text">Emitir NFS-e</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="erroAssinatura" class="alert-danger alert"><span class="icone"></span><a class="close" href="javascript:void(0);"></a></div>
+
+        <input type="hidden" id="hdfIdr" value="a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090" />
+
+
+        <div class="alert-info alert">
+            <span class="icone"></span>Por favor, revise sua Declaração de Prestação de Serviço (DPS) e confira o cálculo prévio do imposto devido. Se necessário, altere as informações prestadas nos passos anteriores. Em seguida, emita a sua Nota Fiscal
+            de Serviço Eletrônica (NFS-e).
+        </div>
+
+        <div class="pnlCollapse">
+            <h2>Pessoas</h2>
+            <div class="retratil">
+                <h4 class="emissao-titulo">Informações do Emitente</h4>
+                <div class="emissao-conteudo">
+                    <dl class="dl-horizontal">
+                        <dt>
+                    Você irá emitir esta NFS-e como:
+                </dt>
+                        <dd>
+                            PRESTADOR
+                        </dd>
+                    </dl>
+
+                    <dl class="dl-horizontal">
+
+
+
+                        <dt>
+                CNPJ:
+            </dt>
+                        <dd>
+                            <span class="">64.388.348/0001-80</span>
+                        </dd>
+
+                        <dt>
+        Nome/Raz&#227;o Social:
+    </dt>
+                        <dd>
+                            TEIXX DESENVOLVIMENTO E SOFTWARE LTDA
+                        </dd>
+
+                        <dt>
+            Telefone:
+        </dt>
+                        <dd>
+                            (41) 88842502
+                        </dd>
+
+                        <dt>
+            E-mail:
+        </dt>
+                        <dd>
+                            ADR1ANO.RICARDO.TEIXEIRA@GMAIL.COM
+                        </dd>
+
+                    </dl>
+                </div>
+
+
+
+                <div style="text-align: center;padding: 10px 0;">
+                    <a class="btn btn-lg btn-info" href="/EmissorNacional/DPS/Pessoas?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090">Editar Pessoas</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pnlCollapse">
+            <h2>Serviço</h2>
+            <div class="retratil">
+                <h4 class="emissao-titulo">Serviço Prestado</h4>
+                <div class="emissao-conteudo">
+                    <dl class="dl-horizontal">
+                        <dt>
+                    Data de Compet&#234;ncia:
+                </dt>
+                        <dd>
+                            24/01/2026
+                        </dd>
+                        <dt>
+                    Código completo do serviço:
+                </dt>
+                        <dd>
+                            01.01.01.000
+                        </dd>
+                        <dt>
+                    Descrição do serviço:
+                </dt>
+                        <dd>
+                            An&#225;lise e desenvolvimento de sistemas.
+                        </dd>
+
+
+                        <dt>
+                        Município da prestação:
+                    </dt>
+                        <dd>
+                            CURITIBA/PR
+                        </dd>
+
+                        <dt>
+                    Munic&#237;pio de incid&#234;ncia do ISSQN:
+                </dt>
+                        <dd>
+                            CURITIBA/PR </dd>
+
+                        <dt>
+                    Descri&#231;&#227;o do Servi&#231;o:
+                </dt>
+                        <dd>
+                            deaenvolvimento
+                        </dd>
+
+
+                        <dt>
+                    Item da NBS correspondente ao servi&#231;o prestado:
+                </dt>
+                        <dd>
+                            101011100 - Servi&#231;os de constru&#231;&#227;o de edifica&#231;&#245;es residenciais de um e dois pavimentos
+                        </dd>
+                    </dl>
+                </div>
+
+
+
+
+
+
+                <div style="text-align: center;padding: 10px 0;">
+                    <a class="btn btn-lg btn-info" href="/EmissorNacional/DPS/Servico?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090">Editar Serviço</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="pnlTributacaoMunicipal" class="pnlCollapse">
+            <h2>Valores</h2>
+            <div class="retratil">
+                <h4 class="emissao-titulo">Valores do Serviço Prestado</h4>
+                <div class="emissao-conteudo">
+                    <dl class="dl-horizontal">
+
+                        <dt>
+                    Valor do servi&#231;o prestado:
+                </dt>
+                        <dd>
+                            R$ 2.500,00
+                        </dd>
+
+
+
+
+                    </dl>
+                </div>
+
+                <h4 class="emissao-titulo">Tributação Municipal</h4>
+                <div class="emissao-conteudo">
+                    <dl class="dl-horizontal">
+
+                        <dt>
+                    Tributa&#231;&#227;o do ISSQN sobre o servi&#231;o prestado:
+                </dt>
+                        <dd>
+                            Opera&#231;&#227;o Tribut&#225;vel
+                        </dd>
+
+
+                        <dt>
+                    Regime Especial de Tributa&#231;&#227;o:
+                </dt>
+                        <dd>
+                            Nenhum
+                        </dd>
+
+                        <dt>
+                        A exigibilidade do recolhimento do ISSQN devido nesta opera&#231;&#227;o est&#225; suspensa?
+                    </dt>
+                        <dd>
+                            N&#227;o
+                        </dd>
+                        <dt>
+                        H&#225; reten&#231;&#227;o do ISSQN pelo Tomador ou pelo Intermedi&#225;rio?
+                    </dt>
+                        <dd>
+                            N&#227;o
+                        </dd>
+                        <dt>
+                        Este servi&#231;o prestado est&#225; amparado por algum benef&#237;cio municipal?
+                    </dt>
+                        <dd>
+                            N&#227;o
+                        </dd>
+                        <dt>
+                        Ser&#225; aplicado algum tipo de Dedu&#231;&#227;o/Redu&#231;&#227;o &#224; base de c&#225;lculo do ISSQN?
+                    </dt>
+                        <dd>
+                            N&#227;o
+                        </dd>
+
+                    </dl>
+                </div>
+
+
+                <div style="text-align: center;padding: 10px 0;">
+                    <a class="btn btn-lg btn-info" href="/EmissorNacional/DPS/Tributacao?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090">Editar Tributação</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pnlCollapse emissao-calculos">
+            <h2>Prévia dos valores da NFS-e</h2>
+            <div class="retratil">
+
+                <h4 class="emissao-titulo">ISSQN calculado</h4>
+                <div class="emissao-conteudo">
+                    <ul class=leaders>
+                        <li class="subItem">
+                            <span>Serviço prestado:</span>
+                            <span>R$ 2.500,00</span>
+                        </li>
+
+
+                        <li class="subItem">
+                            <span>Base de cálculo:</span>
+                            <span>R$ 2.500,00</span>
+                        </li>
+
+                        <li class="subItem">
+                            <span>Alíquota aplicada:</span>
+                            <span>5,00%</span>
+                        </li>
+
+                        <li class="subItem">
+                            <span>
+                            ISSQN
+                                <span>:</span>
+                            </span>
+                            <span>R$ 125,00</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h4 class="emissao-titulo">Tributação federal</h4>
+                <div class="emissao-conteudo">
+
+                    <ul class=leaders>
+                        <li class="subItem">
+                            <span>
+                        PIS Devido:
+                        
+                    </span>
+                            <span>
+                        R$ 0,00
+                    </span>
+                        </li>
+                        <li class="subItem">
+                            <span>
+                        COFINS Devido:
+                        
+                    </span>
+                            <span>
+                        R$ 0,00
+                    </span>
+                        </li>
+                        <li class="subItem">
+                            <span>Imposto de Renda Retido na Fonte (IRRF):</span>
+                            <span>
+                        R$ 0,00
+                    </span>
+                        </li>
+                        <li class="subItem">
+                            <span>PIS/COFINS/CSLL Retidos:</span>
+                            <span>
+                        R$ 0,00
+                    </span>
+                        </li>
+                        <li class="subItem">
+                            <span>Contribuição Previdenciária (CP) Retida:</span>
+                            <span>
+                        R$ 0,00
+                    </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <h4 class="emissao-titulo">Valor líquido da NFS-e</h4>
+                <div class="emissao-conteudo">
+                    <ul class=leaders>
+                        <li>
+                            <span>Serviço prestado:</span>
+                            <span>R$ 2.500,00</span>
+                        </li>
+                        <li>
+                            <span>Valor total de tributos retidos:</span>
+                            <span>
+                        R$ 0,00
+                    </span>
+                        </li>
+                        <li>
+                            <span>Valor líquido da NFS-e:</span>
+                            <span>
+                        R$ 2.500,00
+                    </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="comandos">
+            <a id="btnVoltar" href="/EmissorNacional/DPS/Tributacao?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090" class="btn btn-lg btn-info float-left">
+        <img src="/EmissorNacional/img/btn-voltar.svg" /><span>Voltar</span>
+    </a>
+            <a id="btnProsseguir" href="/EmissorNacional/DPS/NFSe?idr=a0RIOVA5dHBuOURJWTNKMnJTS2hOQT090" class="btn btn-lg btn-primary direita">
+                <span>Emitir NFS-e</span><img src="/EmissorNacional/img/btn-avancar.svg" />
+            </a>
+
+
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="parceiros">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-2">
+                        <a href="http://idg.receita.fazenda.gov.br/" target="_blank">
+                            <img src="/EmissorNacional/img/logo-rfb.png" class="logo" alt="Receita Federal do Brasil">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://www.sebrae.com.br/" target="_blank">
+                            <img src="/EmissorNacional/img/logo-sebrae.png" class="logo" alt="Sebrae">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://www.cnm.org.br/" target="_blank">
+                            <img src="/EmissorNacional/img/logo-cnm.png" class="logo" alt="Confederação Nacional dos Municípios">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://www.abrasf.org.br/" target="_blank">
+                            <img src="/EmissorNacional/img/logo-abrasf.png" class="logo" alt="Associação Brasileira das Secretarias de Finanças das Capitais">
+                        </a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="http://portal.siscomex.gov.br/legislacao/orgaos/secretaria-de-comercio-exterior-secex" target="_blank">
+                            <img src="/EmissorNacional/img/logo-secex.png" class="logo" alt="Secretaria de Comércio Exterior" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 logo">
+                        <img src="/EmissorNacional/img/logo-nfse-branca-sm.svg" class="logo-branca" alt="NFS-e" />
+                    </div>
+                    <div class="col-md-8 versao">
+                        Portal de Gestão NFS-e - Contribuinte | Versão 1.4.0.27
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modalLoading" class="modalBgLoading" style="display:none;">
+        <div class="loading">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+            <div class="texto">Por favor, aguarde...</div>
+        </div>
+    </div>
+
+    <div id="modalPessoa" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -128,6 +128,18 @@ Route::middleware(['authh', 'validaEmpresa', 'ui.segment'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
         Route::prefix('v2/api')->group(function () {
+            Route::get('dps/emitente', [App\Http\Controllers\V2\Api\DpsEmitenteController::class, 'show'])->name('api.v2.dps.emitente');
+            Route::prefix('emissaodps')->group(function () {
+                Route::get('ListarMunicipiosParaEmissao', [App\Http\Controllers\V2\Api\EmissaoDpsController::class, 'listarMunicipiosParaEmissao'])->name('api.v2.emissaodps.listar-municipios');
+                Route::get('ListarEstabelecimentosParaEmissao', [App\Http\Controllers\V2\Api\EmissaoDpsController::class, 'listarEstabelecimentosParaEmissao'])->name('api.v2.emissaodps.listar-estabelecimentos');
+                Route::get('RecuperarInfoEstabelecimento', [App\Http\Controllers\V2\Api\EmissaoDpsController::class, 'recuperarInfoEstabelecimento'])->name('api.v2.emissaodps.recuperar-info-estabelecimento');
+                Route::get('recuperaropcaosn', [App\Http\Controllers\V2\Api\EmissaoDpsController::class, 'recuperarOpcaoSn'])->name('api.v2.emissaodps.recuperar-opcao-sn');
+                Route::get('BuscarNomeMunicipio', [App\Http\Controllers\V2\Api\EmissaoDpsController::class, 'buscarNomeMunicipio'])->name('api.v2.emissaodps.buscar-nome-municipio');
+                Route::get('BuscarNomeServico', [App\Http\Controllers\V2\Api\EmissaoDpsController::class, 'buscarNomeServico'])->name('api.v2.emissaodps.buscar-nome-servico');
+                Route::get('VerificarIncidencia', [App\Http\Controllers\V2\Api\EmissaoDpsController::class, 'verificarIncidencia'])->name('api.v2.emissaodps.verificar-incidencia');
+                Route::get('cep/{cep}', [App\Http\Controllers\V2\Api\EmissaoDpsController::class, 'cep'])->whereNumber('cep')->name('api.v2.emissaodps.cep');
+            });
+
             Route::get('produtos', [App\Http\Controllers\V2\Api\ProdutosController::class, 'index'])->name('api.v2.produtos.index');
             Route::get('produtos/options', [App\Http\Controllers\V2\Api\ProdutosController::class, 'options'])->name('api.v2.produtos.options');
             Route::get('produtos/{id}', [App\Http\Controllers\V2\Api\ProdutosController::class, 'show'])->name('api.v2.produtos.show');
